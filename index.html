@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; manifest-src 'self'; connect-src 'self'; worker-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="ナイトレインのボス候補と弱点・耐性を確認する個人用ツール">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="夜王チェッカー">
+  <title>ナイトレイン ボス判別</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon-180.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./resistance.css">
+  <script defer src="./mapping-data.js"></script>
+  <script defer src="./resistance-data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="app-header">
+    <h1>ナイトレイン <span>ボス判別</span></h1>
+    <button id="reset-button" class="reset-button" type="button" disabled>リセット</button>
+  </header>
+
+  <main id="main" class="workspace">
+    <section class="selection-panel" aria-labelledby="selection-title">
+      <div class="panel-heading">
+        <h2 id="selection-title">出撃情報</h2>
+      </div>
+
+      <div class="selection-grid">
+        <section class="selection-card selection-card--day1" aria-labelledby="day1-title">
+          <div class="card-heading">
+            <span class="stage-mark" aria-hidden="true">1</span>
+            <h3 id="day1-title">1日目</h3>
+            <input id="day1-search" class="search-input" type="search" autocomplete="off" placeholder="ボス名" aria-label="1日目ボスを検索" aria-controls="day1-options">
+          </div>
+          <div id="day1-selected" class="selected-chip" hidden></div>
+          <div id="day1-options" class="option-list" role="group" aria-label="1日目ボス一覧"></div>
+          <p id="day1-empty" class="empty-hint" hidden>一致するボスがありません。</p>
+        </section>
+
+        <section class="selection-card selection-card--day2" aria-labelledby="day2-title">
+          <div class="card-heading">
+            <span class="stage-mark" aria-hidden="true">2</span>
+            <h3 id="day2-title">2日目</h3>
+            <input id="day2-search" class="search-input" type="search" autocomplete="off" placeholder="1日目を選択" aria-label="2日目ボスを検索" aria-controls="day2-options" disabled>
+          </div>
+          <div id="day2-selected" class="selected-chip" hidden></div>
+          <div id="day2-options" class="option-list" role="group" aria-label="2日目ボス一覧" aria-disabled="true"></div>
+          <p id="day2-empty" class="empty-hint" hidden>一致するボスがありません。</p>
+        </section>
+
+        <section class="selection-card selection-card--event" aria-labelledby="event-title">
+          <div class="card-heading">
+            <span class="stage-mark event-mark" aria-hidden="true">任意</span>
+            <h3 id="event-title">イベント</h3>
+            <input id="event-search" class="search-input" type="search" autocomplete="off" placeholder="イベント名" aria-label="イベントを検索" aria-controls="event-options">
+          </div>
+          <div id="event-selected" class="selected-chip" hidden></div>
+          <div id="event-options" class="option-list" role="group" aria-label="イベント一覧"></div>
+          <p id="event-empty" class="empty-hint" hidden>一致するイベントがありません。</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="results-panel" aria-label="日別ボスと夜の王">
+      <details id="day1-section" class="stage-section stage-section--day1" open>
+        <summary class="stage-heading">
+          <span class="stage-mark" aria-hidden="true">1</span>
+          <span>1日目</span>
+        </summary>
+        <div id="day1-resistance-details" class="details-list"></div>
+      </details>
+
+      <details id="day2-section" class="stage-section stage-section--day2">
+        <summary class="stage-heading">
+          <span class="stage-mark" aria-hidden="true">2</span>
+          <span>2日目</span>
+        </summary>
+        <div id="day2-resistance-details" class="details-list"></div>
+      </details>
+
+      <details id="nightlord-section" class="stage-section stage-section--nightlord">
+        <summary class="stage-heading">
+          <span class="stage-mark nightlord-mark" aria-hidden="true">◆</span>
+          <span>夜の王</span>
+          <span id="candidate-count" class="count-badge" aria-live="polite">未選択</span>
+        </summary>
+        <p id="candidate-message" class="result-message" hidden></p>
+        <div id="candidate-details" class="details-list"></div>
+      </details>
+    </section>
+  </main>
+</body>
+</html>

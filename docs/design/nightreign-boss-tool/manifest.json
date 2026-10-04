@@ -1,0 +1,92 @@
+{
+  "featureId": "nightreign-boss-tool",
+  "featureVersion": "0.11.0",
+  "documentSetVersion": "0.11.3",
+  "codeRevision": "74cdde38f096b2296d62ad0a0b278110dde0c81b",
+  "author": "Codex",
+  "reviewer": "Codex main (user-authorized); no designated specialist reviewer is configured",
+  "status": "in-progress",
+  "documents": [
+    {
+      "id": "NRT-REQ-001",
+      "path": "requirements.md",
+      "version": "0.11.3",
+      "relatedDocuments": [
+        "NRT-DES-001@0.11.3",
+        "NRT-SPEC-001@0.11.3",
+        "NRT-PLAN-001@0.11.3",
+        "NRT-MAP-001@0.11.3"
+      ],
+      "author": "Codex",
+      "reviewer": "Codex main (user-authorized); no designated specialist reviewer is configured",
+      "status": "approved"
+    },
+    {
+      "id": "NRT-DES-001",
+      "path": "design.md",
+      "version": "0.11.3",
+      "relatedDocuments": [
+        "NRT-REQ-001@0.11.3",
+        "NRT-SPEC-001@0.11.3",
+        "NRT-PLAN-001@0.11.3",
+        "NRT-MAP-001@0.11.3"
+      ],
+      "author": "Codex",
+      "reviewer": "Codex main (user-authorized); no designated specialist reviewer is configured",
+      "status": "approved"
+    },
+    {
+      "id": "NRT-SPEC-001",
+      "path": "specification.md",
+      "version": "0.11.3",
+      "relatedDocuments": [
+        "NRT-REQ-001@0.11.3",
+        "NRT-DES-001@0.11.3",
+        "NRT-PLAN-001@0.11.3",
+        "NRT-MAP-001@0.11.3"
+      ],
+      "author": "Codex",
+      "reviewer": "Codex main (user-authorized); no designated specialist reviewer is configured",
+      "status": "approved"
+    },
+    {
+      "id": "NRT-PLAN-001",
+      "path": "plan.md",
+      "version": "0.11.3",
+      "relatedDocuments": [
+        "NRT-REQ-001@0.11.3",
+        "NRT-DES-001@0.11.3",
+        "NRT-SPEC-001@0.11.3",
+        "NRT-MAP-001@0.11.3"
+      ],
+      "author": "Codex",
+      "reviewer": "Codex main (user-authorized); no designated specialist reviewer is configured",
+      "status": "in-progress"
+    },
+    {
+      "id": "NRT-MAP-001",
+      "path": "code-map.md",
+      "version": "0.11.3",
+      "relatedDocuments": [
+        "NRT-REQ-001@0.11.3",
+        "NRT-DES-001@0.11.3",
+        "NRT-SPEC-001@0.11.3",
+        "NRT-PLAN-001@0.11.3"
+      ],
+      "author": "Codex",
+      "reviewer": "Codex main (user-authorized); no designated specialist reviewer is configured",
+      "status": "in-progress"
+    }
+  ],
+  "gateState": {
+    "requirements": "Pass",
+    "design": "Pass",
+    "preImplementationReview": "Pass",
+    "implementation": "Pass",
+    "test": "Pass",
+    "postImplementationReview": "Pass",
+    "correction": "Pass",
+    "retest": "Pass",
+    "reReview": "Pass"
+  }
+}
