@@ -1,0 +1,17 @@
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - docs/
+  - certificates/
+  - start-https.bat
+  - start-https.ps1
+  - https-static-server.ps1
