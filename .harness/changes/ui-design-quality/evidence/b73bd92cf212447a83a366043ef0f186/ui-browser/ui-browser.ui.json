@@ -1,0 +1,2005 @@
+{
+  "schema_version": 3,
+  "scenarios": [
+    {
+      "id": "desktop-empty",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "未選択; CSS layout zoom 1x"
+      },
+      "files": [
+        {
+          "path": "desktop-empty.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-empty.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-empty.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "desktop-empty.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "desktop-empty-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "desktop-empty-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "desktop-empty-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "desktop-empty-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "desktop-empty-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "desktop-empty-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "desktop-empty-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "desktop-empty-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "desktop-empty-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "desktop-empty-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "desktop-empty-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "desktop-empty-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "desktop-empty-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "desktop-empty-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "desktop-empty-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "desktop-empty-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "desktop-empty-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-empty.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desktop-selected",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+      },
+      "files": [
+        {
+          "path": "desktop-selected.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-selected.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-selected.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "desktop-selected.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "desktop-selected-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "desktop-selected-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "desktop-selected-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "desktop-selected-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "desktop-selected-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "desktop-selected-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "desktop-selected-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "desktop-selected-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "desktop-selected-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "desktop-selected-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "desktop-selected-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "desktop-selected-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "desktop-selected-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "desktop-selected-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "desktop-selected-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "desktop-selected-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "desktop-selected-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        },
+        {
+          "id": "desktop-selected-choose-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/choose-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-choose-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/choose-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-choose-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/choose-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-choose-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/choose-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-choose-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するchooseの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/choose-activate"
+          }
+        },
+        {
+          "id": "desktop-selected-clear-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/clear-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-clear-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/clear-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-clear-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/clear-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-clear-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/clear-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-clear-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するclearの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/clear-activate"
+          }
+        },
+        {
+          "id": "desktop-selected-search-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/search-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-search-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/search-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-search-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/search-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-search-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/search-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-search-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するsearchの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/search-activate"
+          }
+        },
+        {
+          "id": "desktop-selected-reset-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/reset-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-reset-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/reset-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-reset-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/reset-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-reset-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/reset-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-reset-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するresetの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/reset-activate"
+          }
+        },
+        {
+          "id": "desktop-selected-stage-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/stage-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-stage-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/stage-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-stage-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/stage-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-stage-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/stage-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-stage-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するstageの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/stage-activate"
+          }
+        },
+        {
+          "id": "desktop-selected-boss-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/boss-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-boss-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/boss-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-boss-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/boss-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-boss-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/boss-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-boss-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するbossの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/boss-activate"
+          }
+        },
+        {
+          "id": "desktop-selected-form-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/form-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-form-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/form-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-form-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/form-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-form-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/form-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-form-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するformの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/form-activate"
+          }
+        },
+        {
+          "id": "desktop-selected-help-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/help-visual-width"
+          }
+        },
+        {
+          "id": "desktop-selected-help-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/help-visual-height"
+          }
+        },
+        {
+          "id": "desktop-selected-help-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/help-hit-width"
+          }
+        },
+        {
+          "id": "desktop-selected-help-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/help-hit-height"
+          }
+        },
+        {
+          "id": "desktop-selected-help-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するhelpの結果を起動するか。",
+          "value_ref": {
+            "path": "desktop-selected.metrics.json",
+            "pointer": "/help-activate"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mobile-selected",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+      },
+      "files": [
+        {
+          "path": "mobile-selected.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "mobile-selected.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "mobile-selected.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "mobile-selected.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "mobile-selected-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "mobile-selected-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "mobile-selected-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "mobile-selected-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "mobile-selected-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "mobile-selected-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "mobile-selected-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "mobile-selected-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "mobile-selected-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "mobile-selected-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "mobile-selected-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "mobile-selected-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "mobile-selected-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "mobile-selected-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "mobile-selected-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "mobile-selected-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "mobile-selected-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        },
+        {
+          "id": "mobile-selected-choose-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/choose-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-choose-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/choose-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-choose-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/choose-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-choose-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/choose-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-choose-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するchooseの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/choose-activate"
+          }
+        },
+        {
+          "id": "mobile-selected-clear-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/clear-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-clear-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/clear-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-clear-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/clear-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-clear-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/clear-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-clear-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するclearの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/clear-activate"
+          }
+        },
+        {
+          "id": "mobile-selected-search-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/search-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-search-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/search-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-search-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/search-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-search-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/search-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-search-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するsearchの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/search-activate"
+          }
+        },
+        {
+          "id": "mobile-selected-reset-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/reset-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-reset-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/reset-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-reset-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/reset-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-reset-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/reset-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-reset-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するresetの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/reset-activate"
+          }
+        },
+        {
+          "id": "mobile-selected-stage-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/stage-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-stage-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/stage-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-stage-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/stage-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-stage-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/stage-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-stage-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するstageの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/stage-activate"
+          }
+        },
+        {
+          "id": "mobile-selected-boss-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/boss-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-boss-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/boss-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-boss-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/boss-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-boss-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/boss-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-boss-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するbossの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/boss-activate"
+          }
+        },
+        {
+          "id": "mobile-selected-form-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/form-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-form-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/form-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-form-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/form-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-form-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/form-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-form-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するformの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/form-activate"
+          }
+        },
+        {
+          "id": "mobile-selected-help-visual-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/help-visual-width"
+          }
+        },
+        {
+          "id": "mobile-selected-help-visual-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/help-visual-height"
+          }
+        },
+        {
+          "id": "mobile-selected-help-hit-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/help-hit-width"
+          }
+        },
+        {
+          "id": "mobile-selected-help-hit-height",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/help-hit-height"
+          }
+        },
+        {
+          "id": "mobile-selected-help-activate",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するhelpの結果を起動するか。",
+          "value_ref": {
+            "path": "mobile-selected.metrics.json",
+            "pointer": "/help-activate"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tablet-selected",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+      },
+      "files": [
+        {
+          "path": "tablet-selected.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "tablet-selected.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "tablet-selected.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "tablet-selected.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "tablet-selected-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "tablet-selected-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "tablet-selected-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "tablet-selected-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "tablet-selected-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "tablet-selected-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "tablet-selected-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "tablet-selected-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "tablet-selected-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "tablet-selected-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "tablet-selected-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "tablet-selected-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "tablet-selected-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "tablet-selected-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "tablet-selected-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "tablet-selected-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "tablet-selected-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "tablet-selected.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "narrow-zoom",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 640,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 2x"
+      },
+      "files": [
+        {
+          "path": "narrow-zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "narrow-zoom.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "narrow-zoom.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "narrow-zoom.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "narrow-zoom-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "narrow-zoom-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "narrow-zoom-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "narrow-zoom-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "narrow-zoom-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "narrow-zoom-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "narrow-zoom-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "narrow-zoom-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "narrow-zoom-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "narrow-zoom-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "narrow-zoom-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "narrow-zoom-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "narrow-zoom-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "narrow-zoom-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "narrow-zoom-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "narrow-zoom-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "narrow-zoom-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "narrow-zoom.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desktop-expanded",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; boss/form details expanded; help open; CSS layout zoom 1x"
+      },
+      "files": [
+        {
+          "path": "desktop-expanded.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-expanded.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-expanded.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "desktop-expanded.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "desktop-expanded-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "desktop-expanded-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "desktop-expanded-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "desktop-expanded-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "desktop-expanded-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "desktop-expanded-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "desktop-expanded-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "desktop-expanded-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "desktop-expanded-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "desktop-expanded-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "desktop-expanded-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "desktop-expanded-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "desktop-expanded-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "desktop-expanded-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "desktop-expanded-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "desktop-expanded-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "desktop-expanded-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-expanded.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mobile-expanded",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; boss/form details expanded; help open; CSS layout zoom 1x"
+      },
+      "files": [
+        {
+          "path": "mobile-expanded.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "mobile-expanded.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "mobile-expanded.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "mobile-expanded.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "mobile-expanded-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "mobile-expanded-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "mobile-expanded-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "mobile-expanded-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "mobile-expanded-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "mobile-expanded-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "mobile-expanded-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "mobile-expanded-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "mobile-expanded-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "mobile-expanded-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "mobile-expanded-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "mobile-expanded-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "mobile-expanded-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "mobile-expanded-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "mobile-expanded-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "mobile-expanded-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "mobile-expanded-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "mobile-expanded.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desktop-search-empty",
+      "status": "passed",
+      "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+      "environment": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; unmatched day1/event search; CSS layout zoom 1x"
+      },
+      "files": [
+        {
+          "path": "desktop-search-empty.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-search-empty.zoom.png",
+          "kind": "screenshot"
+        },
+        {
+          "path": "desktop-search-empty.metrics.json",
+          "kind": "metrics"
+        },
+        {
+          "path": "desktop-search-empty.aria.json",
+          "kind": "aria"
+        }
+      ],
+      "case_results": [
+        {
+          "id": "desktop-search-empty-layout",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/layout"
+          }
+        },
+        {
+          "id": "desktop-search-empty-heading-font",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/heading-font"
+          }
+        },
+        {
+          "id": "desktop-search-empty-option-line",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/option-line"
+          }
+        },
+        {
+          "id": "desktop-search-empty-option-row",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/option-row"
+          }
+        },
+        {
+          "id": "desktop-search-empty-reset-target",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/reset-target"
+          }
+        },
+        {
+          "id": "desktop-search-empty-workspace-gap",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/workspace-gap"
+          }
+        },
+        {
+          "id": "desktop-search-empty-page-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/page-token"
+          }
+        },
+        {
+          "id": "desktop-search-empty-heading-token",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/heading-token"
+          }
+        },
+        {
+          "id": "desktop-search-empty-copy",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/copy"
+          }
+        },
+        {
+          "id": "desktop-search-empty-state-consistency",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/state-consistency"
+          }
+        },
+        {
+          "id": "desktop-search-empty-a11y-label",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/a11y-label"
+          }
+        },
+        {
+          "id": "desktop-search-empty-a11y-keyboard",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/a11y-keyboard"
+          }
+        },
+        {
+          "id": "desktop-search-empty-a11y-focus",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/a11y-focus"
+          }
+        },
+        {
+          "id": "desktop-search-empty-a11y-width",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/a11y-width"
+          }
+        },
+        {
+          "id": "desktop-search-empty-a11y-zoom",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/a11y-zoom"
+          }
+        },
+        {
+          "id": "desktop-search-empty-a11y-reading_order",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/a11y-reading_order"
+          }
+        },
+        {
+          "id": "desktop-search-empty-a11y-operable_targets",
+          "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+          "value_ref": {
+            "path": "desktop-search-empty.metrics.json",
+            "pointer": "/a11y-operable_targets"
+          }
+        }
+      ]
+    }
+  ]
+}

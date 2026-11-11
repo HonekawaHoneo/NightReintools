@@ -1,0 +1,1635 @@
+{
+  "schema_version": 1,
+  "id": "ui-design-quality",
+  "kind": "change",
+  "author": "codex-ui-owner",
+  "context": "ui-owner-implementation-20261111",
+  "phase": "done",
+  "approvals": {
+    "discovery": "f4f8b9a3f9b9c31cc2de50da0b5a2457bf802d1d93fc6c83081fce9d2eed5fb4",
+    "requirements": "a8d3582dbb566f6daa9eca8bdd2d00ba8821adf3c0df43fceb9aa936fefb41ea",
+    "design": "39f3f0f045cb4bf790ed7ce6316f519aaddc3391bb8004f21804040f3b247956",
+    "implementation": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2",
+    "review": "97da1ad8c4f038e8c0510a17ee335cb2e81e4ed2629af030b5e23e5d028c5fb0"
+  },
+  "intent_contract": 1,
+  "baseline_files": {
+    ".agents/skills/architect/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/architect/SKILL.md": {
+      "sha256": "f47d19426c347d851cd4f61f6441d609216dc4fd56778c1ca0f52e50649be014",
+      "executable": false
+    },
+    ".agents/skills/architect/UPSTREAM.md": {
+      "sha256": "31f8e97a52bfa5432edd61f68ade2a8632ef0bacbc2d2a6802d7a0e6821944ac",
+      "executable": false
+    },
+    ".agents/skills/architect/agents/openai.yaml": {
+      "sha256": "22d5cb7f12e56e7319cdf3bc633a059078a96f4b067bac6aa9acd4a9458b21fe",
+      "executable": false
+    },
+    ".agents/skills/architect/references/design-red-flags.md": {
+      "sha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
+      "executable": false
+    },
+    ".agents/skills/architect/references/rationale-template.md": {
+      "sha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
+      "executable": false
+    },
+    ".agents/skills/architect/references/runner-prompt.md": {
+      "sha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
+      "executable": false
+    },
+    ".agents/skills/arena/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/arena/SKILL.md": {
+      "sha256": "9b60f959f2da5c88cfb9b9decd49a479b2c1ab78fdd7cfbd8fc795fe850f3a86",
+      "executable": false
+    },
+    ".agents/skills/arena/UPSTREAM.md": {
+      "sha256": "ed72f6c132b1ce3974d949581d0adc5dade424fe20793ac3b4c4fae22ecb9354",
+      "executable": false
+    },
+    ".agents/skills/arena/agents/openai.yaml": {
+      "sha256": "f2c86f960eb15c2ce42cd4be3982946ef92eafdb55fbba55d45431dd7915da47",
+      "executable": false
+    },
+    ".agents/skills/automate-me/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/automate-me/SKILL.md": {
+      "sha256": "b9d9be9f0b7fdd9eaa4b06dad33e653d7867f15c80280d43253f92c27bfbe011",
+      "executable": false
+    },
+    ".agents/skills/automate-me/UPSTREAM.md": {
+      "sha256": "30b35f3628c4fd8c11af0ada06d14cdc3b28901810caca2480f627d4d21acfbe",
+      "executable": false
+    },
+    ".agents/skills/automate-me/agents/openai.yaml": {
+      "sha256": "b870402b17b3e9f440032f969044b592fb35e212ce4f33f9e8fbb21f6caa55c8",
+      "executable": false
+    },
+    ".agents/skills/benchmark-checklist/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/benchmark-checklist/SKILL.md": {
+      "sha256": "48fa50e43419be2acd793ced09e1404ec88b7a780aec9c7fc45b3056919bee5c",
+      "executable": false
+    },
+    ".agents/skills/benchmark-checklist/UPSTREAM.md": {
+      "sha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+      "executable": false
+    },
+    ".agents/skills/benchmark-checklist/agents/openai.yaml": {
+      "sha256": "e1d15c56249446f9e6d8c47b74453fc896c8c749dbbe2211bf67fd9d7a426e66",
+      "executable": false
+    },
+    ".agents/skills/blast-radius/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/blast-radius/SKILL.md": {
+      "sha256": "88c89609f3262ac3ce6205882d9f0c1380e66cd4d6567fe0c9183109195808a5",
+      "executable": false
+    },
+    ".agents/skills/blast-radius/UPSTREAM.md": {
+      "sha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
+      "executable": false
+    },
+    ".agents/skills/blast-radius/agents/openai.yaml": {
+      "sha256": "9e64de4c18e78c6f0fe3563e2ba30173aaaab801124c122431ea6945a1d0ed3e",
+      "executable": false
+    },
+    ".agents/skills/bro/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/bro/SKILL.md": {
+      "sha256": "de2ea65ee0a0b674b59ed3b0213e31360a68f4e1b3a5970ca5e9ec0759fcdbff",
+      "executable": false
+    },
+    ".agents/skills/bro/UPSTREAM.md": {
+      "sha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+      "executable": false
+    },
+    ".agents/skills/bro/agents/openai.yaml": {
+      "sha256": "b138723f8aa2b99ad933db1454216ad3b6653684201770d6a9e5f60fa04449f3",
+      "executable": false
+    },
+    ".agents/skills/common-workflow/SKILL.md": {
+      "sha256": "5cde6cd13342f489a502e18e3999ec02ceb826945e95f67664fd07f6f8a6116f",
+      "executable": false
+    },
+    ".agents/skills/correct/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/correct/SKILL.md": {
+      "sha256": "af17c21a479ae97959a54244b2d147e597364433c21b65ae1a1ea229a5aef2ab",
+      "executable": false
+    },
+    ".agents/skills/correct/UPSTREAM.md": {
+      "sha256": "bf482bacc972b3f124a4af8bf9364b4b3e280cb5845e44c326ea4f4565e5c904",
+      "executable": false
+    },
+    ".agents/skills/correct/agents/openai.yaml": {
+      "sha256": "459c6a31fd54aa457002815c1c0bfc567c495d0246eae17c2c5d8f687a555eba",
+      "executable": false
+    },
+    ".agents/skills/create-verification-skill/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/create-verification-skill/SKILL.md": {
+      "sha256": "ba57a6fe5bc5b751a9bcec895537f88626db33c884f676cf86de7b07fbff0068",
+      "executable": false
+    },
+    ".agents/skills/create-verification-skill/UPSTREAM.md": {
+      "sha256": "d353973547bf8ad8977eca645f4cd4feaed0d32f4b43d1448f906b0a76c4d694",
+      "executable": false
+    },
+    ".agents/skills/create-verification-skill/agents/openai.yaml": {
+      "sha256": "ef6b016a0b387b0c871f03ea4298ee2d585e5d5e6339cb62b82b530241e3b7fe",
+      "executable": false
+    },
+    ".agents/skills/create-verification-skill/references/feature-map-example/README.md": {
+      "sha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+      "executable": false
+    },
+    ".agents/skills/create-verification-skill/references/feature-map-example/create-note.md": {
+      "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+      "executable": false
+    },
+    ".agents/skills/create-verification-skill/references/feature-map-example/search.md": {
+      "sha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+      "executable": false
+    },
+    ".agents/skills/evidence-first-response/SKILL.md": {
+      "sha256": "7fec5fd060a701703c7ff7519096f3fb1733db8357447b46b34297875d44470c",
+      "executable": false
+    },
+    ".agents/skills/evidence-first-response/agents/openai.yaml": {
+      "sha256": "46f66c8453fc9a0dd75739394a1861ecf887801307f4d8ffae43d250c4a6e4bd",
+      "executable": false
+    },
+    ".agents/skills/evidence-first-response/references/design-sources.md": {
+      "sha256": "a8b77a2c92f516c37265a09dba183c6446af50dc9f9f5df5b47e90d34dcccee2",
+      "executable": false
+    },
+    ".agents/skills/evidence-first-response/references/evaluation-cases.md": {
+      "sha256": "4b69d7d7e50e4192383f19dfadbfb963d425ae9a9ee1b34c4f7cbcc37331a744",
+      "executable": false
+    },
+    ".agents/skills/evidence-first-response/references/workflows.md": {
+      "sha256": "532d255222063fa0e6a0d9359781fee4db5c48f5d72d8811fee1afab669a3320",
+      "executable": false
+    },
+    ".agents/skills/figure-it-out/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/figure-it-out/SKILL.md": {
+      "sha256": "3365d2de0b28d3ee254600883cedc745aeb8e92359fd57131a3a8545d4e6c6dd",
+      "executable": false
+    },
+    ".agents/skills/figure-it-out/UPSTREAM.md": {
+      "sha256": "bdb23cdbd82a1e6af094b495691c832a6f7f3ab9706ba9edbeb664ef51a726e1",
+      "executable": false
+    },
+    ".agents/skills/figure-it-out/agents/openai.yaml": {
+      "sha256": "9d07b5aa47ae9415c5586fa1ba1c35f00cca0302e6349ed3203ab1b400fdeecb",
+      "executable": false
+    },
+    ".agents/skills/grill-me/LICENSE": {
+      "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "executable": false
+    },
+    ".agents/skills/grill-me/SKILL.md": {
+      "sha256": "cfd049dd16df9579d17e480746c19ea158d80405249bce2202e67c8b4fcc8a87",
+      "executable": false
+    },
+    ".agents/skills/grill-me/UPSTREAM.md": {
+      "sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "executable": false
+    },
+    ".agents/skills/grill-me/agents/UPSTREAM-openai.yaml": {
+      "sha256": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b",
+      "executable": false
+    },
+    ".agents/skills/grill-me/agents/openai.yaml": {
+      "sha256": "1172fb1997fa04e7aae5a642f4a99af8a55812ad701ab07a04a29bdf70faba78",
+      "executable": false
+    },
+    ".agents/skills/grilling/LICENSE": {
+      "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "executable": false
+    },
+    ".agents/skills/grilling/SKILL.md": {
+      "sha256": "594b1d5913f56dd03687b9ebde3f6113383324fd90ffd6fb780e7d9e74d1f3a0",
+      "executable": false
+    },
+    ".agents/skills/grilling/UPSTREAM.md": {
+      "sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+      "executable": false
+    },
+    ".agents/skills/grilling/agents/UPSTREAM-openai.yaml": {
+      "sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+      "executable": false
+    },
+    ".agents/skills/grilling/agents/openai.yaml": {
+      "sha256": "d468045970cbf95c5120422b4bd2edfaaf0ec00d54ca18098cddc68a2a5a2a73",
+      "executable": false
+    },
+    ".agents/skills/how/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/how/SKILL.md": {
+      "sha256": "87b627ca39b1e3d4723bd0cf3e0cc395d386cfc6eeb9dabcfcd774770e3be337",
+      "executable": false
+    },
+    ".agents/skills/how/UPSTREAM.md": {
+      "sha256": "08a00079bb15b4258874ac3ff62d4ca7e94350ffedb521d0fd296dc9dd21904e",
+      "executable": false
+    },
+    ".agents/skills/how/agents/openai.yaml": {
+      "sha256": "71771864634bbe33b49609679ea85149fcc6d83d64a12526071a85212c2e27c0",
+      "executable": false
+    },
+    ".agents/skills/how/references/explainer-prompt.md": {
+      "sha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
+      "executable": false
+    },
+    ".agents/skills/how/references/explorer-prompt.md": {
+      "sha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1",
+      "executable": false
+    },
+    ".agents/skills/implementation-planning/SKILL.md": {
+      "sha256": "820ec9cadb84ae9582bce2734cca479e54c24967699517a7c373313507d9c261",
+      "executable": false
+    },
+    ".agents/skills/in-your-own-words/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/in-your-own-words/SKILL.md": {
+      "sha256": "17c315bcbe293321e3d26a03780b4240635274b1463f4baa0d4ba37646bfe38b",
+      "executable": false
+    },
+    ".agents/skills/in-your-own-words/UPSTREAM.md": {
+      "sha256": "fa8ba74e27d7be371dc270ec78bbf816411477d0dfab185356c861ac8dd413ad",
+      "executable": false
+    },
+    ".agents/skills/in-your-own-words/agents/openai.yaml": {
+      "sha256": "06b1d34db9bbaa2f527bc9b4d4903476cc19c5e9aec3fce7a80772156f26823a",
+      "executable": false
+    },
+    ".agents/skills/interrogate/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/interrogate/SKILL.md": {
+      "sha256": "a991ad2b24a4f6ce832807dd8ada926629226dd7f244b62cabbc8ce5a83637d5",
+      "executable": false
+    },
+    ".agents/skills/interrogate/UPSTREAM.md": {
+      "sha256": "a16dfe179005abc22a4651b82f25b0c8ab953284276efe4e6dc341958fb63647",
+      "executable": false
+    },
+    ".agents/skills/interrogate/agents/openai.yaml": {
+      "sha256": "91648fc99ec096c714e4485292a096cd7d98d470af17a34837e3ebbf04640111",
+      "executable": false
+    },
+    ".agents/skills/interrogate/references/code-quality-review.md": {
+      "sha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
+      "executable": false
+    },
+    ".agents/skills/interrogate/references/lead-judgment.md": {
+      "sha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
+      "executable": false
+    },
+    ".agents/skills/interrogate/references/reviewer-prompt.md": {
+      "sha256": "f6005cc2b535006fca97a96c5bfda49df57312eedf1ffd8d1aaaf3eb33817c25",
+      "executable": false
+    },
+    ".agents/skills/interrogate/references/rubric.md": {
+      "sha256": "0f9c6bdb0b96e26dbde5f6407f417e0c02f54080e7a1268d8994f3c3ec6c5ac0",
+      "executable": false
+    },
+    ".agents/skills/ketchup/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/ketchup/SKILL.md": {
+      "sha256": "b8a63d1fe00709b08395e7f103c4c1f13c9f1db0ccc1bd83604ea59c8fbe2a12",
+      "executable": false
+    },
+    ".agents/skills/ketchup/UPSTREAM.md": {
+      "sha256": "d9704b154081af306b6583b2752498d454f9d761e9989ff1f037efd414f86bb4",
+      "executable": false
+    },
+    ".agents/skills/ketchup/agents/openai.yaml": {
+      "sha256": "cae9970191b504da21b60d4edd232a56b6fff687b6c6bf6b6f4e561862cd4c46",
+      "executable": false
+    },
+    ".agents/skills/maintain-verification-skill/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/maintain-verification-skill/SKILL.md": {
+      "sha256": "28ddbcf1042be5c3b529594e3f6136e815b760e962ab485c00d2902fc13a0b2e",
+      "executable": false
+    },
+    ".agents/skills/maintain-verification-skill/UPSTREAM.md": {
+      "sha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
+      "executable": false
+    },
+    ".agents/skills/maintain-verification-skill/agents/openai.yaml": {
+      "sha256": "e8bfd366ebf9986694b6d1128b5672be1cbbdc164dfaf7bc8b89c38e398290f4",
+      "executable": false
+    },
+    ".agents/skills/make-bot-ui/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/make-bot-ui/SKILL.md": {
+      "sha256": "b29fc04f0ecd0e3867db6af436863956cfce0e711346a7c628f6863d45d1ef40",
+      "executable": false
+    },
+    ".agents/skills/make-bot-ui/UPSTREAM.md": {
+      "sha256": "3624c8ef16cf2e48deb2a4049e72c6962a9431c8d6c6af90e7bd7ea0375224ec",
+      "executable": false
+    },
+    ".agents/skills/make-bot-ui/agents/openai.yaml": {
+      "sha256": "2273fc82902a52c1456161585935e2260a5b6b36a24fa35376e6127435143de2",
+      "executable": false
+    },
+    ".agents/skills/no-comments/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/no-comments/SKILL.md": {
+      "sha256": "f4f631e8d16ef58813bbef0e27334efde79c3c42ae9ede0e345b549cbb715dca",
+      "executable": false
+    },
+    ".agents/skills/no-comments/UPSTREAM.md": {
+      "sha256": "078ecfe224eafbb017f6476870612838bf6dbe38c0b697e12f0c887d0313f17e",
+      "executable": false
+    },
+    ".agents/skills/no-comments/agents/openai.yaml": {
+      "sha256": "7a3fd6880c79f287436de362b81d1694892e92869d369d7f9922f667fc19b242",
+      "executable": false
+    },
+    ".agents/skills/ponytail-review/LICENSE": {
+      "sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+      "executable": false
+    },
+    ".agents/skills/ponytail-review/SKILL.md": {
+      "sha256": "96f74cba58265fa11ee53c76a6e0743e2b260b81f7d62bc2e5237bc75e59a529",
+      "executable": false
+    },
+    ".agents/skills/ponytail-review/UPSTREAM.md": {
+      "sha256": "33fe4ebe22a460924e5d4a261e223df22e409cc94ab76182bee9fb91a3ef022e",
+      "executable": false
+    },
+    ".agents/skills/ponytail-review/agents/openai.yaml": {
+      "sha256": "452fb169ac7cf1d3bbf16289969f47c41991c6036b36adebff0f8e8049807748",
+      "executable": false
+    },
+    ".agents/skills/ponytail/LICENSE": {
+      "sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+      "executable": false
+    },
+    ".agents/skills/ponytail/SKILL.md": {
+      "sha256": "83ba94bce0dcbf4e36570fc8eb7ba04b40183d8ee46e2cca478404f943d127da",
+      "executable": false
+    },
+    ".agents/skills/ponytail/UPSTREAM.md": {
+      "sha256": "ba68ff26239c3c3b05b2a9a47ee0d9a6b93a69639a2555ec87a5d44bffaf2f0c",
+      "executable": false
+    },
+    ".agents/skills/ponytail/agents/openai.yaml": {
+      "sha256": "fb3feb62780da59cb6ae92238b47331b0a47c419be31a8d6c0bbfd26d700c663",
+      "executable": false
+    },
+    ".agents/skills/poteto-help/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/poteto-help/SKILL.md": {
+      "sha256": "a1c69d5ceaf4c9f9d2503efb6bbc145615c4cccb22e30b51dea339a275a7e36d",
+      "executable": false
+    },
+    ".agents/skills/poteto-help/UPSTREAM.md": {
+      "sha256": "1b0645c25200a19e5863583e117bad684b1b79ba8434823ebf4f6bbcc61e8a75",
+      "executable": false
+    },
+    ".agents/skills/poteto-help/agents/openai.yaml": {
+      "sha256": "8cc8b65edc9690976f70fdab6a49acb6258f0c2d5f5cf7b184f1dfd48761a090",
+      "executable": false
+    },
+    ".agents/skills/poteto-help/references/prompting.md": {
+      "sha256": "463f450c44a60afd001a2f69fdf8a5dea174351f339369b12ec3c41515e564d3",
+      "executable": false
+    },
+    ".agents/skills/poteto-help/references/recipes.md": {
+      "sha256": "5fb97a805976a82db0aba5cc8943e88d0cb38b17a0d6b8e89a44633677febb1a",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/SKILL.md": {
+      "sha256": "3e9dd20e63b21d71572f8313fdfb43ffc1b835612a2463f23a3908db534acf29",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/UPSTREAM.md": {
+      "sha256": "f234661471847cafc4ae9bcb4a9208eb32ed8154ac25b91b2b064ec71bd62167",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/agents/openai.yaml": {
+      "sha256": "ddec1300d41ff36440cbb23a9b5afb6fd0d0886aa1bd8eef3ff8f550f582bf5a",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/authoring-a-skill.md": {
+      "sha256": "f6a13a445c360b48d6cd72780ac01955f45b82826476efe0e67c7559329407aa",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/autonomous-run.md": {
+      "sha256": "6ac974fd2b09748add56493e89f578a35a6a9289e1026515878d81ef3cf129d1",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/autopilot-full.md": {
+      "sha256": "acf4f4a58c11045f9d3e8807d907a877e61ca6432b079f1087d7d30fc931566f",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/autopilot-stack.md": {
+      "sha256": "c6bcb18b2ce605e77a2a2225854590a4b9a687911f79331746d91a4fe9a52e60",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/babysit.md": {
+      "sha256": "e261c1ff5581e0f8fc6c686f34de4b535f87473e77beabea7dd8323021214610",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/bug-fix.md": {
+      "sha256": "66e26542dad131cfd7df80ac0cdf81ed4d85e7b5e3f0eb65b933888760c4831f",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/eval.md": {
+      "sha256": "a93d449a908236afa6645179651844094b1547dbab4e484cffcdda630e4b90bf",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/feature.md": {
+      "sha256": "af8ce700b99953741cb547e34308fde0cf6b98ce67e1652c800d0deedf53aba1",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/hillclimb.md": {
+      "sha256": "942c1565b75ad02a2cb6230dd7c1ebd87e19f59a00319ebac2b6616007bf018f",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/investigation.md": {
+      "sha256": "dc66bcf6af3a074fc7f67aa5e12b93ef571a4fb4d8e17f2f1af5ae5359f42e46",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/multi-phase-plan.md": {
+      "sha256": "5f239457bfdec3345c92caa06c59bf0257c662b89353f25a1c02ea942dcd00b1",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/opening-a-pr.md": {
+      "sha256": "a5aef646de8b651306c2d10974623650e4a013a245aec1c00525bbe0e31bfa76",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/orchestrate.md": {
+      "sha256": "08dce6c9e7be1d13bc6944ab9b51665f935c531437f5e088bc53d2a62099ef05",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/pause-safely.md": {
+      "sha256": "77968cfe5f4a71a8cd33e0ae8ffcdbd88dd693a212c240457773e6c40c96c21d",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/perf-issue.md": {
+      "sha256": "c12aa2f82de7651a11676a3d5fea168f539b7f0faaa3a501d279255dd2a469c8",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/prototype.md": {
+      "sha256": "7aa1f52c691c3d46d5afc527b23f90977fce869ce33573c73c81a4c7f0cde962",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/refactoring.md": {
+      "sha256": "0f5dd38113379ea8cf61e2182eca0a7478eea9a869eb40c2dddab3335aeca197",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/runtime-forensics.md": {
+      "sha256": "3463372b578c28f27c236f2627f09b5c5b1e85e86db7399fb984f3892fb450f5",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/session-pickup.md": {
+      "sha256": "d194f2a7ef392c1598ef3f0e3b561370ca25c2c7a78308007af4aa46ada8ee12",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/shipping.md": {
+      "sha256": "bf56339bdf7e0223bcff5abf4e8599e3f5b547b3fcc3b4ce9475e6e7dda14a9f",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/trace-forensics.md": {
+      "sha256": "ef0bbf79856a4ae1a8993d54c1a1da159cb97623941b652c0069cf75a017e0f5",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/visual-parity.md": {
+      "sha256": "950ca51999a6454c98eee6bcbc3d1bbe501a4e3a5d5439b6f6ddc378991b256c",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/playbooks/worktree-cleanup.md": {
+      "sha256": "be04ae0afe19d4a4da5bcc4e94455f68dbebd1cda6eb0f456ca0d358ecf76c00",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/references/bugbot-triage.md": {
+      "sha256": "b2d146c770d8d3593e1ef3d77b668039b8e1f78093ea1a86f1d45d7f99614309",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/bootstrap.ts": {
+      "sha256": "ccd2ed08fd9da9d0d942e5f2491cfc74bb92d8a08fa51755e0da1ac8de287361",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/bun.lock": {
+      "sha256": "667d9cf7222e9aae3fa42a4be383e657784216e9df115da02227fbc5ac7bbe46",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/check-plan.mjs": {
+      "sha256": "e58c3d871b09d477be00628d69dd23ffa6c2e3a1728f5b867a841baa8e90278b",
+      "executable": true
+    },
+    ".agents/skills/poteto-mode/scripts/check-plan.test.ts": {
+      "sha256": "c80f3ea043b81f219b92c4c8a3af6bdd4f8d32ea596ec15b5b9e0252645f2ae8",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/orch/orch.test.ts": {
+      "sha256": "5e80b416bdcd68e4067690ce857345852fd2e0db3dcf3e25607999cd55b963d2",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/orch/orch.ts": {
+      "sha256": "47c92c57e8276616d8de94665a126bd832e748036afa8d0ffdbacb7946decb5c",
+      "executable": true
+    },
+    ".agents/skills/poteto-mode/scripts/orch/store.ts": {
+      "sha256": "558cfda533e1ebe7c8d7842604f07e0be7618759cf129b4c2397a8e29516ecea",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/package.json": {
+      "sha256": "fd511a0c01f522e0c781ddd8eccea0e91697a0856c6e6a3261de78a6a0287c72",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/cli.test.ts": {
+      "sha256": "a35592b4c6da96caf8d47987e9cd503fab6c7774ab87d11a43f24b4b5df2a9d1",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/cli.ts": {
+      "sha256": "89c08863089181a232be782c4b2ed90a1552f44aeecb0dcb7aac2c623620e680",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/fakes.test-helper.ts": {
+      "sha256": "cf0c5ee61b4a73444c1b775cfb6c81a40d312e055dd21a1f5eae6276e54de13f",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/github.test.ts": {
+      "sha256": "70c9f03d8738228763846f2abdd8c7de7be68dba3035041482386a69cbf5639b",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/github.ts": {
+      "sha256": "a605b8531468dbe4c07b93663c0993a9c11dc7e9179adde970f5c740396451d9",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/policy.test.ts": {
+      "sha256": "146acabcfee9b6fa3342358eb0a9504aa65fd081bbc15b10adf9c1c5485067d2",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/policy.ts": {
+      "sha256": "f2a3e31223d05edc05e5473cc3f8f3cb9bd20c202c30c6abe7f21f0f7aee8fbb",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/render.ts": {
+      "sha256": "2b709e86628d5b8fdb61f860e60ababc342b0626c67576305442cf548283a604",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/tsconfig.json": {
+      "sha256": "1ecccc72320b086c63ce3f73c959896fd747363e63553b3b1136296ea4069e45",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/types.compile.ts": {
+      "sha256": "621af4c9a664fbf699a9737efccdc248abb416df8819c9dc5f824beae2b9b1d6",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/types.ts": {
+      "sha256": "0cac435294dc85ce1ba755e8e67f6c5ab163dfa252f2722d6e3a2d68c58fec59",
+      "executable": false
+    },
+    ".agents/skills/poteto-mode/scripts/watch-pr/watch-pr": {
+      "sha256": "d955603be6cc0e8b8ffcec722f635192b2261410b1f2929abea94480e47eb5d4",
+      "executable": true
+    },
+    ".agents/skills/poteto-mode/scripts/worktree-audit.sh": {
+      "sha256": "e0a94e5e5b1ff60638916e440600e15851f7b79bc1a1d1f602fde05d465e2ec0",
+      "executable": true
+    },
+    ".agents/skills/principle-attack-the-premise/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-attack-the-premise/SKILL.md": {
+      "sha256": "a79179406b6774d2b4215b28ffef05afbfe1ff1989dca9d0175ff4899cf82ffa",
+      "executable": false
+    },
+    ".agents/skills/principle-attack-the-premise/UPSTREAM.md": {
+      "sha256": "c87bd7536f772f8a403ad8155535ee17a1bbec9a353156693eb3bb1520c87ae3",
+      "executable": false
+    },
+    ".agents/skills/principle-attack-the-premise/agents/openai.yaml": {
+      "sha256": "37fbf361a9926039b9c56d7e4d4cf2fe169759a9244ec55fb016bffd84272234",
+      "executable": false
+    },
+    ".agents/skills/principle-boundary-discipline/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-boundary-discipline/SKILL.md": {
+      "sha256": "0f10a55c4ee1fe2642cd972d6e7f4b08c9ec384ab14cfe8bc87b3f7cf7c05b74",
+      "executable": false
+    },
+    ".agents/skills/principle-boundary-discipline/UPSTREAM.md": {
+      "sha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
+      "executable": false
+    },
+    ".agents/skills/principle-boundary-discipline/agents/openai.yaml": {
+      "sha256": "22e9334485284234d22bfc137b5c9643c2fadc23b10d3c725a6bcfd342afd0a8",
+      "executable": false
+    },
+    ".agents/skills/principle-build-the-lever/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-build-the-lever/SKILL.md": {
+      "sha256": "96bd3c72dddbb3d373ecf697665156413266edd4e47de7362d9bdcfeaa070b95",
+      "executable": false
+    },
+    ".agents/skills/principle-build-the-lever/UPSTREAM.md": {
+      "sha256": "3434b0ad0c640c6f1d7960be7a8986c3bcdc14e26060360dec29903df60074ff",
+      "executable": false
+    },
+    ".agents/skills/principle-build-the-lever/agents/openai.yaml": {
+      "sha256": "8f4d2597ea97c2f02193a4eae19e79e3e844409b44ac70fc2748d8a53386bd20",
+      "executable": false
+    },
+    ".agents/skills/principle-encode-lessons-in-structure/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-encode-lessons-in-structure/SKILL.md": {
+      "sha256": "7c02fc5b7b4464795757a05e5461b078b6980a44cc2d8ba5ab01a081426a63c4",
+      "executable": false
+    },
+    ".agents/skills/principle-encode-lessons-in-structure/UPSTREAM.md": {
+      "sha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+      "executable": false
+    },
+    ".agents/skills/principle-encode-lessons-in-structure/agents/openai.yaml": {
+      "sha256": "dd034dbde8804b578d4d0969ec558e1d026aeba846f1ea10609711790a850981",
+      "executable": false
+    },
+    ".agents/skills/principle-exhaust-the-design-space/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-exhaust-the-design-space/SKILL.md": {
+      "sha256": "1bf70449c01b85daf6c9f925f43be59fc0005141f0b2971706921251278aa1a5",
+      "executable": false
+    },
+    ".agents/skills/principle-exhaust-the-design-space/UPSTREAM.md": {
+      "sha256": "2de83d99f93f60ec6313455b0bc9aa9f0bfb93dd59f414f403691322db00d4db",
+      "executable": false
+    },
+    ".agents/skills/principle-exhaust-the-design-space/agents/openai.yaml": {
+      "sha256": "7ecb3974b235c2f1eaa181cd58834b37e81a622fe22a22b741aea5ff57e420c4",
+      "executable": false
+    },
+    ".agents/skills/principle-experience-first/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-experience-first/SKILL.md": {
+      "sha256": "55fa739f9fa2f3a66410d543e595a3d97a3f6389ecd049f044fd200cf0806ccb",
+      "executable": false
+    },
+    ".agents/skills/principle-experience-first/UPSTREAM.md": {
+      "sha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
+      "executable": false
+    },
+    ".agents/skills/principle-experience-first/agents/openai.yaml": {
+      "sha256": "e94a3ffac0c7967d04f82fb833a6da2823771568abaa1ebd6e4b4d3f0c483c83",
+      "executable": false
+    },
+    ".agents/skills/principle-explain-the-number/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-explain-the-number/SKILL.md": {
+      "sha256": "1997eb3f6b640735830b03273358ad18398ea77f657021216c416bf6c276475c",
+      "executable": false
+    },
+    ".agents/skills/principle-explain-the-number/UPSTREAM.md": {
+      "sha256": "cd5a25f9e7cf023627ccb470dc5faa97542f29b4319496a32b839a8e1e988047",
+      "executable": false
+    },
+    ".agents/skills/principle-explain-the-number/agents/openai.yaml": {
+      "sha256": "900e12f55f4cbb25f699e3d9acde88f4a7ca24a7587ff043a97b145172ea2fa6",
+      "executable": false
+    },
+    ".agents/skills/principle-fix-root-causes/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-fix-root-causes/SKILL.md": {
+      "sha256": "ef9d31d31deaea51f0190fa44b9c6a659bf9f1db2fd202a10c81675ff55a4152",
+      "executable": false
+    },
+    ".agents/skills/principle-fix-root-causes/UPSTREAM.md": {
+      "sha256": "2131069d285d82fb799458494f2e4ac8759c9c6a60f9e300828c17874f514c6e",
+      "executable": false
+    },
+    ".agents/skills/principle-fix-root-causes/agents/openai.yaml": {
+      "sha256": "441f3b26f4bfb49012da8e8ffee0002941f3db171016418d817239e2c07fa6c8",
+      "executable": false
+    },
+    ".agents/skills/principle-foundational-thinking/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-foundational-thinking/SKILL.md": {
+      "sha256": "9228d565636176d992c4fe5da39e98dc35e5a7808d8bd680ae225efa5060ce95",
+      "executable": false
+    },
+    ".agents/skills/principle-foundational-thinking/UPSTREAM.md": {
+      "sha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+      "executable": false
+    },
+    ".agents/skills/principle-foundational-thinking/agents/openai.yaml": {
+      "sha256": "3d707ac4a172c96b1c219313675f6a2a3c965bca00f39e0908aa357dd844e888",
+      "executable": false
+    },
+    ".agents/skills/principle-guard-the-context-window/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-guard-the-context-window/SKILL.md": {
+      "sha256": "78bf45db6a923d98ab407866c9e4c12abd5e381f57894a36333d3a2862e182c9",
+      "executable": false
+    },
+    ".agents/skills/principle-guard-the-context-window/UPSTREAM.md": {
+      "sha256": "af0b9dd70b43628ce4a59a4d332e9d9ad055084e460f430e7a757495c627e81a",
+      "executable": false
+    },
+    ".agents/skills/principle-guard-the-context-window/agents/openai.yaml": {
+      "sha256": "6af10dafa3a8db1d47f6f911217158509ce624eaad32fad1183c5227a64a01be",
+      "executable": false
+    },
+    ".agents/skills/principle-laziness-protocol/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-laziness-protocol/SKILL.md": {
+      "sha256": "21c4d216afa6c9ffc34cdd3117149ef3e060ff96c3dfafcf4becacdcfa44671a",
+      "executable": false
+    },
+    ".agents/skills/principle-laziness-protocol/UPSTREAM.md": {
+      "sha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
+      "executable": false
+    },
+    ".agents/skills/principle-laziness-protocol/agents/openai.yaml": {
+      "sha256": "1a00f3bc452dd528cdbeee39930beca0fc312b27578275d9d173849761e0a850",
+      "executable": false
+    },
+    ".agents/skills/principle-make-operations-idempotent/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-make-operations-idempotent/SKILL.md": {
+      "sha256": "67a75a23784e9aaa0dcff3278f98b5b531a172d2a7b3eb95d1b6d743a9d5c097",
+      "executable": false
+    },
+    ".agents/skills/principle-make-operations-idempotent/UPSTREAM.md": {
+      "sha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+      "executable": false
+    },
+    ".agents/skills/principle-make-operations-idempotent/agents/openai.yaml": {
+      "sha256": "2bc1fcec7fe69e02f53ddf797674e9777d989784836b8f0080a5062322aa8f8a",
+      "executable": false
+    },
+    ".agents/skills/principle-migrate-callers-then-delete-legacy-apis/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md": {
+      "sha256": "58006fb8ffcd250426cf910a8c1f681d065e32b27f670954b69f5c68db8d8a3b",
+      "executable": false
+    },
+    ".agents/skills/principle-migrate-callers-then-delete-legacy-apis/UPSTREAM.md": {
+      "sha256": "09978915a4a11990cf0a9a02d9c08cc59e0b7a04c5c24b83aa560fbe4146f75b",
+      "executable": false
+    },
+    ".agents/skills/principle-migrate-callers-then-delete-legacy-apis/agents/openai.yaml": {
+      "sha256": "c3492cdfd2f8da905d8e5226d2cd487de07dafa8207b3fa8283b565299d5d843",
+      "executable": false
+    },
+    ".agents/skills/principle-minimize-reader-load/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-minimize-reader-load/SKILL.md": {
+      "sha256": "cb1bdc9cced4945d3ea70c86bf0cdda6a49ceda3ab17165d730f635e6d678715",
+      "executable": false
+    },
+    ".agents/skills/principle-minimize-reader-load/UPSTREAM.md": {
+      "sha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
+      "executable": false
+    },
+    ".agents/skills/principle-minimize-reader-load/agents/openai.yaml": {
+      "sha256": "1e5199256cc22d2694d038890cba3e993953ffe7bfe20afdc27ca5e7d350adfc",
+      "executable": false
+    },
+    ".agents/skills/principle-model-the-domain/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-model-the-domain/SKILL.md": {
+      "sha256": "a13540458ab1024936644196a427a00f5a2640594253b74ae1c8407e1ea25722",
+      "executable": false
+    },
+    ".agents/skills/principle-model-the-domain/UPSTREAM.md": {
+      "sha256": "52c0d85e0c3827c41c18299b642657d7b47eaf77b7b31609e42e0df42b84c75f",
+      "executable": false
+    },
+    ".agents/skills/principle-model-the-domain/agents/openai.yaml": {
+      "sha256": "307a2af98ab1428a12be3034702b17a51a857612b230bca9cdabb8b00bafdc6c",
+      "executable": false
+    },
+    ".agents/skills/principle-never-block-on-the-human/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-never-block-on-the-human/SKILL.md": {
+      "sha256": "70038b2690e614479744f83b86eb53ccbd3a74cdfb5e8f9d9a83eb0e566214b1",
+      "executable": false
+    },
+    ".agents/skills/principle-never-block-on-the-human/UPSTREAM.md": {
+      "sha256": "05030a7a083c337676f793881b4e93cd218e8f1dd676529f56e6ac1d3efb8d1f",
+      "executable": false
+    },
+    ".agents/skills/principle-never-block-on-the-human/agents/openai.yaml": {
+      "sha256": "352cc2dd021d3facda067d6c0d583b81e8c34c7d655fb5d76488de2ac399900b",
+      "executable": false
+    },
+    ".agents/skills/principle-outcome-oriented-execution/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-outcome-oriented-execution/SKILL.md": {
+      "sha256": "340c5c8300d01ef51ee4b5921d7bd4cc3e4473bcaaa229dc65cdca163f4b74a7",
+      "executable": false
+    },
+    ".agents/skills/principle-outcome-oriented-execution/UPSTREAM.md": {
+      "sha256": "10eb91633aa570355ba4bb37088fcade2b22e498df7a58edc749e65bc5a78e2d",
+      "executable": false
+    },
+    ".agents/skills/principle-outcome-oriented-execution/agents/openai.yaml": {
+      "sha256": "4206944244c1ad9a6c33cf741ba1ae24816cc562450b184d0a7238140c79a726",
+      "executable": false
+    },
+    ".agents/skills/principle-prove-it-works/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-prove-it-works/SKILL.md": {
+      "sha256": "901df62c9ac1de46ea2d38d07df4fb8dbfef3b960c1a470aa75acf8125ded333",
+      "executable": false
+    },
+    ".agents/skills/principle-prove-it-works/UPSTREAM.md": {
+      "sha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+      "executable": false
+    },
+    ".agents/skills/principle-prove-it-works/agents/openai.yaml": {
+      "sha256": "fed31ec13ca86fab43606ec2d2ac226465c62375682d6ea8c79a9b8c62daa511",
+      "executable": false
+    },
+    ".agents/skills/principle-redesign-from-first-principles/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-redesign-from-first-principles/SKILL.md": {
+      "sha256": "4b21f1f6adf21298f3e193b07480e573f54456c1c56f8f47a28de0bb9b59b391",
+      "executable": false
+    },
+    ".agents/skills/principle-redesign-from-first-principles/UPSTREAM.md": {
+      "sha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
+      "executable": false
+    },
+    ".agents/skills/principle-redesign-from-first-principles/agents/openai.yaml": {
+      "sha256": "ac6cb88169629e5673d43bee9f4606d6453a0381e04370c187fc226e6ded2927",
+      "executable": false
+    },
+    ".agents/skills/principle-separate-before-serializing-shared-state/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-separate-before-serializing-shared-state/SKILL.md": {
+      "sha256": "3ef9785f5cf957d4d756302aaac8ba12bd274da4bc3649cea9f72ac519b3b4e3",
+      "executable": false
+    },
+    ".agents/skills/principle-separate-before-serializing-shared-state/UPSTREAM.md": {
+      "sha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+      "executable": false
+    },
+    ".agents/skills/principle-separate-before-serializing-shared-state/agents/openai.yaml": {
+      "sha256": "8e3aee02a639ca950c29939dda98852a98e33d5cdef9f46502dd7dc517ec8047",
+      "executable": false
+    },
+    ".agents/skills/principle-sequence-verifiable-units/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-sequence-verifiable-units/SKILL.md": {
+      "sha256": "ddabe7fc17ba90eb4f495bc7d909832eaa22124be875284c92d370954fc2f3d9",
+      "executable": false
+    },
+    ".agents/skills/principle-sequence-verifiable-units/UPSTREAM.md": {
+      "sha256": "2ccbbacc56ace5afdfb8670cef19d7bd009fb2a0033b9a741cbdf2b6baf72187",
+      "executable": false
+    },
+    ".agents/skills/principle-sequence-verifiable-units/agents/openai.yaml": {
+      "sha256": "a50e66235f7796bc18021bba0a5b8453f9859fd400e2ed75307d93ddd022473f",
+      "executable": false
+    },
+    ".agents/skills/principle-subtract-before-you-add/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-subtract-before-you-add/SKILL.md": {
+      "sha256": "ba128c0d2a5d729362a57e6afa56dce220463f1c05a6d93bcfc1daf98a04b981",
+      "executable": false
+    },
+    ".agents/skills/principle-subtract-before-you-add/UPSTREAM.md": {
+      "sha256": "8c93bb9d1a7f38e2ef37655d93f0e790fa59903105af3d500cc8a663ebe45f3f",
+      "executable": false
+    },
+    ".agents/skills/principle-subtract-before-you-add/agents/openai.yaml": {
+      "sha256": "b517277622a7b385e1af73dfbc0ea9bb76f6d735e77454aedbc21099d25b25ec",
+      "executable": false
+    },
+    ".agents/skills/principle-test-behavior-not-implementation/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-test-behavior-not-implementation/SKILL.md": {
+      "sha256": "375383df1c0c26c7c4c94a9f6bc9111d61140d2422f83a37fce83c9a8bf0d1f8",
+      "executable": false
+    },
+    ".agents/skills/principle-test-behavior-not-implementation/UPSTREAM.md": {
+      "sha256": "b2b73ba42920f9c3174ecdf808ec6e4591b3a9266ada9a05814f386004266d3a",
+      "executable": false
+    },
+    ".agents/skills/principle-test-behavior-not-implementation/agents/openai.yaml": {
+      "sha256": "0a7c4a6d8b5862af455f7fc4745a59a53dbd39a24de8f9bca6aa6755c46f0038",
+      "executable": false
+    },
+    ".agents/skills/principle-type-system-discipline/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/principle-type-system-discipline/SKILL.md": {
+      "sha256": "1834f1af122c724117ae48c6e0d997f0a5203d908802b57d9cf2fdafe1490802",
+      "executable": false
+    },
+    ".agents/skills/principle-type-system-discipline/UPSTREAM.md": {
+      "sha256": "2e492cef34bb25a20b9115df61f9ef3a9837e3fda144ffda8079e5f45a1b72e8",
+      "executable": false
+    },
+    ".agents/skills/principle-type-system-discipline/agents/openai.yaml": {
+      "sha256": "1f2b6d112993c979684b6af4d56cda9f0e246df96741ff1075b6972c68b2ad4a",
+      "executable": false
+    },
+    ".agents/skills/quality-review/SKILL.md": {
+      "sha256": "a2500f342573e125b9959ea02368728c3bc4fe29c77aa231d7d3533e9d113acd",
+      "executable": false
+    },
+    ".agents/skills/recall/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/recall/SKILL.md": {
+      "sha256": "b7296bc694e7ce145ed4b383a1feb455d203694bf76f0259231c1d22a41dbf79",
+      "executable": false
+    },
+    ".agents/skills/recall/UPSTREAM.md": {
+      "sha256": "b0ceb996259c3404532f61e4b010df4e3d80d7ddbed85b3c302895723eb62a89",
+      "executable": false
+    },
+    ".agents/skills/recall/agents/openai.yaml": {
+      "sha256": "98e1799cacd09746f145933180425cd5eff366a18b5441ffc591eb9cefca136f",
+      "executable": false
+    },
+    ".agents/skills/reflect/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/reflect/SKILL.md": {
+      "sha256": "f5da055406a4a9a85ac38581581ba2e2b7f2af773c64178b3517067592b14252",
+      "executable": false
+    },
+    ".agents/skills/reflect/UPSTREAM.md": {
+      "sha256": "1f5a8c246cdee8251f8667d85bd5d97f6c2801f505843c26ddbd6c621632519b",
+      "executable": false
+    },
+    ".agents/skills/reflect/agents/openai.yaml": {
+      "sha256": "fe6eb256784e26e83e76e099c345cbb94c769658bb6aee494f785b278894a543",
+      "executable": false
+    },
+    ".agents/skills/reflect/references/divergent-reviewer.md": {
+      "sha256": "f6030d88e20e906ef5e2d9ba44cb013ce610c49c2fe2ef74c377d32e0dc9e939",
+      "executable": false
+    },
+    ".agents/skills/reflect/references/judgment-reviewer.md": {
+      "sha256": "38f917619fbf346062d643e0ad6b12fc952d58678dfcbbf42ffcf6d8b9c08307",
+      "executable": false
+    },
+    ".agents/skills/reflect/references/synthesizer.md": {
+      "sha256": "6af816963de74d1a1aef4070273c1ff533d2072732e488e159ddc0b299fec3cd",
+      "executable": false
+    },
+    ".agents/skills/reflect/references/tooling-reviewer.md": {
+      "sha256": "f81b8697e7366fbbc18feba52c6e3253a101f751091364ebc4396a1d9b5753b4",
+      "executable": false
+    },
+    ".agents/skills/requirements-discovery/SKILL.md": {
+      "sha256": "ca206ec0350d70e2fd1e523b7a600ecae41e88ebcb52e21ae28b6f943ee8bf8e",
+      "executable": false
+    },
+    ".agents/skills/semantic-ui-design/SKILL.md": {
+      "sha256": "79dcd6a125056a3bc3d1a2248476fb8ab416342b4fe341d04dc3de4c006834ba",
+      "executable": false
+    },
+    ".agents/skills/semantic-ui-design/agents/openai.yaml": {
+      "sha256": "78cc97a8c6be2b338e34780ab42600087a32315220847db216afb7675a373cf4",
+      "executable": false
+    },
+    ".agents/skills/semantic-ui-design/references/principle-checks.md": {
+      "sha256": "b50414c0abce757ab203ef834c22a861c4724e4d4dcf179f853ae1bd95216d42",
+      "executable": false
+    },
+    ".agents/skills/setup-pstack/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/setup-pstack/SKILL.md": {
+      "sha256": "c41d33a5cbb8dd63b7158ba17f8d746a02d5c29bf575d90fe241aef6557e5c5e",
+      "executable": false
+    },
+    ".agents/skills/setup-pstack/UPSTREAM.md": {
+      "sha256": "d61b47256a18155a81c8e5ef95e3cc6569ce8c18317c35c4dd9c8015cf68cb59",
+      "executable": false
+    },
+    ".agents/skills/setup-pstack/agents/openai.yaml": {
+      "sha256": "2f2df707f5ca73899bcf6cafa9b5243f136a9eb823414e3ac5328dcec8ac370a",
+      "executable": false
+    },
+    ".agents/skills/sharpen/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/sharpen/SKILL.md": {
+      "sha256": "4c501c442cf95ecf434175112b1f4780cf8a2b0ef1ea60bfa81433ab3105ee22",
+      "executable": false
+    },
+    ".agents/skills/sharpen/UPSTREAM.md": {
+      "sha256": "6bcd73916696eb9c5b79b6f960983760c34bcc28937c11142dd8d86b5107aa46",
+      "executable": false
+    },
+    ".agents/skills/sharpen/agents/openai.yaml": {
+      "sha256": "c9391920fb6f85a25f71066913fe1195edc92500e8502532a4164de992ea1da5",
+      "executable": false
+    },
+    ".agents/skills/show-me-your-work/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/show-me-your-work/SKILL.md": {
+      "sha256": "e55cacb9dd9f4df15ea2e9c8b5ae969e0d992ddf00dc4e4bc02b2b978d459d62",
+      "executable": false
+    },
+    ".agents/skills/show-me-your-work/UPSTREAM.md": {
+      "sha256": "920a8217cbb62f92a2222fb81fc9eab17ecd554a0277e444a95a927195139bd1",
+      "executable": false
+    },
+    ".agents/skills/show-me-your-work/agents/openai.yaml": {
+      "sha256": "f1dc187e8aa293b22816777f310cb36c529efe08041c440b6d78f771f2fd905a",
+      "executable": false
+    },
+    ".agents/skills/show-me-your-work/references/decision-log-template.tsv": {
+      "sha256": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76",
+      "executable": false
+    },
+    ".agents/skills/show-me-your-work/scripts/log.sh": {
+      "sha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
+      "executable": true
+    },
+    ".agents/skills/swarm/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/swarm/SKILL.md": {
+      "sha256": "2a0160bb8b2fdfdb00555652454246eb6af1867993fe0c67037b17585ea5485c",
+      "executable": false
+    },
+    ".agents/skills/swarm/UPSTREAM.md": {
+      "sha256": "c8fe1b28282e7a051a4041a146a11f076e0fd95252bb010106a58209805303d5",
+      "executable": false
+    },
+    ".agents/skills/swarm/agents/openai.yaml": {
+      "sha256": "8d850537f15b8c41bd4a3cc9b858a3d9e670de2f9b3ae5e9d4c7c00811a3c924",
+      "executable": false
+    },
+    ".agents/skills/tdd/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/tdd/SKILL.md": {
+      "sha256": "58207991fcbdcec3ba1152750c57bd8438dd9dec5ca37fc6181e115fdbb60521",
+      "executable": false
+    },
+    ".agents/skills/tdd/UPSTREAM.md": {
+      "sha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f",
+      "executable": false
+    },
+    ".agents/skills/tdd/agents/openai.yaml": {
+      "sha256": "3ce0d8fe6ae2cfa4e6b95ecf29ef8b497e6e58214f090df0d31e54cfbf02a89c",
+      "executable": false
+    },
+    ".agents/skills/teach/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/teach/SKILL.md": {
+      "sha256": "04f0cd25e5b92c83f0212897c2ccfe808ed1b3ffdc8fa58d481f995a8106143e",
+      "executable": false
+    },
+    ".agents/skills/teach/UPSTREAM.md": {
+      "sha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
+      "executable": false
+    },
+    ".agents/skills/teach/agents/openai.yaml": {
+      "sha256": "14bfacdf8edb21b262430ddfa24151fcfedb44b595a921f67268ea999139250f",
+      "executable": false
+    },
+    ".agents/skills/technical-writing/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/technical-writing/SKILL.md": {
+      "sha256": "78b0db9c357d2c874a4cc6b551d6489085c2e5b16865ace5afefca3f453cc3bb",
+      "executable": false
+    },
+    ".agents/skills/technical-writing/UPSTREAM.md": {
+      "sha256": "61fe9c424a798ebf36ad94941f87be049cb8827bdf86d21474a0dde37b513c43",
+      "executable": false
+    },
+    ".agents/skills/technical-writing/agents/openai.yaml": {
+      "sha256": "46d1068eaae2b7b0d9d34350f895651019640155f6ac8b68352bc2d26f3e1373",
+      "executable": false
+    },
+    ".agents/skills/typescript-best-practices/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/typescript-best-practices/SKILL.md": {
+      "sha256": "411e310acb3696fd0793f9850ebebc525f923dcb6d430fd2bdb72dfdb6d9e297",
+      "executable": false
+    },
+    ".agents/skills/typescript-best-practices/UPSTREAM.md": {
+      "sha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
+      "executable": false
+    },
+    ".agents/skills/typescript-best-practices/agents/openai.yaml": {
+      "sha256": "bd2ba2c613da369fa68d9bfbffa6e1f8fd66885618b8f062076ecb096d67af35",
+      "executable": false
+    },
+    ".agents/skills/typescript-best-practices/references/patterns.md": {
+      "sha256": "faa1362055374452efccac1b629677c61acfb0bcc6c4e3311836b5715638ee18",
+      "executable": false
+    },
+    ".agents/skills/ui-implementation-harness/SKILL.md": {
+      "sha256": "9a25c396e84d42753ddd3cb30a48bfb45a86669079ac0848468b0ae5c7484b54",
+      "executable": false
+    },
+    ".agents/skills/ui-implementation-harness/agents/openai.yaml": {
+      "sha256": "654f1bed42c2f54442b8f5b3e5f0ff5fd42ff73be5e734d0fa338e767e5c427a",
+      "executable": false
+    },
+    ".agents/skills/ui-implementation-harness/references/principle-checks.md": {
+      "sha256": "0704b5c21bf89db602bf1f01588d0c58b15c09e22a9e8e925926d87ef3935f2f",
+      "executable": false
+    },
+    ".agents/skills/ui-implementation-harness/references/standard-path.md": {
+      "sha256": "1e9ed8dea689518e1d5d3e8e48f1de52b93d6bc3ac203ed5132447d6be284e6c",
+      "executable": false
+    },
+    ".agents/skills/ui-implementation-harness/references/ui-contract.md": {
+      "sha256": "a2f9f22879b8553a4304cd6058f31a373d0a735e8a527133f4bf298c43b2d4ca",
+      "executable": false
+    },
+    ".agents/skills/unslop/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/unslop/SKILL.md": {
+      "sha256": "8a2686d30e2cd8d884055cc0e6018d5c87cd320cb40232d8a80a59eb0786fa00",
+      "executable": false
+    },
+    ".agents/skills/unslop/UPSTREAM.md": {
+      "sha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+      "executable": false
+    },
+    ".agents/skills/unslop/agents/openai.yaml": {
+      "sha256": "c81bcef95313ce7ff5eaed8bdb39d96bdd86ce90705247f4776a2437f29b2f3e",
+      "executable": false
+    },
+    ".agents/skills/why/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".agents/skills/why/SKILL.md": {
+      "sha256": "07188d913d7a59ea5d39ba4f3eaab46cde19e89023b92723e7d4d9b3811a39eb",
+      "executable": false
+    },
+    ".agents/skills/why/UPSTREAM.md": {
+      "sha256": "144d42e7712723d763e607bc0a969e5f1cdf83ec7228519d87677cc534571bed",
+      "executable": false
+    },
+    ".agents/skills/why/agents/openai.yaml": {
+      "sha256": "54ed748039621102bc1ddf2312cdb7b0ae515eac664b2b3182118823e5315a21",
+      "executable": false
+    },
+    ".agents/skills/why/references/epistemics.md": {
+      "sha256": "d54a2361b2d5973bc3fe2edf62f446d87935974d4b40d47f23b9529f956ca758",
+      "executable": false
+    },
+    ".agents/skills/why/references/investigator-prompt.md": {
+      "sha256": "c44afba186f899094f3694e6c9d6de5d14ff7c4ce28b787a9f50fc789c9a7fc3",
+      "executable": false
+    },
+    ".agents/skills/why/references/source-playbook.md": {
+      "sha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/code-archaeology.md": {
+      "sha256": "a4a3970e9db448054aed676f3f7feeee667b4b69f0bd57c8fd72b751be687cc7",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/databricks.md": {
+      "sha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/datadog.md": {
+      "sha256": "b139faac5dc11b8f26c8255dce6033c1a6ac143b038d3dd103f2034c5dbec9cd",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/incident-postmortem.md": {
+      "sha256": "bf2661f1a81c37700884a45b77d6289be0c802b065febced31990e6564510839",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/linear.md": {
+      "sha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/notion.md": {
+      "sha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/sentry.md": {
+      "sha256": "2d4f83048eac1df530b399e2aed75dd7c9c18577b7665420aaeb96d0ceb0b702",
+      "executable": false
+    },
+    ".agents/skills/why/references/sources/slack.md": {
+      "sha256": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
+      "executable": false
+    },
+    ".agents/skills/why/references/synthesizer-prompt.md": {
+      "sha256": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb",
+      "executable": false
+    },
+    ".gitignore": {
+      "sha256": "6725417bde74b284283ede55ba5618e6c630767003e5249fb8b02a2bf4ab0f61",
+      "executable": false
+    },
+    ".harness/commands.md": {
+      "sha256": "e526e943c9fe0bd0ff20f927c3a3f37702b65d1c715e8dc55b0da27cd90381a9",
+      "executable": false
+    },
+    ".harness/common.py": {
+      "sha256": "eb4625171135dcdd3dd172b3f7e58383a12edd1a05a9d58b63f333e087c84fdb",
+      "executable": false
+    },
+    ".harness/cumulative-quality.md": {
+      "sha256": "61a361ed03e27735c5d39c5517a9aa7409b195098f5cb50aad10311e3926ac65",
+      "executable": false
+    },
+    ".harness/delivery.py": {
+      "sha256": "3725b0c63bf5e794806b225ed44329adb4a0d0f1db0257316280657354531595",
+      "executable": false
+    },
+    ".harness/framework.lock.json": {
+      "sha256": "be9b802f9eac87f2b5d09398c2b9e97f2c4660031cf36fa2571841b6d5b6e7d8",
+      "executable": false
+    },
+    ".harness/harness.py": {
+      "sha256": "933f8e83b3dad418d4fb0ea1ee9b807d1449abd6bdef63c5f489a93c5510f23f",
+      "executable": false
+    },
+    ".harness/licenses/mattpocock.LICENSE": {
+      "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "executable": false
+    },
+    ".harness/licenses/ponytail.LICENSE": {
+      "sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+      "executable": false
+    },
+    ".harness/licenses/pstack.LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "executable": false
+    },
+    ".harness/policy_changes.py": {
+      "sha256": "aa5b79d011ee00cc02fc0b2b0416201d74009e2546f51f6c385b404dfe9ab7e0",
+      "executable": false
+    },
+    ".harness/project.json": {
+      "sha256": "8790e816e4355f87aed4ce638a4db0926f28cfd137f1957bec54087de894280b",
+      "executable": false
+    },
+    ".harness/protocol.md": {
+      "sha256": "7f9afc38a18199a22372d662ceb3cd6b0c0aa5fec5e7be7a0a2eab28875eb0d6",
+      "executable": false
+    },
+    ".harness/pstack/agents/comment-sicko.md": {
+      "sha256": "3e239e40b7b4b9beb2cf7f3ccc57f2388eb8b69bd1ba8ae888ef87ef6e0e2116",
+      "executable": false
+    },
+    ".harness/pstack/agents/poteto-agent.md": {
+      "sha256": "979f18abd000d185a0b4c41a2a4111c0910596a7f5c81cbb571885bc721b2bf7",
+      "executable": false
+    },
+    ".harness/quality-evaluation.md": {
+      "sha256": "648f8ffb80f610f4eaf65dc6840059774b84b1f86f717855a867100e859e6248",
+      "executable": false
+    },
+    ".harness/quality_history.py": {
+      "sha256": "a6e29bb59063010778cd459f3c8380ad03006a97bcfa3ca9057ee5c2ebc7902b",
+      "executable": false
+    },
+    ".harness/rules.md": {
+      "sha256": "262c6b2fbc2319ccba85a2014f5e8b29c965a71ccd8c223439419be2937736d1",
+      "executable": false
+    },
+    ".harness/skill-compatibility.md": {
+      "sha256": "c4d6679b0f1725cee203ca6742d1fa4a03fe9a061b4f2ab6649008471e746968",
+      "executable": false
+    },
+    ".harness/structural-quality.md": {
+      "sha256": "d34a5acafdb197d113e3b1de579f8c4ce4d37ebb3d7a62a9a63334dca4faab42",
+      "executable": false
+    },
+    ".harness/structure.py": {
+      "sha256": "db7ff13a15ce7fa14559f8c0ba90c6eaea3eaa8a1268e1824366c2bf88e4c1a5",
+      "executable": false
+    },
+    ".harness/templates/CODEOWNERS": {
+      "sha256": "76eb47d37c19de67ca11c661ed14285ae15693195030070586e04f0c076e9340",
+      "executable": false
+    },
+    ".harness/templates/jscpd.json": {
+      "sha256": "003b3ebb0def81440ee787331be9f182321bfc7ece931e3041e668ad6c7515a6",
+      "executable": false
+    },
+    ".harness/templates/project-ci.yml": {
+      "sha256": "af2862a36dacff8bc59a7088adcdc12b7730a70ef7cd83251dcea1af08cea724",
+      "executable": false
+    },
+    ".harness/templates/project-cumulative.json": {
+      "sha256": "0841287a11bd91b7b1981eba60f6ed25537d29275162f5be9b01b417c554af97",
+      "executable": false
+    },
+    ".harness/templates/project-python.json": {
+      "sha256": "0ce4c5d30863150cb6173ac96a8860304c99b47b8ad4a7b3dbaef542c688738a",
+      "executable": false
+    },
+    ".harness/templates/requirements-quality.in": {
+      "sha256": "9c6344a86229c5f67203f49edac3ece31a6ffa64e73d95b997c7c70bda3ba8f2",
+      "executable": false
+    },
+    ".harness/templates/requirements-quality.txt": {
+      "sha256": "cdfcb57403f2f146d1267e722551c197a6e06f11fe5e94e440972f3550ff7e66",
+      "executable": false
+    },
+    ".harness/templates/tach.toml": {
+      "sha256": "ccbcb75a1ba11ccb1a2a2a7054cec3d6cba71c5e47205ebfe8303a98c9814ad3",
+      "executable": false
+    },
+    ".harness/ui-design.md": {
+      "sha256": "7178810ee027faad0a0a8f9ba7c7366d3c1f2dd82c3e311f351d6652728b5aa1",
+      "executable": false
+    },
+    ".harness/ui-principles.md": {
+      "sha256": "75e166a4329c76f0841acacb5417a20d4c3a880e9155021843a1571810e202c0",
+      "executable": false
+    },
+    ".harness/ui_contract.py": {
+      "sha256": "da3371b0e833c3f3e776dea891a928c5abc8fb95860ba4ea8bd9ff78cb171063",
+      "executable": false
+    },
+    ".harness/ui_principles.py": {
+      "sha256": "36d295df07fb243475afd70912ea9ccada4fe7682339ddffb8262f961318f8f7",
+      "executable": false
+    },
+    ".harness/ui_rules.py": {
+      "sha256": "bfd26152936182c2e429410e9822e314ba5841e68d7aec19b5e27db3a92b65a6",
+      "executable": false
+    },
+    ".harness/upstream-lock.json": {
+      "sha256": "04c602ae7d713c59787a4521bdc61df854feebad41271c2939265e358fe12e66",
+      "executable": false
+    },
+    "AGENTS.md": {
+      "sha256": "80660308f2dd0ba91c27aa8e9c5a9069a282dd4b0c6deea03a2c99f515a63bd7",
+      "executable": false
+    },
+    "README.md": {
+      "sha256": "4d69c37bda64a190d451006bcb1a48db7b53be8a9f3f18c7b40d1e05bb82658c",
+      "executable": false
+    },
+    "_config.yml": {
+      "sha256": "75d7429a8decc8da01ce7db45a30302573ab1aca50e76cbb07e552bbe6bffbad",
+      "executable": false
+    },
+    "app.js": {
+      "sha256": "1f1166a01367bddcbf91be224d49f794088f20a1221b7c4e45f03f3853fa8110",
+      "executable": false
+    },
+    "assets/icon-180.png": {
+      "sha256": "7dfbfb10349db615efccfac5fe334f7f85a4330504eecc09db5d3b5d2cf76fa1",
+      "executable": false
+    },
+    "assets/icon-192.png": {
+      "sha256": "07f37bfa37b70f6f71f8325fb3daf0522dfd4c4def37b1a4a063766e67c54075",
+      "executable": false
+    },
+    "assets/icon-512.png": {
+      "sha256": "92731618382ea90f07e0223dcb6a1d02bbecb1e05cece42c1654c4971eb378f2",
+      "executable": false
+    },
+    "assets/icon.svg": {
+      "sha256": "9e1c30a03ff03d00585488eab01c1eca8d953d0e3d326f074acc13fa7c53fcb6",
+      "executable": false
+    },
+    "docs/design/nightreign-boss-tool/code-map.md": {
+      "sha256": "635b52abaac6f7828776c655c740fe8a5305212bbcf02925fc6fb9c424935c9b",
+      "executable": false
+    },
+    "docs/design/nightreign-boss-tool/design.md": {
+      "sha256": "c426ad3501f331bb1fda58dfc13e8e75146d66c5d4fe3f56e2f82343196977a3",
+      "executable": false
+    },
+    "docs/design/nightreign-boss-tool/manifest.json": {
+      "sha256": "16e7c35a8a4052f75bb87d662481bbe1f09ace710723ae19e12d264bf20ae9e9",
+      "executable": false
+    },
+    "docs/design/nightreign-boss-tool/plan.md": {
+      "sha256": "2c3385e13a29a9318a50028730dfb4a50a89784292ce9a9f298bcad77e5421e4",
+      "executable": false
+    },
+    "docs/design/nightreign-boss-tool/requirements.md": {
+      "sha256": "f0c8dfa4d2addeadf1472af7585c194bf8a50ccae0d3307322dd2bac1e75ecaf",
+      "executable": false
+    },
+    "docs/design/nightreign-boss-tool/specification.md": {
+      "sha256": "ff55b6be1110db582b32ab2ff49f5307bd10961b7db4af95b6b3266a862452b8",
+      "executable": false
+    },
+    "https-static-server.ps1": {
+      "sha256": "d289059e4efac56b2f26eaf770b0851af6b534864999cc75e3b0f125e5c4f2e0",
+      "executable": false
+    },
+    "index.html": {
+      "sha256": "4786a035685502cadba8ce291369f00dff1976f9ab8c286c956aece38ea50e03",
+      "executable": false
+    },
+    "manifest.webmanifest": {
+      "sha256": "139557b829513b2d5daa418ad1022bb0c878aded90ca843533ad318ff13dc332",
+      "executable": false
+    },
+    "mapping-data.js": {
+      "sha256": "ab27a1425d8b37fb3d463500125641b0a0cbfad64f4e05bb47e9527ab8cd70b9",
+      "executable": false
+    },
+    "resistance-data.js": {
+      "sha256": "55d700eef65b1cc7f8e629c102306410a841b726bb1da2cf8d020b464f94e510",
+      "executable": false
+    },
+    "resistance.css": {
+      "sha256": "a3418ee481b7db8b9feba68a040b06b27d86594226a1a3e8b2b73d85b3d9e7ab",
+      "executable": false
+    },
+    "service-worker.js": {
+      "sha256": "66ffab294531dc039863573a835897f759686f9bb8d2634a6162f8d62cad7924",
+      "executable": false
+    },
+    "start-https.bat": {
+      "sha256": "75a4282e61079316ae42a7c5f173b93a3a4abe2735fbb6ecc8b98a353acf87e3",
+      "executable": false
+    },
+    "start-https.ps1": {
+      "sha256": "cb289e1c48cdd45019444e4c047bf419d358fa324a16553c19cf3328114ca586",
+      "executable": false
+    },
+    "styles.css": {
+      "sha256": "16ea9e88d145117e90634809bccb37e8ddcd26fe67bdf5219fc719dd9c6ed110",
+      "executable": false
+    },
+    "tests/browser_support.py": {
+      "sha256": "fcb5801976a716e86aa7105161d9e13f7672941cf4bc2993b9baa1ddcff74b30",
+      "executable": false
+    },
+    "tests/fixtures/behavior-baseline.json": {
+      "sha256": "26159c4705496934439e526b8d31538cb0398320d25cba328fddc334aa189f9d",
+      "executable": false
+    },
+    "tests/fixtures/logic-hashes.json": {
+      "sha256": "0ea252a860543dbef89d5b563f55f8c977fea8988299eeb846c7ead8a2e284f7",
+      "executable": false
+    },
+    "tests/regression.py": {
+      "sha256": "8ffb192e86a8efb0d6722cd590eea7f0f9f0cd6f707b4e54f6e92c2e9e8be7d0",
+      "executable": false
+    },
+    "tests/ui_browser.py": {
+      "sha256": "b3a31fa0320b32ca37027ed4bdd82185950af8658b89e4cdf713b1cf6c402956",
+      "executable": false
+    },
+    "ui/definition.json": {
+      "sha256": "6bb07002c6ecf2281f13d84c3eb06b5fbcea2678ec1422c1677ea0c342ff4991",
+      "executable": false
+    },
+    "ui/registry.json": {
+      "sha256": "8e2c62bb942615c1d8875470679667d1a28666e8949486e8f1d6e3ab302af3d0",
+      "executable": false
+    },
+    "ui/tokens.json": {
+      "sha256": "89d353331201614a04339765f2c2afe2a3a011396b6d96318c5a503d8500acc1",
+      "executable": false
+    }
+  },
+  "base_sha": null,
+  "structural_quality": null,
+  "ui_policy": {
+    "ui": {
+      "schema_version": 3,
+      "mode": "enforce",
+      "registry": "ui/registry.json",
+      "input_globs": [
+        "index.html",
+        "styles.css",
+        "resistance.css",
+        "app.js",
+        "mapping-data.js",
+        "resistance-data.js",
+        "manifest.webmanifest",
+        "service-worker.js",
+        "ui/**"
+      ],
+      "check_ids": [
+        "ui-browser"
+      ]
+    },
+    "checks": [
+      {
+        "id": "ui-browser",
+        "argv": [
+          "python3",
+          "tests/ui_browser.py"
+        ],
+        "timeout_seconds": 180
+      }
+    ]
+  }
+}

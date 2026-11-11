@@ -1,0 +1,1898 @@
+{
+  "reviewer": "ui-independent-reviewer",
+  "context": "/root/ui_review",
+  "decision": "request_changes",
+  "summary": "UIの配置・可読性とローカル動作は改善している。ゲームJS/データ、CSP、PWA経路の変更境界も守る。ただしv3の全表示文台帳に通常操作の状態とplaceholderが欠け、非操作見出しをaction_labelへ誤分類している。R1/R2を直し、runと別コンテキストレビューを更新する。",
+  "checked_requirements": [
+    "REQ-UI",
+    "REQ-LOGIC",
+    "REQ-ACCESS",
+    "REQ-PWA",
+    "REQ-HARNESS"
+  ],
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "major",
+      "status": "open",
+      "description": "全表示文の検証が初期画面と1日目選択後の閉じたdetailsに限定され、通常操作で表示される文言を検査していない。",
+      "evidence": [
+        "tests/ui_browser.py:measure_scene はfixture直後にinventory(body)を取得する。help/form等のcontrol_probeは開閉のbooleanだけを記録し、開いた画面のinventoryを取得しない。",
+        "独立した実Chromium操作で使い方を開くと、index.htmlの新規3段落すべてが202個のcopy itemのどこにも存在しなかった。1440/390/320pxで再現。",
+        "390pxで検索「存在しないボス」を入力すると「一致するボスがありません。」、イベント検索では「一致するイベントがありません。」が表示され、いずれも台帳にない。",
+        "夜の騎兵→最初の候補を展開すると「物理・属性」「標準」「0%」「魔力」、ナメレスの形態を展開すると「252」が加わる。古竜を2日目に選択すると「2体」、日別詳細では「−80%」等も加わるがinventory対象外。",
+        "browser_support.pyのtext-node walkerは表示中のinput placeholderを取得しない。「ボス名」「1日目を先に選択」「イベント名」は画面上に見えるが、台帳にも実測配列にもない。"
+      ],
+      "fix": "設計へ戻り、help-open、検索不一致、候補/形態の全表、2日目/イベント選択を代表fixtureとして追加する。各状態でbody全文と表示中のplaceholderを観測し、対応するcopy ID/purpose/source/alternative/redundancyを固定してrunを再実行する。ゲーム値の全組合せを列挙する必要はない。",
+      "resolution": "未修正。現在のreceiptは165 caseの実測成功を示すが、未宣言の表示状態まで検証した証拠にはならない。"
+    },
+    {
+      "id": "R2",
+      "severity": "major",
+      "status": "open",
+      "description": "非操作の見出し・意味を示す印・任意表示をaction_labelへ分類しており、roleから独立したcopy purposeを正確に評価できない。",
+      "evidence": [
+        "「出撃情報」「数値の見方」、quick-summaryの「物理」「属性」「状態異常」はクリック入口を持たない静的見出しだがpurpose=action_label。",
+        "「任意」はイベント選択の任意性を示す状態情報、「1」「2」「◆」は所属の識別表示であり、それぞれ単独の操作名ではない。",
+        "対象ID: empty-copy-4,5,25,27,28,42,46,50,52; selected-copy-4,5,27,35,36,47,51,52,57,71,72,77,92,99,104,116,123,128,139,143,146。"
+      ],
+      "fix": "非操作の対象・属性見出しにはidentityまたはdata、任意性にはstate_guidance等、実際の意味に合うpurposeを選ぶ。day/stageの操作ラベルと静的な印を区別する。各itemの削除影響・重複理由も所属と用途ごとに具体化する。",
+      "resolution": "未修正。表示文字そのものを削除する指摘ではない。"
+    }
+  ],
+  "limitations": [
+    "Safari/iPad実機、ブラウザー本体のzoom、WCAG全面適合は未検証。CSS zoomはレイアウト代替。",
+    "環境Publishと新規チャットの自動読込は未実施。",
+    "既存app.jsによる選択肢DOM再生成後のfocus保持は改善対象外であり、成功とは主張しない。",
+    "copy expectation_assessmentsはR2の否定的判断30件に限定した。R1で契約自体が不完全なため、残りの肯定的判断を完成済みとして記録しない。次レビューで新しい全IDを評価する。"
+  ],
+  "project_digest": "499e98bf92a6500cc7f9a336d9d8cb6d33ffa717bf4c6b595f693d21279a9205",
+  "artifacts_digest": "c9ea4ff63721fa5a7dd72e8952da8b54529a1e8b06b217e09df4dfb89f92b9e0",
+  "intent_review": {
+    "purpose": {
+      "status": "failed",
+      "evidence": "UI改善は視認できるが、品質チェックの目的に対してcopy contractの見落としが残る（R1/R2）。"
+    },
+    "sources": [
+      {
+        "source": "SRC-HARNESS",
+        "status": "passed",
+        "evidence": "installed0.9.0 lockの361配布ファイルSHA256一致。環境setup記録のsource main commitを確認した。"
+      },
+      {
+        "source": "SRC-PURPOSE",
+        "status": "failed",
+        "evidence": "receiptは165 caseで成功しているが、実操作で表示されるhelp/表/検索不一致/placeholderがcopy検証から漏れる。"
+      },
+      {
+        "source": "SRC-UI",
+        "status": "passed",
+        "evidence": "READMEと実処理を読みボス候補/耐性PWAと確認。候補の先頭配置、簡易耐性の狭幅表示、短い空状態、読みやすい選択行を実画面で確認した。"
+      },
+      {
+        "source": "SRC-SCOPE",
+        "status": "passed",
+        "evidence": "app.js/mapping-data.js/resistance-data.jsはbase2e39352とbyte-for-byte一致。SWはcache名のみ、CSPと相対パスを保持。"
+      },
+      {
+        "source": "SRC-INSTALL",
+        "status": "passed",
+        "evidence": "環境setup、対象lock、schema3 enforce固定、実runのlog/metrics、今回の別コンテキストreviewを確認した。完了は未承認。"
+      }
+    ],
+    "minimality": {
+      "status": "passed",
+      "evidence": "静的HTML+CSSとnative disclosureを再利用。新runtime依存/外部通信/アプリ状態は増やしていない。修正要求もcopy設計とproviderへの局所追加で足りる。"
+    }
+  },
+  "ui": {
+    "receipt_ref": {
+      "path": ".harness/changes/ui-design-quality/evidence/3a242dc7266941c6bbec0dc39205fae9.json",
+      "sha256": "f6911ef56025501928a7df6bf75cf1231e2fa61da232bc5e47c79b6be5d3defe"
+    },
+    "checked_scenarios": [
+      "desktop-empty",
+      "desktop-selected",
+      "mobile-selected",
+      "tablet-selected",
+      "narrow-zoom"
+    ],
+    "observations": [
+      {
+        "scenario": "desktop-empty",
+        "understood": [
+          "SELECT",
+          "CANDIDATES",
+          "ENCOUNTER"
+        ],
+        "excess": [
+          "R2: 静的見出し等のpurpose分類は修正が必要。"
+        ],
+        "missing": [
+          "R1: このfixture以外の開いたhelp/全表/検索不一致の文言とplaceholderは未計測。"
+        ],
+        "assessment": "画面の所属、候補の優先、選択と無効、数値列は識別できる。表示の過剰なhero/励ましは見られない。現在のcopy契約は通常操作の状態を網羅しないため総合UI判定はrequest_changes。"
+      },
+      {
+        "scenario": "desktop-selected",
+        "understood": [
+          "SELECT",
+          "CANDIDATES",
+          "ENCOUNTER"
+        ],
+        "excess": [
+          "R2: 静的見出し等のpurpose分類は修正が必要。"
+        ],
+        "missing": [
+          "R1: このfixture以外の開いたhelp/全表/検索不一致の文言とplaceholderは未計測。"
+        ],
+        "assessment": "画面の所属、候補の優先、選択と無効、数値列は識別できる。表示の過剰なhero/励ましは見られない。現在のcopy契約は通常操作の状態を網羅しないため総合UI判定はrequest_changes。"
+      },
+      {
+        "scenario": "mobile-selected",
+        "understood": [
+          "SELECT",
+          "CANDIDATES",
+          "ENCOUNTER"
+        ],
+        "excess": [
+          "R2: 静的見出し等のpurpose分類は修正が必要。"
+        ],
+        "missing": [
+          "R1: このfixture以外の開いたhelp/全表/検索不一致の文言とplaceholderは未計測。"
+        ],
+        "assessment": "画面の所属、候補の優先、選択と無効、数値列は識別できる。表示の過剰なhero/励ましは見られない。現在のcopy契約は通常操作の状態を網羅しないため総合UI判定はrequest_changes。"
+      },
+      {
+        "scenario": "tablet-selected",
+        "understood": [
+          "SELECT",
+          "CANDIDATES",
+          "ENCOUNTER"
+        ],
+        "excess": [
+          "R2: 静的見出し等のpurpose分類は修正が必要。"
+        ],
+        "missing": [
+          "R1: このfixture以外の開いたhelp/全表/検索不一致の文言とplaceholderは未計測。"
+        ],
+        "assessment": "画面の所属、候補の優先、選択と無効、数値列は識別できる。表示の過剰なhero/励ましは見られない。現在のcopy契約は通常操作の状態を網羅しないため総合UI判定はrequest_changes。"
+      },
+      {
+        "scenario": "narrow-zoom",
+        "understood": [
+          "SELECT",
+          "CANDIDATES",
+          "ENCOUNTER"
+        ],
+        "excess": [
+          "R2: 静的見出し等のpurpose分類は修正が必要。"
+        ],
+        "missing": [
+          "R1: このfixture以外の開いたhelp/全表/検索不一致の文言とplaceholderは未計測。"
+        ],
+        "assessment": "画面の所属、候補の優先、選択と無効、数値列は識別できる。表示の過剰なhero/励ましは見られない。現在のcopy契約は通常操作の状態を網羅しないため総合UI判定はrequest_changes。"
+      }
+    ],
+    "status": "request_changes",
+    "principles": [
+      {
+        "id": "meaning",
+        "case_ids": [
+          "desktop-empty-layout",
+          "desktop-empty-state-consistency",
+          "desktop-selected-layout",
+          "desktop-selected-state-consistency",
+          "mobile-selected-layout",
+          "mobile-selected-state-consistency",
+          "tablet-selected-layout",
+          "tablet-selected-state-consistency",
+          "narrow-zoom-layout",
+          "narrow-zoom-state-consistency"
+        ],
+        "observations": [
+          "画面から入力3群、候補一覧と日別耐性を識別できた。夜の騎兵を選ぶと3体（エデレ/フルゴール/ナメレス）となり、古竜を選ぶと2体へ変化した。",
+          "未選択のbadgeと短い次操作の案内は役割が異なり、励ましは追加されていない。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "structure",
+        "case_ids": [
+          "desktop-empty-layout",
+          "desktop-selected-layout",
+          "mobile-selected-layout",
+          "tablet-selected-layout",
+          "narrow-zoom-layout"
+        ],
+        "observations": [
+          "1440pxは左入力・右結果、390/320pxは入力→候補→凡例→日別詳細の順。候補は日別耐性より先にある。",
+          "候補別の3列は物理/属性/状態異常、ナメレス内の2形態は小見出しと区切りで所属を示す。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "reuse",
+        "case_ids": [
+          "desktop-empty-layout",
+          "desktop-selected-layout",
+          "mobile-selected-layout",
+          "tablet-selected-layout",
+          "narrow-zoom-layout"
+        ],
+        "observations": [
+          "既存button/input/details/summary/tableとapp.jsのID契約を再利用している。新しいアプリ状態や部品frameworkはない。",
+          "UI5ファイルの差分とapp.jsの接続を読み、既存イベント処理に接続していることを確認した。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "visual_hierarchy",
+        "case_ids": [
+          "desktop-empty-layout",
+          "desktop-selected-layout",
+          "mobile-selected-layout",
+          "tablet-selected-layout",
+          "narrow-zoom-layout"
+        ],
+        "observations": [
+          "24pxのツール名、16pxの金色の候補見出し、14pxの操作行、12pxの表を視認した。巨大heroや追加の宣伝文はない。",
+          "候補数は右端、選択は小さな印・枠・背景・選択chipで示し、色だけに依存しない。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "tokens",
+        "case_ids": [
+          "desktop-empty-page-token",
+          "desktop-empty-heading-token",
+          "desktop-selected-page-token",
+          "desktop-selected-heading-token",
+          "mobile-selected-page-token",
+          "mobile-selected-heading-token",
+          "tablet-selected-page-token",
+          "tablet-selected-heading-token",
+          "narrow-zoom-page-token",
+          "narrow-zoom-heading-token"
+        ],
+        "observations": [
+          "bodyの実測#101519とh1の24pxはui/tokens.jsonのpage/heading_sizeに一致。CSSの用途別ink/muted/goldと弱点/耐性の色を確認した。",
+          "borderとsurfaceでグループを示し、同じ操作へ対象ごとの別装飾を増やしていない。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "density_typography",
+        "case_ids": [
+          "desktop-empty-heading-font",
+          "desktop-empty-option-line",
+          "desktop-empty-option-row",
+          "desktop-empty-reset-target",
+          "desktop-empty-workspace-gap",
+          "desktop-selected-heading-font",
+          "desktop-selected-option-line",
+          "desktop-selected-option-row",
+          "desktop-selected-reset-target",
+          "desktop-selected-workspace-gap",
+          "mobile-selected-heading-font",
+          "mobile-selected-option-line",
+          "mobile-selected-option-row",
+          "mobile-selected-reset-target",
+          "mobile-selected-workspace-gap",
+          "tablet-selected-heading-font",
+          "tablet-selected-option-line",
+          "tablet-selected-option-row",
+          "tablet-selected-reset-target",
+          "tablet-selected-workspace-gap",
+          "narrow-zoom-heading-font",
+          "narrow-zoom-option-line",
+          "narrow-zoom-option-row",
+          "narrow-zoom-reset-target",
+          "narrow-zoom-workspace-gap",
+          "desktop-selected-choose-visual-width",
+          "desktop-selected-choose-visual-height",
+          "desktop-selected-choose-hit-width",
+          "desktop-selected-choose-hit-height",
+          "mobile-selected-choose-visual-width",
+          "mobile-selected-choose-visual-height",
+          "mobile-selected-choose-hit-width",
+          "mobile-selected-choose-hit-height",
+          "desktop-selected-clear-visual-width",
+          "desktop-selected-clear-visual-height",
+          "desktop-selected-clear-hit-width",
+          "desktop-selected-clear-hit-height",
+          "mobile-selected-clear-visual-width",
+          "mobile-selected-clear-visual-height",
+          "mobile-selected-clear-hit-width",
+          "mobile-selected-clear-hit-height",
+          "desktop-selected-search-visual-width",
+          "desktop-selected-search-visual-height",
+          "desktop-selected-search-hit-width",
+          "desktop-selected-search-hit-height",
+          "mobile-selected-search-visual-width",
+          "mobile-selected-search-visual-height",
+          "mobile-selected-search-hit-width",
+          "mobile-selected-search-hit-height",
+          "desktop-selected-reset-visual-width",
+          "desktop-selected-reset-visual-height",
+          "desktop-selected-reset-hit-width",
+          "desktop-selected-reset-hit-height",
+          "mobile-selected-reset-visual-width",
+          "mobile-selected-reset-visual-height",
+          "mobile-selected-reset-hit-width",
+          "mobile-selected-reset-hit-height",
+          "desktop-selected-stage-visual-width",
+          "desktop-selected-stage-visual-height",
+          "desktop-selected-stage-hit-width",
+          "desktop-selected-stage-hit-height",
+          "mobile-selected-stage-visual-width",
+          "mobile-selected-stage-visual-height",
+          "mobile-selected-stage-hit-width",
+          "mobile-selected-stage-hit-height",
+          "desktop-selected-boss-visual-width",
+          "desktop-selected-boss-visual-height",
+          "desktop-selected-boss-hit-width",
+          "desktop-selected-boss-hit-height",
+          "mobile-selected-boss-visual-width",
+          "mobile-selected-boss-visual-height",
+          "mobile-selected-boss-hit-width",
+          "mobile-selected-boss-hit-height",
+          "desktop-selected-form-visual-width",
+          "desktop-selected-form-visual-height",
+          "desktop-selected-form-hit-width",
+          "desktop-selected-form-hit-height",
+          "mobile-selected-form-visual-width",
+          "mobile-selected-form-visual-height",
+          "mobile-selected-form-hit-width",
+          "mobile-selected-form-hit-height",
+          "desktop-selected-help-visual-width",
+          "desktop-selected-help-visual-height",
+          "desktop-selected-help-hit-width",
+          "desktop-selected-help-hit-height",
+          "mobile-selected-help-visual-width",
+          "mobile-selected-help-visual-height",
+          "mobile-selected-help-hit-width",
+          "mobile-selected-help-hit-height"
+        ],
+        "observations": [
+          "5画面でh1=24px、option line-height=20px、workspace gap=20px、reset height=44px。選択行は52px、narrow-zoomでは44px。",
+          "選択印12×12pxに対し操作域はdesktop167×52/mobile161×52px。小さな印と広い操作域で十分であり、印を44pxへ拡大する必要はない。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "copy",
+        "case_ids": [
+          "desktop-empty-copy",
+          "desktop-selected-copy",
+          "mobile-selected-copy",
+          "tablet-selected-copy",
+          "narrow-zoom-copy"
+        ],
+        "observations": [
+          "閉じた初期/1日目選択fixtureの54/148 text nodeは実画面と一致した。ゲーム名・値と短い凡例の表示自体は作業目的に沿う。",
+          "使い方の新規3段落、検索不一致、全表、選択した2日目/イベント、placeholderは実際に表示されるが期待inventoryから漏れる（R1）。",
+          "静的見出しなど30 IDのpurpose=action_labelは表示上の役割と一致しない（R2）。"
+        ],
+        "status": "request_changes",
+        "excess": [
+          "copy分類上、非操作の静的見出し/識別印をaction_labelに含めている。"
+        ],
+        "missing": [
+          "通常操作で表示する文言とplaceholderの台帳・実測・必要性判断が欠ける。"
+        ]
+      },
+      {
+        "id": "states_actions",
+        "case_ids": [
+          "desktop-empty-state-consistency",
+          "desktop-empty-a11y-focus",
+          "desktop-selected-state-consistency",
+          "desktop-selected-a11y-focus",
+          "mobile-selected-state-consistency",
+          "mobile-selected-a11y-focus",
+          "tablet-selected-state-consistency",
+          "tablet-selected-a11y-focus",
+          "narrow-zoom-state-consistency",
+          "narrow-zoom-a11y-focus",
+          "desktop-selected-choose-activate",
+          "mobile-selected-choose-activate",
+          "desktop-selected-clear-activate",
+          "mobile-selected-clear-activate",
+          "desktop-selected-search-activate",
+          "mobile-selected-search-activate",
+          "desktop-selected-reset-activate",
+          "mobile-selected-reset-activate",
+          "desktop-selected-stage-activate",
+          "mobile-selected-stage-activate",
+          "desktop-selected-boss-activate",
+          "mobile-selected-boss-activate",
+          "desktop-selected-form-activate",
+          "mobile-selected-form-activate",
+          "desktop-selected-help-activate",
+          "mobile-selected-help-activate"
+        ],
+        "observations": [
+          "8入口についてpadding位置をclickし、選択/解除/検索/リセットとnative detailsの開閉を観測するproviderを読み、receiptの全activation=trueを確認した。",
+          "同期のローカル処理なので送信失敗・遅延応答・トランザクション取消を非適用とした判断は妥当。DOM再生成後のfocus保持を改善済みとは扱わない。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "accessibility",
+        "case_ids": [
+          "desktop-empty-a11y-label",
+          "desktop-empty-a11y-keyboard",
+          "desktop-empty-a11y-focus",
+          "desktop-empty-a11y-width",
+          "desktop-empty-a11y-zoom",
+          "desktop-empty-a11y-reading_order",
+          "desktop-empty-a11y-operable_targets",
+          "desktop-selected-a11y-label",
+          "desktop-selected-a11y-keyboard",
+          "desktop-selected-a11y-focus",
+          "desktop-selected-a11y-width",
+          "desktop-selected-a11y-zoom",
+          "desktop-selected-a11y-reading_order",
+          "desktop-selected-a11y-operable_targets",
+          "mobile-selected-a11y-label",
+          "mobile-selected-a11y-keyboard",
+          "mobile-selected-a11y-focus",
+          "mobile-selected-a11y-width",
+          "mobile-selected-a11y-zoom",
+          "mobile-selected-a11y-reading_order",
+          "mobile-selected-a11y-operable_targets",
+          "tablet-selected-a11y-label",
+          "tablet-selected-a11y-keyboard",
+          "tablet-selected-a11y-focus",
+          "tablet-selected-a11y-width",
+          "tablet-selected-a11y-zoom",
+          "tablet-selected-a11y-reading_order",
+          "tablet-selected-a11y-operable_targets",
+          "narrow-zoom-a11y-label",
+          "narrow-zoom-a11y-keyboard",
+          "narrow-zoom-a11y-focus",
+          "narrow-zoom-a11y-width",
+          "narrow-zoom-a11y-zoom",
+          "narrow-zoom-a11y-reading_order",
+          "narrow-zoom-a11y-operable_targets"
+        ],
+        "observations": [
+          "320pxで実ブラウザーを操作しdocument scrollWidth=320px、横溢れなし。390/1024/1440と200% CSS zoom画像でも簡易耐性を保持している。",
+          "検索のaria-label、native summary/button操作、2pxのfocus-visibleをproviderと実画面で確認。以前からのDOM再生成に伴うfocus消失と実機未検証は限界として記載する。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      },
+      {
+        "id": "scope_connections",
+        "case_ids": [
+          "desktop-empty-layout",
+          "desktop-empty-state-consistency",
+          "desktop-selected-layout",
+          "desktop-selected-state-consistency",
+          "mobile-selected-layout",
+          "mobile-selected-state-consistency",
+          "tablet-selected-layout",
+          "tablet-selected-state-consistency",
+          "narrow-zoom-layout",
+          "narrow-zoom-state-consistency",
+          "desktop-selected-choose-activate",
+          "mobile-selected-choose-activate",
+          "desktop-selected-clear-activate",
+          "mobile-selected-clear-activate",
+          "desktop-selected-search-activate",
+          "mobile-selected-search-activate",
+          "desktop-selected-reset-activate",
+          "mobile-selected-reset-activate",
+          "desktop-selected-stage-activate",
+          "mobile-selected-stage-activate",
+          "desktop-selected-boss-activate",
+          "mobile-selected-boss-activate",
+          "desktop-selected-form-activate",
+          "mobile-selected-form-activate",
+          "desktop-selected-help-activate",
+          "mobile-selected-help-activate"
+        ],
+        "observations": [
+          "app.js/mapping-data.js/resistance-data.jsはgit show 2e39352とbyte-for-byte一致。CSPと資源の相対パスを保持。SW差分はcache名0.9.1→0.9.2のみ。",
+          "実receiptの18種回帰と旧SWを配信して更新するoffline試験を読み、実処理を模擬成功で置換していないことを確認した。配布361ファイルのhash一致、追加runtime依存なし。"
+        ],
+        "status": "passed",
+        "excess": [],
+        "missing": []
+      }
+    ],
+    "expectation_assessments": {
+      "measurements": [
+        {
+          "id": "heading-font",
+          "case_ids": [
+            "desktop-empty-heading-font",
+            "desktop-selected-heading-font",
+            "mobile-selected-heading-font",
+            "tablet-selected-heading-font",
+            "narrow-zoom-heading-font"
+          ],
+          "expectations": {
+            "desktop-empty-heading-font": {
+              "operator": "range",
+              "min": 22,
+              "max": 26
+            },
+            "desktop-selected-heading-font": {
+              "operator": "range",
+              "min": 22,
+              "max": 26
+            },
+            "mobile-selected-heading-font": {
+              "operator": "range",
+              "min": 22,
+              "max": 26
+            },
+            "tablet-selected-heading-font": {
+              "operator": "range",
+              "min": 22,
+              "max": 26
+            },
+            "narrow-zoom-heading-font": {
+              "operator": "range",
+              "min": 22,
+              "max": 26
+            }
+          },
+          "bounds_appropriate": true,
+          "evidence": "{'desktop-empty-heading-font': 24, 'desktop-selected-heading-font': 24, 'mobile-selected-heading-font': 24, 'tablet-selected-heading-font': 24, 'narrow-zoom-heading-font': 24}",
+          "rationale": "22–26pxは短い道具名の識別に十分な範囲。実測24pxでheaderは一行相当、320pxでは操作群を折り返し、見出しを縮小しない。"
+        },
+        {
+          "id": "option-line",
+          "case_ids": [
+            "desktop-empty-option-line",
+            "desktop-selected-option-line",
+            "mobile-selected-option-line",
+            "tablet-selected-option-line",
+            "narrow-zoom-option-line"
+          ],
+          "expectations": {
+            "desktop-empty-option-line": {
+              "operator": "range",
+              "min": 19,
+              "max": 23
+            },
+            "desktop-selected-option-line": {
+              "operator": "range",
+              "min": 19,
+              "max": 23
+            },
+            "mobile-selected-option-line": {
+              "operator": "range",
+              "min": 19,
+              "max": 23
+            },
+            "tablet-selected-option-line": {
+              "operator": "range",
+              "min": 19,
+              "max": 23
+            },
+            "narrow-zoom-option-line": {
+              "operator": "range",
+              "min": 19,
+              "max": 23
+            }
+          },
+          "bounds_appropriate": true,
+          "evidence": "{'desktop-empty-option-line': 20, 'desktop-selected-option-line': 20, 'mobile-selected-option-line': 20, 'tablet-selected-option-line': 20, 'narrow-zoom-option-line': 20}",
+          "rationale": "19–23pxは14px日本語の複数行を読める行高。実測20pxで長い候補名も重ならない。"
+        },
+        {
+          "id": "option-row",
+          "case_ids": [
+            "desktop-empty-option-row",
+            "desktop-selected-option-row",
+            "mobile-selected-option-row",
+            "tablet-selected-option-row",
+            "narrow-zoom-option-row"
+          ],
+          "expectations": {
+            "desktop-empty-option-row": {
+              "operator": "range",
+              "min": 44,
+              "max": 72
+            },
+            "desktop-selected-option-row": {
+              "operator": "range",
+              "min": 44,
+              "max": 72
+            },
+            "mobile-selected-option-row": {
+              "operator": "range",
+              "min": 44,
+              "max": 72
+            },
+            "tablet-selected-option-row": {
+              "operator": "range",
+              "min": 44,
+              "max": 72
+            },
+            "narrow-zoom-option-row": {
+              "operator": "range",
+              "min": 44,
+              "max": 72
+            }
+          },
+          "bounds_appropriate": true,
+          "evidence": "{'desktop-empty-option-row': 52, 'desktop-selected-option-row': 52, 'mobile-selected-option-row': 52, 'tablet-selected-option-row': 52, 'narrow-zoom-option-row': 44}",
+          "rationale": "44–72pxは1〜3行の名前に必要な余白と操作域を与える。実測52px/拡大時44pxで切れず、印は12pxのまま。"
+        },
+        {
+          "id": "reset-target",
+          "case_ids": [
+            "desktop-empty-reset-target",
+            "desktop-selected-reset-target",
+            "mobile-selected-reset-target",
+            "tablet-selected-reset-target",
+            "narrow-zoom-reset-target"
+          ],
+          "expectations": {
+            "desktop-empty-reset-target": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-reset-target": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-reset-target": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "tablet-selected-reset-target": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "narrow-zoom-reset-target": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            }
+          },
+          "bounds_appropriate": true,
+          "evidence": "{'desktop-empty-reset-target': 44, 'desktop-selected-reset-target': 44, 'mobile-selected-reset-target': 44, 'tablet-selected-reset-target': 44, 'narrow-zoom-reset-target': 44}",
+          "rationale": "44–52pxはヘッダー操作として過大でなく隣の使い方と区別できる。実測44px、幅82pxのボタンで反応する。"
+        },
+        {
+          "id": "workspace-gap",
+          "case_ids": [
+            "desktop-empty-workspace-gap",
+            "desktop-selected-workspace-gap",
+            "mobile-selected-workspace-gap",
+            "tablet-selected-workspace-gap",
+            "narrow-zoom-workspace-gap"
+          ],
+          "expectations": {
+            "desktop-empty-workspace-gap": {
+              "operator": "range",
+              "min": 16,
+              "max": 24
+            },
+            "desktop-selected-workspace-gap": {
+              "operator": "range",
+              "min": 16,
+              "max": 24
+            },
+            "mobile-selected-workspace-gap": {
+              "operator": "range",
+              "min": 16,
+              "max": 24
+            },
+            "tablet-selected-workspace-gap": {
+              "operator": "range",
+              "min": 16,
+              "max": 24
+            },
+            "narrow-zoom-workspace-gap": {
+              "operator": "range",
+              "min": 16,
+              "max": 24
+            }
+          },
+          "bounds_appropriate": true,
+          "evidence": "{'desktop-empty-workspace-gap': 20, 'desktop-selected-workspace-gap': 20, 'mobile-selected-workspace-gap': 20, 'tablet-selected-workspace-gap': 20, 'narrow-zoom-workspace-gap': 20}",
+          "rationale": "16–24pxは入力と結果の所属を分ける距離。実測20pxでdesktop比較幅を保ち、mobileにも過大な空白を加えない。"
+        }
+      ],
+      "controls": [
+        {
+          "id": "choose",
+          "case_ids": [
+            "desktop-selected-choose-visual-width",
+            "mobile-selected-choose-visual-width",
+            "desktop-selected-choose-visual-height",
+            "mobile-selected-choose-visual-height",
+            "desktop-selected-choose-hit-width",
+            "mobile-selected-choose-hit-width",
+            "desktop-selected-choose-hit-height",
+            "mobile-selected-choose-hit-height",
+            "desktop-selected-choose-activate",
+            "mobile-selected-choose-activate"
+          ],
+          "expectations": {
+            "desktop-selected-choose-visual-width": {
+              "operator": "range",
+              "min": 10,
+              "max": 14
+            },
+            "mobile-selected-choose-visual-width": {
+              "operator": "range",
+              "min": 10,
+              "max": 14
+            },
+            "desktop-selected-choose-visual-height": {
+              "operator": "range",
+              "min": 10,
+              "max": 14
+            },
+            "mobile-selected-choose-visual-height": {
+              "operator": "range",
+              "min": 10,
+              "max": 14
+            },
+            "desktop-selected-choose-hit-width": {
+              "operator": "range",
+              "min": 100,
+              "max": 700
+            },
+            "mobile-selected-choose-hit-width": {
+              "operator": "range",
+              "min": 100,
+              "max": 700
+            },
+            "desktop-selected-choose-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 72
+            },
+            "mobile-selected-choose-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 72
+            },
+            "desktop-selected-choose-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-choose-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-choose-visual-width': 12, 'mobile-selected-choose-visual-width': 12, 'desktop-selected-choose-visual-height': 12, 'mobile-selected-choose-visual-height': 12, 'desktop-selected-choose-hit-width': 167, 'mobile-selected-choose-hit-width': 161, 'desktop-selected-choose-hit-height': 52, 'mobile-selected-choose-hit-height': 52, 'desktop-selected-choose-activate': True, 'mobile-selected-choose-activate': True}",
+          "rationale": "本文に釣り合う12px印と44px以上の実buttonを別々に測る。click(24,8)は印外のpaddingで選択を起動する。"
+        },
+        {
+          "id": "clear",
+          "case_ids": [
+            "desktop-selected-clear-visual-width",
+            "mobile-selected-clear-visual-width",
+            "desktop-selected-clear-visual-height",
+            "mobile-selected-clear-visual-height",
+            "desktop-selected-clear-hit-width",
+            "mobile-selected-clear-hit-width",
+            "desktop-selected-clear-hit-height",
+            "mobile-selected-clear-hit-height",
+            "desktop-selected-clear-activate",
+            "mobile-selected-clear-activate"
+          ],
+          "expectations": {
+            "desktop-selected-clear-visual-width": {
+              "operator": "range",
+              "min": 44,
+              "max": 100
+            },
+            "mobile-selected-clear-visual-width": {
+              "operator": "range",
+              "min": 44,
+              "max": 100
+            },
+            "desktop-selected-clear-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-clear-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-clear-hit-width": {
+              "operator": "range",
+              "min": 44,
+              "max": 100
+            },
+            "mobile-selected-clear-hit-width": {
+              "operator": "range",
+              "min": 44,
+              "max": 100
+            },
+            "desktop-selected-clear-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-clear-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-clear-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-clear-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-clear-visual-width': 48, 'mobile-selected-clear-visual-width': 48, 'desktop-selected-clear-visual-height': 44, 'mobile-selected-clear-visual-height': 44, 'desktop-selected-clear-hit-width': 48, 'mobile-selected-clear-hit-width': 48, 'desktop-selected-clear-hit-height': 44, 'mobile-selected-clear-hit-height': 44, 'desktop-selected-clear-activate': True, 'mobile-selected-clear-activate': True}",
+          "rationale": "選択chipの解除48×44pxは短い操作名に十分。click(4,4)で選択と2日目enable状態が戻る。"
+        },
+        {
+          "id": "search",
+          "case_ids": [
+            "desktop-selected-search-visual-width",
+            "mobile-selected-search-visual-width",
+            "desktop-selected-search-visual-height",
+            "mobile-selected-search-visual-height",
+            "desktop-selected-search-hit-width",
+            "mobile-selected-search-hit-width",
+            "desktop-selected-search-hit-height",
+            "mobile-selected-search-hit-height",
+            "desktop-selected-search-activate",
+            "mobile-selected-search-activate"
+          ],
+          "expectations": {
+            "desktop-selected-search-visual-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 700
+            },
+            "mobile-selected-search-visual-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 700
+            },
+            "desktop-selected-search-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-search-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-search-hit-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 700
+            },
+            "mobile-selected-search-hit-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 700
+            },
+            "desktop-selected-search-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-search-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-search-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-search-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-search-visual-width': 340, 'mobile-selected-search-visual-width': 328, 'desktop-selected-search-visual-height': 44, 'mobile-selected-search-visual-height': 44, 'desktop-selected-search-hit-width': 340, 'mobile-selected-search-hit-width': 328, 'desktop-selected-search-hit-height': 44, 'mobile-selected-search-hit-height': 44, 'desktop-selected-search-activate': True, 'mobile-selected-search-activate': True}",
+          "rationale": "入力欄はdesktop340/mobile328×44pxで日本語入力用16px文字を表示。実clickとtypeで不一致状態になる。"
+        },
+        {
+          "id": "reset",
+          "case_ids": [
+            "desktop-selected-reset-visual-width",
+            "mobile-selected-reset-visual-width",
+            "desktop-selected-reset-visual-height",
+            "mobile-selected-reset-visual-height",
+            "desktop-selected-reset-hit-width",
+            "mobile-selected-reset-hit-width",
+            "desktop-selected-reset-hit-height",
+            "mobile-selected-reset-hit-height",
+            "desktop-selected-reset-activate",
+            "mobile-selected-reset-activate"
+          ],
+          "expectations": {
+            "desktop-selected-reset-visual-width": {
+              "operator": "range",
+              "min": 72,
+              "max": 120
+            },
+            "mobile-selected-reset-visual-width": {
+              "operator": "range",
+              "min": 72,
+              "max": 120
+            },
+            "desktop-selected-reset-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-reset-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-reset-hit-width": {
+              "operator": "range",
+              "min": 72,
+              "max": 120
+            },
+            "mobile-selected-reset-hit-width": {
+              "operator": "range",
+              "min": 72,
+              "max": 120
+            },
+            "desktop-selected-reset-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-reset-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-reset-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-reset-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-reset-visual-width': 82, 'mobile-selected-reset-visual-width': 82, 'desktop-selected-reset-visual-height': 44, 'mobile-selected-reset-visual-height': 44, 'desktop-selected-reset-hit-width': 82, 'mobile-selected-reset-hit-width': 82, 'desktop-selected-reset-hit-height': 44, 'mobile-selected-reset-hit-height': 44, 'desktop-selected-reset-activate': True, 'mobile-selected-reset-activate': True}",
+          "rationale": "82×44pxは隣の使い方と8px離れた通常ボタン。実clickで未選択/空候補/disabledへ戻る。"
+        },
+        {
+          "id": "stage",
+          "case_ids": [
+            "desktop-selected-stage-visual-width",
+            "mobile-selected-stage-visual-width",
+            "desktop-selected-stage-visual-height",
+            "mobile-selected-stage-visual-height",
+            "desktop-selected-stage-hit-width",
+            "mobile-selected-stage-hit-width",
+            "desktop-selected-stage-hit-height",
+            "mobile-selected-stage-hit-height",
+            "desktop-selected-stage-activate",
+            "mobile-selected-stage-activate"
+          ],
+          "expectations": {
+            "desktop-selected-stage-visual-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 1200
+            },
+            "mobile-selected-stage-visual-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 1200
+            },
+            "desktop-selected-stage-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "mobile-selected-stage-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "desktop-selected-stage-hit-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 1200
+            },
+            "mobile-selected-stage-hit-width": {
+              "operator": "range",
+              "min": 200,
+              "max": 1200
+            },
+            "desktop-selected-stage-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "mobile-selected-stage-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "desktop-selected-stage-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-stage-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-stage-visual-width': 998, 'mobile-selected-stage-visual-width': 362, 'desktop-selected-stage-visual-height': 49, 'mobile-selected-stage-visual-height': 49, 'desktop-selected-stage-hit-width': 998, 'mobile-selected-stage-hit-width': 362, 'desktop-selected-stage-hit-height': 49, 'mobile-selected-stage-hit-height': 49, 'desktop-selected-stage-activate': True, 'mobile-selected-stage-activate': True}",
+          "rationale": "所属全幅のsummaryは49px高。広い見える面全体がnative開閉入口なのでvisualとhitが同じでよい。"
+        },
+        {
+          "id": "boss",
+          "case_ids": [
+            "desktop-selected-boss-visual-width",
+            "mobile-selected-boss-visual-width",
+            "desktop-selected-boss-visual-height",
+            "mobile-selected-boss-visual-height",
+            "desktop-selected-boss-hit-width",
+            "mobile-selected-boss-hit-width",
+            "desktop-selected-boss-hit-height",
+            "mobile-selected-boss-hit-height",
+            "desktop-selected-boss-activate",
+            "mobile-selected-boss-activate"
+          ],
+          "expectations": {
+            "desktop-selected-boss-visual-width": {
+              "operator": "range",
+              "min": 170,
+              "max": 1200
+            },
+            "mobile-selected-boss-visual-width": {
+              "operator": "range",
+              "min": 170,
+              "max": 1200
+            },
+            "desktop-selected-boss-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "mobile-selected-boss-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "desktop-selected-boss-hit-width": {
+              "operator": "range",
+              "min": 170,
+              "max": 1200
+            },
+            "mobile-selected-boss-hit-width": {
+              "operator": "range",
+              "min": 170,
+              "max": 1200
+            },
+            "desktop-selected-boss-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "mobile-selected-boss-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "desktop-selected-boss-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-boss-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-boss-visual-width': 322.65625, 'mobile-selected-boss-visual-width': 360, 'desktop-selected-boss-visual-height': 44, 'mobile-selected-boss-visual-height': 44, 'desktop-selected-boss-hit-width': 322.65625, 'mobile-selected-boss-hit-width': 360, 'desktop-selected-boss-hit-height': 44, 'mobile-selected-boss-hit-height': 44, 'desktop-selected-boss-activate': True, 'mobile-selected-boss-activate': True}",
+          "rationale": "候補名のsummaryは44px高。名前・+印・面が一つの開閉操作に対応し、別の大きな装飾印は不要。"
+        },
+        {
+          "id": "form",
+          "case_ids": [
+            "desktop-selected-form-visual-width",
+            "mobile-selected-form-visual-width",
+            "desktop-selected-form-visual-height",
+            "mobile-selected-form-visual-height",
+            "desktop-selected-form-hit-width",
+            "mobile-selected-form-hit-width",
+            "desktop-selected-form-hit-height",
+            "mobile-selected-form-hit-height",
+            "desktop-selected-form-activate",
+            "mobile-selected-form-activate"
+          ],
+          "expectations": {
+            "desktop-selected-form-visual-width": {
+              "operator": "range",
+              "min": 160,
+              "max": 1200
+            },
+            "mobile-selected-form-visual-width": {
+              "operator": "range",
+              "min": 160,
+              "max": 1200
+            },
+            "desktop-selected-form-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "mobile-selected-form-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "desktop-selected-form-hit-width": {
+              "operator": "range",
+              "min": 160,
+              "max": 1200
+            },
+            "mobile-selected-form-hit-width": {
+              "operator": "range",
+              "min": 160,
+              "max": 1200
+            },
+            "desktop-selected-form-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "mobile-selected-form-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 88
+            },
+            "desktop-selected-form-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-form-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-form-visual-width': 298.65625, 'mobile-selected-form-visual-width': 336, 'desktop-selected-form-visual-height': 44, 'mobile-selected-form-visual-height': 44, 'desktop-selected-form-hit-width': 298.65625, 'mobile-selected-form-hit-width': 336, 'desktop-selected-form-hit-height': 44, 'mobile-selected-form-hit-height': 44, 'desktop-selected-form-activate': True, 'mobile-selected-form-activate': True}",
+          "rationale": "形態名のsummaryも44px高で親boss内に所属。1つの面が1つのnative開閉へ対応する。"
+        },
+        {
+          "id": "help",
+          "case_ids": [
+            "desktop-selected-help-visual-width",
+            "mobile-selected-help-visual-width",
+            "desktop-selected-help-visual-height",
+            "mobile-selected-help-visual-height",
+            "desktop-selected-help-hit-width",
+            "mobile-selected-help-hit-width",
+            "desktop-selected-help-hit-height",
+            "mobile-selected-help-hit-height",
+            "desktop-selected-help-activate",
+            "mobile-selected-help-activate"
+          ],
+          "expectations": {
+            "desktop-selected-help-visual-width": {
+              "operator": "range",
+              "min": 56,
+              "max": 120
+            },
+            "mobile-selected-help-visual-width": {
+              "operator": "range",
+              "min": 56,
+              "max": 120
+            },
+            "desktop-selected-help-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-help-visual-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-help-hit-width": {
+              "operator": "range",
+              "min": 56,
+              "max": 120
+            },
+            "mobile-selected-help-hit-width": {
+              "operator": "range",
+              "min": 56,
+              "max": 120
+            },
+            "desktop-selected-help-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "mobile-selected-help-hit-height": {
+              "operator": "range",
+              "min": 44,
+              "max": 52
+            },
+            "desktop-selected-help-activate": {
+              "operator": "equals",
+              "value": true
+            },
+            "mobile-selected-help-activate": {
+              "operator": "equals",
+              "value": true
+            }
+          },
+          "visual_appropriate": true,
+          "hit_appropriate": true,
+          "activation_associated": true,
+          "evidence": "{'desktop-selected-help-visual-width': 68, 'mobile-selected-help-visual-width': 68, 'desktop-selected-help-visual-height': 44, 'mobile-selected-help-visual-height': 44, 'desktop-selected-help-hit-width': 68, 'mobile-selected-help-hit-width': 68, 'desktop-selected-help-hit-height': 44, 'mobile-selected-help-hit-height': 44, 'desktop-selected-help-activate': True, 'mobile-selected-help-activate': True}",
+          "rationale": "使い方68×44pxは短いラベル付きsummary。実clickで説明を開閉し、アイコンだけの曖昧な入口ではない。"
+        }
+      ],
+      "copy": [
+        {
+          "id": "empty-copy-4",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "出撃情報",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/4"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。出撃情報は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-5",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "1",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/5"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。1は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-25",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "2",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/25"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。2は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-27",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "任意",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/27"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。任意は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-28",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "イベント",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/28"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。イベントは静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-42",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "◆",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/42"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。◆は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-46",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "数値の見方",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": "ui/definition.json",
+            "pointer": "/copy/legend/0"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。数値の見方は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-50",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "1",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/50"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。1は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "empty-copy-52",
+          "case_ids": [
+            "desktop-empty-copy"
+          ],
+          "text": "2",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-empty/52"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。2は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-4",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "出撃情報",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/4"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。出撃情報は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-5",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "1",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/5"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。1は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-27",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "2",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/27"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。2は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-35",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "任意",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/35"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。任意は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-36",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "イベント",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/36"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。イベントは静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-47",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "◆",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/47"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。◆は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-51",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "物理",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/51"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。物理は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-52",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "属性",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/52"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。属性は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-57",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "状態異常",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/57"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。状態異常は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-71",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "物理",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/71"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。物理は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-72",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "属性",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/72"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。属性は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-77",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "状態異常",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/77"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。状態異常は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-92",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "物理",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/92"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。物理は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-99",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "属性",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/99"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。属性は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-104",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "状態異常",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/104"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。状態異常は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-116",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "物理",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/116"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。物理は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-123",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "属性",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/123"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。属性は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-128",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "状態異常",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/128"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。状態異常は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-139",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "数値の見方",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": "ui/definition.json",
+            "pointer": "/copy/legend/0"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。数値の見方は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-143",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "1",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/143"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。1は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        },
+        {
+          "id": "selected-copy-146",
+          "case_ids": [
+            "desktop-selected-copy",
+            "mobile-selected-copy",
+            "tablet-selected-copy",
+            "narrow-zoom-copy"
+          ],
+          "text": "2",
+          "purpose": "action_label",
+          "source_ref": {
+            "path": ".harness/changes/ui-design-quality/inputs/expected-copy.json",
+            "pointer": "/desktop-selected/146"
+          },
+          "purpose_appropriate": false,
+          "source_supported": true,
+          "necessary": true,
+          "redundancy_justified": true,
+          "evidence": "固定5画面と独立した実操作で表示位置を確認した。2は静的な所属/意味/任意性の表示であり、文字自体は独立した操作を起動しない。source_refの文字列は実ファイルと一致する。",
+          "rationale": "文字自体は対象や値の意味を識別するために必要だが、action_labelという目的は不適切（R2）。繰返しは各所属の識別のために残せる。期待配列由来のsource_refは、修正時に実定義への直接参照へ改善すると出典を追いやすい。"
+        }
+      ]
+    }
+  },
+  "additional_review": {
+    "no_comments": "変更製品5ファイルとtests/browser_support.py/regression.py/ui_browser.pyに説明コメント・抑制コメントの追加はない。元resistance.cssのコメント1件は削除。固定配布の上流コメントは対象外。",
+    "distribution": "framework.lock.jsonの361ファイルのSHA256はすべて一致。固定配布ライブラリを修正・再監査せず整合を確認した。",
+    "provenance_note": "ゲーム値と既存ラベルの多くはsource_refにexpected-copy.jsonのみを記録する。文字列一致は確認したが、修正時にはmapping-data.js/resistance-data.js/app.js/index.htmlの実定義を直接指すと実出典を追える。"
+  }
+}

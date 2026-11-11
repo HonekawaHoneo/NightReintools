@@ -1,0 +1,13 @@
+# Adapt the actual module responsibilities before starting a change. Do not sync during verification.
+source_roots = ["src", "tests"]
+root_module = "forbid"
+ignore_type_checking_imports = false
+forbid_circular_dependencies = false # The adapter compares actual SCCs with the captured baseline.
+
+[[modules]]
+path = "app"
+depends_on = []
+
+[[modules]]
+path = "test_*"
+depends_on = ["app"]

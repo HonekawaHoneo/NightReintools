@@ -1,0 +1,106 @@
+[
+  {
+    "scenario": "desktop-empty",
+    "path": ".harness/changes/ui-design-quality/evidence/before/desktop-empty.png",
+    "environment": {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "未選択; CSS layout zoom 1x"
+    }
+  },
+  {
+    "scenario": "desktop-selected",
+    "path": ".harness/changes/ui-design-quality/evidence/before/desktop-selected.png",
+    "environment": {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+    }
+  },
+  {
+    "scenario": "mobile-selected",
+    "path": ".harness/changes/ui-design-quality/evidence/before/mobile-selected.png",
+    "environment": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+    }
+  },
+  {
+    "scenario": "tablet-selected",
+    "path": ".harness/changes/ui-design-quality/evidence/before/tablet-selected.png",
+    "environment": {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+    }
+  },
+  {
+    "scenario": "narrow-zoom",
+    "path": ".harness/changes/ui-design-quality/evidence/before/narrow-zoom.png",
+    "environment": {
+      "viewport": {
+        "width": 640,
+        "height": 1000
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 2x"
+    }
+  },
+  {
+    "scenario": "desktop-expanded",
+    "path": ".harness/changes/ui-design-quality/evidence/before/desktop-expanded.png",
+    "environment": {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; boss/form details expanded; help open; CSS layout zoom 1x"
+    }
+  },
+  {
+    "scenario": "mobile-expanded",
+    "path": ".harness/changes/ui-design-quality/evidence/before/mobile-expanded.png",
+    "environment": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; boss/form details expanded; help open; CSS layout zoom 1x"
+    }
+  },
+  {
+    "scenario": "desktop-search-empty",
+    "path": ".harness/changes/ui-design-quality/evidence/before/desktop-search-empty.png",
+    "environment": {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browser": "Chromium 156.0.8078.79",
+      "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+      "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; unmatched day1/event search; CSS layout zoom 1x"
+    }
+  }
+]

@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "registry_path": "ui/registry.json",
+  "registry": {
+    "schema_version": 1,
+    "sources": [
+      {
+        "path": "styles.css",
+        "anchor": ":root {"
+      },
+      {
+        "path": "resistance.css",
+        "anchor": ".resistance-detail {"
+      },
+      {
+        "path": "ui/definition.json",
+        "pointer": "/purpose"
+      }
+    ],
+    "components": [
+      {
+        "id": "encounters",
+        "source_ref": {
+          "path": "index.html",
+          "anchor": "id=\"selection-title\""
+        },
+        "implementation_ref": {
+          "path": "index.html",
+          "anchor": "id=\"selection-title\""
+        },
+        "meaning": "日別ボスとイベントを選択する",
+        "use_when": [
+          "日別ボスとイベントを選択する"
+        ],
+        "relations": [],
+        "token_ids": [
+          "page",
+          "heading"
+        ],
+        "required_cues": [
+          "visible-label",
+          "selected-state",
+          "disabled-state",
+          "focus"
+        ],
+        "optional_cues": [
+          "stage-color"
+        ],
+        "avoid": [
+          "marketing-copy",
+          "color-only-state"
+        ],
+        "a11y": [
+          "native-keyboard",
+          "visible-focus",
+          "labels"
+        ]
+      },
+      {
+        "id": "candidates",
+        "source_ref": {
+          "path": "index.html",
+          "anchor": "id=\"nightlord-section\""
+        },
+        "implementation_ref": {
+          "path": "index.html",
+          "anchor": "id=\"nightlord-section\""
+        },
+        "meaning": "候補数と各候補の耐性を比較する",
+        "use_when": [
+          "候補数と各候補の耐性を比較する"
+        ],
+        "relations": [],
+        "token_ids": [
+          "page",
+          "heading"
+        ],
+        "required_cues": [
+          "candidate-count",
+          "expandable",
+          "numeric-effects"
+        ],
+        "optional_cues": [
+          "stage-color"
+        ],
+        "avoid": [
+          "marketing-copy",
+          "color-only-state"
+        ],
+        "a11y": [
+          "native-keyboard",
+          "visible-focus",
+          "labels"
+        ]
+      },
+      {
+        "id": "encounter-details",
+        "source_ref": {
+          "path": "index.html",
+          "anchor": "id=\"day1-section\""
+        },
+        "implementation_ref": {
+          "path": "index.html",
+          "anchor": "id=\"day1-section\""
+        },
+        "meaning": "選択した道中ボスの耐性を確認する",
+        "use_when": [
+          "選択した道中ボスの耐性を確認する"
+        ],
+        "relations": [],
+        "token_ids": [
+          "page",
+          "heading"
+        ],
+        "required_cues": [
+          "day-label",
+          "expandable",
+          "numeric-effects"
+        ],
+        "optional_cues": [
+          "stage-color"
+        ],
+        "avoid": [
+          "marketing-copy",
+          "color-only-state"
+        ],
+        "a11y": [
+          "native-keyboard",
+          "visible-focus",
+          "labels"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "id": "page",
+        "source_ref": {
+          "path": "ui/tokens.json",
+          "pointer": "/page"
+        },
+        "meaning": "画面全体の背景色"
+      },
+      {
+        "id": "heading",
+        "source_ref": {
+          "path": "ui/tokens.json",
+          "pointer": "/heading_size"
+        },
+        "meaning": "作業用ツールを識別する見出しのCSS pxサイズ"
+      }
+    ]
+  },
+  "baseline_registry": {
+    "schema_version": 1,
+    "sources": [
+      {
+        "path": "styles.css",
+        "anchor": ":root {"
+      },
+      {
+        "path": "resistance.css",
+        "anchor": ".resistance-detail {"
+      },
+      {
+        "path": "ui/definition.json",
+        "pointer": "/purpose"
+      }
+    ],
+    "components": [
+      {
+        "id": "encounters",
+        "source_ref": {
+          "path": "index.html",
+          "anchor": "id=\"selection-title\""
+        },
+        "implementation_ref": {
+          "path": "index.html",
+          "anchor": "id=\"selection-title\""
+        },
+        "meaning": "日別ボスとイベントを選択する",
+        "use_when": [
+          "日別ボスとイベントを選択する"
+        ],
+        "relations": [],
+        "token_ids": [
+          "page",
+          "heading"
+        ],
+        "required_cues": [
+          "visible-label",
+          "selected-state",
+          "disabled-state",
+          "focus"
+        ],
+        "optional_cues": [
+          "stage-color"
+        ],
+        "avoid": [
+          "marketing-copy",
+          "color-only-state"
+        ],
+        "a11y": [
+          "native-keyboard",
+          "visible-focus",
+          "labels"
+        ]
+      },
+      {
+        "id": "candidates",
+        "source_ref": {
+          "path": "index.html",
+          "anchor": "id=\"nightlord-section\""
+        },
+        "implementation_ref": {
+          "path": "index.html",
+          "anchor": "id=\"nightlord-section\""
+        },
+        "meaning": "候補数と各候補の耐性を比較する",
+        "use_when": [
+          "候補数と各候補の耐性を比較する"
+        ],
+        "relations": [],
+        "token_ids": [
+          "page",
+          "heading"
+        ],
+        "required_cues": [
+          "candidate-count",
+          "expandable",
+          "numeric-effects"
+        ],
+        "optional_cues": [
+          "stage-color"
+        ],
+        "avoid": [
+          "marketing-copy",
+          "color-only-state"
+        ],
+        "a11y": [
+          "native-keyboard",
+          "visible-focus",
+          "labels"
+        ]
+      },
+      {
+        "id": "encounter-details",
+        "source_ref": {
+          "path": "index.html",
+          "anchor": "id=\"day1-section\""
+        },
+        "implementation_ref": {
+          "path": "index.html",
+          "anchor": "id=\"day1-section\""
+        },
+        "meaning": "選択した道中ボスの耐性を確認する",
+        "use_when": [
+          "選択した道中ボスの耐性を確認する"
+        ],
+        "relations": [],
+        "token_ids": [
+          "page",
+          "heading"
+        ],
+        "required_cues": [
+          "day-label",
+          "expandable",
+          "numeric-effects"
+        ],
+        "optional_cues": [
+          "stage-color"
+        ],
+        "avoid": [
+          "marketing-copy",
+          "color-only-state"
+        ],
+        "a11y": [
+          "native-keyboard",
+          "visible-focus",
+          "labels"
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "id": "page",
+        "source_ref": {
+          "path": "ui/tokens.json",
+          "pointer": "/page"
+        },
+        "meaning": "画面全体の背景色"
+      },
+      {
+        "id": "heading",
+        "source_ref": {
+          "path": "ui/tokens.json",
+          "pointer": "/heading_size"
+        },
+        "meaning": "作業用ツールを識別する見出しのCSS pxサイズ"
+      }
+    ]
+  },
+  "source_digests": {
+    "index.html": "4786a035685502cadba8ce291369f00dff1976f9ab8c286c956aece38ea50e03",
+    "resistance.css": "a3418ee481b7db8b9feba68a040b06b27d86594226a1a3e8b2b73d85b3d9e7ab",
+    "styles.css": "16ea9e88d145117e90634809bccb37e8ddcd26fe67bdf5219fc719dd9c6ed110",
+    "ui/definition.json": "6bb07002c6ecf2281f13d84c3eb06b5fbcea2678ec1422c1677ea0c342ff4991",
+    "ui/registry.json": "8e2c62bb942615c1d8875470679667d1a28666e8949486e8f1d6e3ab302af3d0",
+    "ui/tokens.json": "89d353331201614a04339765f2c2afe2a3a011396b6d96318c5a503d8500acc1"
+  },
+  "approved_sources": [
+    "index.html",
+    "resistance.css",
+    "styles.css"
+  ],
+  "approval_ref": "user:2026-11-11:NightReintoolsのUIを改善してください",
+  "before": [
+    {
+      "scenario": "desktop-empty",
+      "path": ".harness/changes/ui-design-quality/evidence/before/desktop-empty.png",
+      "sha256": "ce3d9c5d26ef94af3c03f33e3861b112c1dbbf4696a16a94688e4912faa9cb5e",
+      "environment": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "未選択; CSS layout zoom 1x"
+      }
+    },
+    {
+      "scenario": "desktop-selected",
+      "path": ".harness/changes/ui-design-quality/evidence/before/desktop-selected.png",
+      "sha256": "fb739347807992e95d1b386ac34985abcb5a40ccf3b2ca248e80ce78fb53d645",
+      "environment": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+      }
+    },
+    {
+      "scenario": "mobile-selected",
+      "path": ".harness/changes/ui-design-quality/evidence/before/mobile-selected.png",
+      "sha256": "8e760b4ffc4b9728c7fa6af386cbb1c0137733242832304394d1f2707713736d",
+      "environment": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+      }
+    },
+    {
+      "scenario": "tablet-selected",
+      "path": ".harness/changes/ui-design-quality/evidence/before/tablet-selected.png",
+      "sha256": "b283c2a2ec29d353be2267449c45d8bc0d80dd39426dacbf1d68144322f67ccd",
+      "environment": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+      }
+    },
+    {
+      "scenario": "narrow-zoom",
+      "path": ".harness/changes/ui-design-quality/evidence/before/narrow-zoom.png",
+      "sha256": "b977f049dba9a329000ebf670428a930e1bb13f887909665eaf5569089f220b0",
+      "environment": {
+        "viewport": {
+          "width": 640,
+          "height": 1000
+        },
+        "browser": "Chromium 156.0.8078.79",
+        "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+        "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 2x"
+      }
+    }
+  ],
+  "bootstrap": false,
+  "input_digests": {
+    ".harness/changes/ui-design-quality/inputs/baseline-regions.json": "368933cc4bccc958117e93e92a3bc27e7a0bd983cb67b10ccc1b4790fdb3987b",
+    ".harness/changes/ui-design-quality/inputs/brief.json": "85b9ff6b017420259d7a5760bad774a46461c0d77a263eb9a4bb18ffe5fe899b",
+    ".harness/changes/ui-design-quality/inputs/comparison-conditions.json": "d1ea8631fe497c33de0a903d60cf675d3aa00594061ed3b7872b177f9161df96",
+    ".harness/changes/ui-design-quality/inputs/expected-copy.json": "0c3cb8ae38ddfaceac56bd174505271b0b58345fc68f2cc9d0ac58814a28e5c1",
+    ".harness/changes/ui-design-quality/inputs/ui-0a1434649b144546abd21ade6308279d.json": "ee0df8d2208026aed7e0c8029ad3d9c363f89f6922877194e59284a00a1e8e92",
+    ".harness/changes/ui-design-quality/inputs/ui-3238c4adfa95427997a2040ca4c56a32.json": "0203c816c358b6c2fa37e6c25026e59cad03f86f97010480ea59ca58f7763193",
+    ".harness/changes/ui-design-quality/inputs/wireframe.txt": "ee806e75c8b59cd6e121909a68aa042486f7cfea9bc35cbf8daa8814937d39c2"
+  },
+  "implementation_paths": [
+    "app.js",
+    "index.html",
+    "manifest.webmanifest",
+    "mapping-data.js",
+    "resistance-data.js",
+    "resistance.css",
+    "service-worker.js",
+    "styles.css",
+    "ui/definition.json",
+    "ui/registry.json",
+    "ui/tokens.json"
+  ],
+  "requirements_digests": {
+    ".harness/changes/ui-design-quality/requirements.json": "a8d3582dbb566f6daa9eca8bdd2d00ba8821adf3c0df43fceb9aa936fefb41ea"
+  }
+}

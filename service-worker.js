@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "nightreign-boss-tool-";
-const CACHE_NAME = `${CACHE_PREFIX}0.9.1`;
+const CACHE_NAME = `${CACHE_PREFIX}0.9.2`;
 const APP_FILES = [
   "./",
   "./index.html",

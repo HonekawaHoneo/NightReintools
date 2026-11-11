@@ -1,0 +1,11 @@
+NightReintools UI: desktop / mobile
+Header: [夜の王チェッカー]                         [使い方] [リセット]
+Desktop main workspace:
+ [出撃情報, 360-380px]             [夜の王の候補 + count, remaining width]
+  [1 1日目 + search]              [candidate summary + quick resistance columns]
+  [2-column option list]          [or factual empty selection guidance]
+  [2 2日目 + disabled search]     [数値の見方 + damage/status legend]
+  [任意 イベント + search]        [1 1日目の弱点・耐性 + encounter disclosures]
+  [2-column event list]           [2 2日目の弱点・耐性 + encounter disclosures]
+Mobile: header wraps if needed; input groups then candidates, legend, encounter details.
+Native details hierarchies represent day -> boss -> form; 12px selection mark sits inside >=44px choice.

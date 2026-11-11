@@ -1,0 +1,25 @@
+{"time": "2026-11-11T06:46:38.112287+00:00", "event": "created", "kind": "change", "author": "codex-ui-owner", "context": "ui-owner-implementation-20261111"}
+{"time": "2026-11-11T06:47:31.270727+00:00", "event": "advanced", "previous": "discovery", "phase": "requirements", "artifact_digest": "f4f8b9a3f9b9c31cc2de50da0b5a2457bf802d1d93fc6c83081fce9d2eed5fb4"}
+{"time": "2026-11-11T06:47:31.392707+00:00", "event": "advanced", "previous": "requirements", "phase": "design", "artifact_digest": "a8d3582dbb566f6daa9eca8bdd2d00ba8821adf3c0df43fceb9aa936fefb41ea"}
+{"time": "2026-11-11T06:51:01.684987+00:00", "event": "gate_failed", "phase": "design", "reason": "成果物自身を実装影響範囲に指定できません"}
+{"time": "2026-11-11T06:51:22.918942+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "337cd29433574f9e6eff3d9c11a2bcf61ce962590c3559708db8ea93815857e7"}
+{"time": "2026-11-11T07:00:15.743236+00:00", "event": "verification", "success": false, "receipt": "evidence/4129b3062fc445f6b7ad628aebf8de7d.json"}
+{"time": "2026-11-11T07:01:44.125705+00:00", "event": "verification", "success": false, "receipt": "evidence/273e97576d9d4f64a177193ae971c555.json"}
+{"time": "2026-11-11T07:01:49.955121+00:00", "event": "gate_failed", "phase": "implementation", "reason": "検証が未実行、失敗、またはタイムアウトです"}
+{"time": "2026-11-11T07:02:52.428182+00:00", "event": "reopened", "previous": "implementation", "phase": "design", "reason": "beforeとafterのenvironmentにアプリ配色と補助probeの説明を混在させていた。画像は変更せず、実際に共通のブラウザーprefers-color-scheme=lightと主fixtureの条件へ訂正する。"}
+{"time": "2026-11-11T07:03:22.487543+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "315891bb9dd4f1227ad0109538b7ce8aefe3130f57f2fca372390238a82c2eb5"}
+{"time": "2026-11-11T07:03:58.080005+00:00", "event": "verification", "success": false, "receipt": "evidence/ce788466fc184f35b972edbba8ed7fee.json"}
+{"time": "2026-11-11T07:04:45.643434+00:00", "event": "verification", "success": true, "receipt": "evidence/3a242dc7266941c6bbec0dc39205fae9.json"}
+{"time": "2026-11-11T07:04:53.952729+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "bd330641af6da41bf27bd44f8b63e2aa80e64d5fc32eabaef32ab81bd5440f1a"}
+{"time": "2026-11-11T07:14:20.274463+00:00", "event": "reopened", "previous": "review", "phase": "design", "reason": "独立レビューR1/R2に対応。開いたhelp/全耐性表/形態/日別選択/検索不一致と入力placeholderを全文観測へ追加し、静的ラベルのpurposeと実出典を修正する。"}
+{"time": "2026-11-11T07:16:36.151884+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "c76cfc524934e3574d1ef53575f838f6edd28cf075008b23784f76c93a1a912f"}
+{"time": "2026-11-11T07:17:25.758941+00:00", "event": "verification", "success": true, "receipt": "evidence/b73bd92cf212447a83a366043ef0f186.json"}
+{"time": "2026-11-11T07:19:34.218199+00:00", "event": "verification", "success": false, "receipt": "evidence/246878e84b354305bc49adaf075e953f.json"}
+{"time": "2026-11-11T07:20:38.323968+00:00", "event": "verification", "success": true, "receipt": "evidence/c27e5c9138b145cc89adba475abf7bca.json"}
+{"time": "2026-11-11T07:20:51.503647+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2"}
+{"time": "2026-11-11T07:26:59.790799+00:00", "event": "reopened", "previous": "review", "phase": "design", "reason": "最終独立レビューで、イベントの静的h3見出し4件とdisabled入力の前提条件案内1件のpurposeを追加修正。UI/入力条件/期待値/ソースは変更しない。"}
+{"time": "2026-11-11T07:27:00.134003+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "39f3f0f045cb4bf790ed7ce6316f519aaddc3391bb8004f21804040f3b247956"}
+{"time": "2026-11-11T07:27:49.940384+00:00", "event": "verification", "success": true, "receipt": "evidence/090f6b3ba9524fd3a7583090b1d0b6ab.json"}
+{"time": "2026-11-11T07:28:49.481996+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2"}
+{"time": "2026-11-11T07:35:20.088234+00:00", "event": "advanced", "previous": "review", "phase": "done", "artifact_digest": "97da1ad8c4f038e8c0510a17ee335cb2e81e4ed2629af030b5e23e5d028c5fb0"}
+{"time": "2026-11-11T07:48:38.462347+00:00", "event": "verification", "success": true, "receipt": "evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8.json"}

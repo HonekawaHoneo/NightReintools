@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; manifest-src 'self'; connect-src 'self'; worker-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <meta name="theme-color" content="#f5f5f3">
+  <meta name="theme-color" content="#101519">
   <meta name="description" content="ナイトレインのボス候補と弱点・耐性を確認する個人用ツール">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="夜王チェッカー">
-  <title>ナイトレイン ボス判別</title>
+  <title>夜の王チェッカー</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon-180.png">
@@ -23,8 +23,18 @@
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="app-header">
-    <h1>ナイトレイン <span>ボス判別</span></h1>
-    <button id="reset-button" class="reset-button" type="button" disabled>リセット</button>
+    <h1>夜の王チェッカー</h1>
+    <div class="header-actions">
+      <details class="help-details">
+        <summary>使い方</summary>
+        <div class="help-content">
+          <p>1日目のボスかイベントを選ぶと、夜の王の候補が表示されます。</p>
+          <p>2日目のボスは、1日目を選ぶと選択できます。</p>
+          <p>候補名を開くと、弱点・耐性の全項目を確認できます。</p>
+        </div>
+      </details>
+      <button id="reset-button" class="reset-button" type="button" disabled>リセット</button>
+    </div>
   </header>
 
   <main id="main" class="workspace">
@@ -70,10 +80,28 @@
     </section>
 
     <section class="results-panel" aria-label="日別ボスと夜の王">
+      <details id="nightlord-section" class="stage-section stage-section--nightlord">
+        <summary class="stage-heading">
+          <span class="stage-mark nightlord-mark" aria-hidden="true">◆</span>
+          <span>夜の王の候補</span>
+          <span id="candidate-count" class="count-badge" aria-live="polite">未選択</span>
+        </summary>
+        <p id="candidate-message" class="result-message" hidden></p>
+        <div id="candidate-details" class="details-list candidate-grid"></div>
+      </details>
+      <p id="candidate-empty-state" class="candidate-empty-state">1日目のボスかイベントを選択してください。</p>
+
+      <aside class="resistance-legend" aria-label="数値の見方">
+        <h2>数値の見方</h2>
+        <p>物理・属性：＋は弱点、−は耐性。</p>
+        <p>状態異常：数値は蓄積耐性値です。</p>
+        <p>—：資料なし</p>
+      </aside>
+
       <details id="day1-section" class="stage-section stage-section--day1" open>
         <summary class="stage-heading">
           <span class="stage-mark" aria-hidden="true">1</span>
-          <span>1日目</span>
+          <span>1日目の弱点・耐性</span>
         </summary>
         <div id="day1-resistance-details" class="details-list"></div>
       </details>
@@ -81,19 +109,9 @@
       <details id="day2-section" class="stage-section stage-section--day2">
         <summary class="stage-heading">
           <span class="stage-mark" aria-hidden="true">2</span>
-          <span>2日目</span>
+          <span>2日目の弱点・耐性</span>
         </summary>
         <div id="day2-resistance-details" class="details-list"></div>
-      </details>
-
-      <details id="nightlord-section" class="stage-section stage-section--nightlord">
-        <summary class="stage-heading">
-          <span class="stage-mark nightlord-mark" aria-hidden="true">◆</span>
-          <span>夜の王</span>
-          <span id="candidate-count" class="count-badge" aria-live="polite">未選択</span>
-        </summary>
-        <p id="candidate-message" class="result-message" hidden></p>
-        <div id="candidate-details" class="details-list"></div>
       </details>
     </section>
   </main>

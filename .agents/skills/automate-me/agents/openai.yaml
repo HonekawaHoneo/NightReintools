@@ -1,0 +1,5 @@
+interface:
+  display_name: "automate-me"
+  short_description: "Use for \"automate me\", \"create/update/refresh my -mode skill\", \"turn/capture my preferences or working style into a skil"
+policy:
+  allow_implicit_invocation: false

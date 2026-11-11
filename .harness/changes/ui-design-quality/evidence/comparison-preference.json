@@ -1,0 +1,9 @@
+{
+  "original_browser_default_observed": {
+    "dark": false,
+    "light": true,
+    "appColorScheme": "light"
+  },
+  "after_browser_preference": "Playwright color_scheme=light, explicitly fixed",
+  "note": "theme in capture.environment is browser preference. Application stylesheet changing from light to dark is the intended UI change."
+}

@@ -1,0 +1,10 @@
+# Replace @QUALITY_OWNER with a real owner. Enable required code-owner reviews in GitHub.
+/.github/workflows/ @QUALITY_OWNER
+/.github/CODEOWNERS @QUALITY_OWNER
+/.harness/*.py @QUALITY_OWNER
+/.harness/framework.lock.json @QUALITY_OWNER
+/.harness/project.json @QUALITY_OWNER
+/.jscpd.json @QUALITY_OWNER
+/tach.toml @QUALITY_OWNER
+/requirements-quality.txt @QUALITY_OWNER
+/.harness/quality-policy.json @QUALITY_OWNER

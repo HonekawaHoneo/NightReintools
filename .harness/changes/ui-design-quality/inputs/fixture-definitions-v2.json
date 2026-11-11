@@ -1,0 +1,61 @@
+{
+  "desktop-empty": {
+    "width": 1440,
+    "height": 1000,
+    "selected": false,
+    "zoom": 1
+  },
+  "desktop-selected": {
+    "width": 1440,
+    "height": 1000,
+    "selected": true,
+    "zoom": 1
+  },
+  "mobile-selected": {
+    "width": 390,
+    "height": 844,
+    "selected": true,
+    "zoom": 1
+  },
+  "tablet-selected": {
+    "width": 1024,
+    "height": 768,
+    "selected": true,
+    "zoom": 1
+  },
+  "narrow-zoom": {
+    "width": 640,
+    "height": 1000,
+    "selected": true,
+    "zoom": 2
+  },
+  "desktop-expanded": {
+    "width": 1440,
+    "height": 1000,
+    "selected": true,
+    "zoom": 1,
+    "day2": "古竜",
+    "event": "忌み鬼",
+    "expanded": true,
+    "help": true
+  },
+  "mobile-expanded": {
+    "width": 390,
+    "height": 844,
+    "selected": true,
+    "zoom": 1,
+    "day2": "古竜",
+    "event": "忌み鬼",
+    "expanded": true,
+    "help": true
+  },
+  "desktop-search-empty": {
+    "width": 1440,
+    "height": 1000,
+    "selected": true,
+    "zoom": 1,
+    "day2": "古竜",
+    "event": "忌み鬼",
+    "search": true
+  }
+}

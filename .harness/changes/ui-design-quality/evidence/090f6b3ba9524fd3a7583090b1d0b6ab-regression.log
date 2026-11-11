@@ -1,0 +1,3 @@
+PASS: 18 encounter flows match; search/aliases, day2 reset, event-only selection, resistance tables, global reset; no browser errors
+PASS: 320px and 768px reflow, tap targets and visible compact resistances
+PASS: actual old-cache → new-cache upgrade and offline reload, with working event selection

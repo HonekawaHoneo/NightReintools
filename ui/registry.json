@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "styles.css",
+      "anchor": ":root {"
+    },
+    {
+      "path": "resistance.css",
+      "anchor": ".resistance-detail {"
+    },
+    {
+      "path": "ui/definition.json",
+      "pointer": "/purpose"
+    }
+  ],
+  "components": [
+    {
+      "id": "encounters",
+      "source_ref": {
+        "path": "index.html",
+        "anchor": "id=\"selection-title\""
+      },
+      "implementation_ref": {
+        "path": "index.html",
+        "anchor": "id=\"selection-title\""
+      },
+      "meaning": "日別ボスとイベントを選択する",
+      "use_when": [
+        "日別ボスとイベントを選択する"
+      ],
+      "relations": [],
+      "token_ids": [
+        "page",
+        "heading"
+      ],
+      "required_cues": [
+        "visible-label",
+        "selected-state",
+        "disabled-state",
+        "focus"
+      ],
+      "optional_cues": [
+        "stage-color"
+      ],
+      "avoid": [
+        "marketing-copy",
+        "color-only-state"
+      ],
+      "a11y": [
+        "native-keyboard",
+        "visible-focus",
+        "labels"
+      ]
+    },
+    {
+      "id": "candidates",
+      "source_ref": {
+        "path": "index.html",
+        "anchor": "id=\"nightlord-section\""
+      },
+      "implementation_ref": {
+        "path": "index.html",
+        "anchor": "id=\"nightlord-section\""
+      },
+      "meaning": "候補数と各候補の耐性を比較する",
+      "use_when": [
+        "候補数と各候補の耐性を比較する"
+      ],
+      "relations": [],
+      "token_ids": [
+        "page",
+        "heading"
+      ],
+      "required_cues": [
+        "candidate-count",
+        "expandable",
+        "numeric-effects"
+      ],
+      "optional_cues": [
+        "stage-color"
+      ],
+      "avoid": [
+        "marketing-copy",
+        "color-only-state"
+      ],
+      "a11y": [
+        "native-keyboard",
+        "visible-focus",
+        "labels"
+      ]
+    },
+    {
+      "id": "encounter-details",
+      "source_ref": {
+        "path": "index.html",
+        "anchor": "id=\"day1-section\""
+      },
+      "implementation_ref": {
+        "path": "index.html",
+        "anchor": "id=\"day1-section\""
+      },
+      "meaning": "選択した道中ボスの耐性を確認する",
+      "use_when": [
+        "選択した道中ボスの耐性を確認する"
+      ],
+      "relations": [],
+      "token_ids": [
+        "page",
+        "heading"
+      ],
+      "required_cues": [
+        "day-label",
+        "expandable",
+        "numeric-effects"
+      ],
+      "optional_cues": [
+        "stage-color"
+      ],
+      "avoid": [
+        "marketing-copy",
+        "color-only-state"
+      ],
+      "a11y": [
+        "native-keyboard",
+        "visible-focus",
+        "labels"
+      ]
+    }
+  ],
+  "tokens": [
+    {
+      "id": "page",
+      "source_ref": {
+        "path": "ui/tokens.json",
+        "pointer": "/page"
+      },
+      "meaning": "画面全体の背景色"
+    },
+    {
+      "id": "heading",
+      "source_ref": {
+        "path": "ui/tokens.json",
+        "pointer": "/heading_size"
+      },
+      "meaning": "作業用ツールを識別する見出しのCSS pxサイズ"
+    }
+  ]
+}

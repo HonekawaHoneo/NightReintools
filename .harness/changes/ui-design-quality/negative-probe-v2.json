@@ -1,0 +1,34 @@
+{
+  "intent": "試験DOMだけに42px見出しと未要求の表示文を追加。実装と期待値は不変。",
+  "observed": "run exit1、8scenarioのfont/token/copy計24caseを拒否。比較条件issuesはゼロ。",
+  "failed_cases": [
+    "desktop-empty-heading-font",
+    "desktop-empty-heading-token",
+    "desktop-empty-copy",
+    "desktop-selected-heading-font",
+    "desktop-selected-heading-token",
+    "desktop-selected-copy",
+    "mobile-selected-heading-font",
+    "mobile-selected-heading-token",
+    "mobile-selected-copy",
+    "tablet-selected-heading-font",
+    "tablet-selected-heading-token",
+    "tablet-selected-copy",
+    "narrow-zoom-heading-font",
+    "narrow-zoom-heading-token",
+    "narrow-zoom-copy",
+    "desktop-expanded-heading-font",
+    "desktop-expanded-heading-token",
+    "desktop-expanded-copy",
+    "mobile-expanded-heading-font",
+    "mobile-expanded-heading-token",
+    "mobile-expanded-copy",
+    "desktop-search-empty-heading-font",
+    "desktop-search-empty-heading-token",
+    "desktop-search-empty-copy"
+  ],
+  "receipt_ref": {
+    "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f.json",
+    "sha256": "14e58aa61033d819238ad26a934fd7393da7d809fe7ea913263fffa9c785eafe"
+  }
+}

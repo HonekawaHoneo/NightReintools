@@ -1,0 +1,5 @@
+interface:
+  display_name: "setup-pstack"
+  short_description: "Configure which models pstack uses per role and at what reasoning budget. Detects your available models and writes an al"
+policy:
+  allow_implicit_invocation: false

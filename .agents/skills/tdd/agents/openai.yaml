@@ -1,0 +1,5 @@
+interface:
+  display_name: "tdd"
+  short_description: "Use only when the user explicitly asks for TDD, a failing test, or a regression test, OR when the bug has an obvious che"
+policy:
+  allow_implicit_invocation: false
