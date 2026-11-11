@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "started_at": "2026-11-11T07:27:00.416451+00:00",
+  "started_at": "2026-11-11T07:47:49.503062+00:00",
   "project_digest": "125eb452cd0678dc63ca9a7aa3dd4a34399b28474f0bb6b3319ad2979db31b98",
   "artifacts_digest": "2e29afa23b128401d85308d9a5c325e21bb1524cda851b9982a422b35d633a58",
   "checks": [
@@ -46,7 +46,7 @@
   "ci_base_sha": null,
   "provenance": {
     "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
-    "head_sha": "999e53818eee3c82ac86a2fcfbf5aa77d109ec8e"
+    "head_sha": "cba3ad44c4ee3208b8d50655c9cc416bc67e697d"
   },
   "results": [
     {
@@ -57,10 +57,10 @@
       ],
       "returncode": 0,
       "timed_out": false,
-      "started_at": "2026-11-11T07:27:00.452786+00:00",
-      "finished_at": "2026-11-11T07:27:38.690215+00:00",
-      "log": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab-ui-browser.log",
-      "log_digest": "720fb4f89bf65400d9b940d1d619b3e9ea24d7bd2d855743e5ca168b1cef8c48"
+      "started_at": "2026-11-11T07:47:49.537568+00:00",
+      "finished_at": "2026-11-11T07:48:27.272117+00:00",
+      "log": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8-ui-browser.log",
+      "log_digest": "241425b5191cf18c821c19541f84c998ee0e231aa45649ef02e8a29101504173"
     },
     {
       "id": "regression",
@@ -70,9 +70,9 @@
       ],
       "returncode": 0,
       "timed_out": false,
-      "started_at": "2026-11-11T07:27:38.690828+00:00",
-      "finished_at": "2026-11-11T07:27:49.752942+00:00",
-      "log": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab-regression.log",
+      "started_at": "2026-11-11T07:48:27.272694+00:00",
+      "finished_at": "2026-11-11T07:48:38.290620+00:00",
+      "log": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8-regression.log",
       "log_digest": "4fa21de286b347908d9789cafc84426642b82ba6f8057c793d16669d1a3dcd49"
     },
     {
@@ -84,20 +84,20 @@
       ],
       "returncode": 0,
       "timed_out": false,
-      "started_at": "2026-11-11T07:27:49.753704+00:00",
-      "finished_at": "2026-11-11T07:27:49.769576+00:00",
-      "log": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab-diff-check.log",
+      "started_at": "2026-11-11T07:48:38.291204+00:00",
+      "finished_at": "2026-11-11T07:48:38.298965+00:00",
+      "log": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8-diff-check.log",
       "log_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ],
   "success": true,
   "ui": {
     "status": "passed",
-    "directory": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab",
+    "directory": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8",
     "registry_digest": "bfea9bb8db0b6209162b7561bb81303b1e7848d43ffa0f436404d0983154c3e0",
     "reports": [
       {
-        "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/ui-browser.ui.json",
+        "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/ui-browser.ui.json",
         "sha256": "1f0ac1a26253d61c5770bc3ede544c8ddd3ec3e705112470a13359ec793b330d"
       }
     ],
@@ -117,22 +117,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.png",
             "sha256": "2cfa71e5184fb9e2f7b3de5d9868c37b42d7b24309f2dc414b63645aa0c2d244",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.zoom.png",
             "sha256": "be9f98335efe7ce6ee4f7d97f5f3df46f70d7059605b968f83e4c0fd031fb37b",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
             "sha256": "e60238e8735388e480e2c2bfedd2d2ec918cab394088155bb72daa48d2cf10f1",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.aria.json",
             "sha256": "8df2c914a6aa51479e963bdaacb088b17489d2667689cde9f3f949d8c5aa3251",
             "kind": "aria"
           }
@@ -142,7 +142,7 @@
             "id": "desktop-empty-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -167,7 +167,7 @@
             "id": "desktop-empty-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -178,7 +178,7 @@
             "id": "desktop-empty-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -189,7 +189,7 @@
             "id": "desktop-empty-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 52,
@@ -200,7 +200,7 @@
             "id": "desktop-empty-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -211,7 +211,7 @@
             "id": "desktop-empty-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -222,7 +222,7 @@
             "id": "desktop-empty-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -233,7 +233,7 @@
             "id": "desktop-empty-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -244,7 +244,7 @@
             "id": "desktop-empty-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -313,7 +313,7 @@
             "id": "desktop-empty-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -324,7 +324,7 @@
             "id": "desktop-empty-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -335,7 +335,7 @@
             "id": "desktop-empty-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -346,7 +346,7 @@
             "id": "desktop-empty-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -357,7 +357,7 @@
             "id": "desktop-empty-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -368,7 +368,7 @@
             "id": "desktop-empty-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -379,7 +379,7 @@
             "id": "desktop-empty-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -390,7 +390,7 @@
             "id": "desktop-empty-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-empty.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -414,22 +414,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.png",
             "sha256": "a501d9d3c299ed5a419ed92cf401c4f8501c2eb4a5b80f31d1ff7ee7a770d442",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.zoom.png",
             "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
             "sha256": "e284a8cbeba461a017b8e5092d908814ec106b350908aff32e7328852fa2e992",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.aria.json",
             "sha256": "eda8a2d25cdf37623125573178d627fc208e67c0e4c4b6e600108c5be70f5dc8",
             "kind": "aria"
           }
@@ -439,7 +439,7 @@
             "id": "desktop-selected-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -468,7 +468,7 @@
             "id": "desktop-selected-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -479,7 +479,7 @@
             "id": "desktop-selected-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -490,7 +490,7 @@
             "id": "desktop-selected-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 52,
@@ -501,7 +501,7 @@
             "id": "desktop-selected-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -512,7 +512,7 @@
             "id": "desktop-selected-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -523,7 +523,7 @@
             "id": "desktop-selected-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -534,7 +534,7 @@
             "id": "desktop-selected-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -545,7 +545,7 @@
             "id": "desktop-selected-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -708,7 +708,7 @@
             "id": "desktop-selected-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -719,7 +719,7 @@
             "id": "desktop-selected-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -730,7 +730,7 @@
             "id": "desktop-selected-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -741,7 +741,7 @@
             "id": "desktop-selected-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -752,7 +752,7 @@
             "id": "desktop-selected-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -763,7 +763,7 @@
             "id": "desktop-selected-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -774,7 +774,7 @@
             "id": "desktop-selected-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -785,7 +785,7 @@
             "id": "desktop-selected-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -796,7 +796,7 @@
             "id": "desktop-selected-choose-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/choose-visual-width"
             },
             "actual": 12,
@@ -807,7 +807,7 @@
             "id": "desktop-selected-choose-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/choose-visual-height"
             },
             "actual": 12,
@@ -818,7 +818,7 @@
             "id": "desktop-selected-choose-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/choose-hit-width"
             },
             "actual": 167,
@@ -829,7 +829,7 @@
             "id": "desktop-selected-choose-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/choose-hit-height"
             },
             "actual": 52,
@@ -840,7 +840,7 @@
             "id": "desktop-selected-choose-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するchooseの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/choose-activate"
             },
             "actual": true,
@@ -851,7 +851,7 @@
             "id": "desktop-selected-clear-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/clear-visual-width"
             },
             "actual": 48,
@@ -862,7 +862,7 @@
             "id": "desktop-selected-clear-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/clear-visual-height"
             },
             "actual": 44,
@@ -873,7 +873,7 @@
             "id": "desktop-selected-clear-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/clear-hit-width"
             },
             "actual": 48,
@@ -884,7 +884,7 @@
             "id": "desktop-selected-clear-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/clear-hit-height"
             },
             "actual": 44,
@@ -895,7 +895,7 @@
             "id": "desktop-selected-clear-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するclearの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/clear-activate"
             },
             "actual": true,
@@ -906,7 +906,7 @@
             "id": "desktop-selected-search-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/search-visual-width"
             },
             "actual": 340,
@@ -917,7 +917,7 @@
             "id": "desktop-selected-search-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/search-visual-height"
             },
             "actual": 44,
@@ -928,7 +928,7 @@
             "id": "desktop-selected-search-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/search-hit-width"
             },
             "actual": 340,
@@ -939,7 +939,7 @@
             "id": "desktop-selected-search-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/search-hit-height"
             },
             "actual": 44,
@@ -950,7 +950,7 @@
             "id": "desktop-selected-search-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するsearchの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/search-activate"
             },
             "actual": true,
@@ -961,7 +961,7 @@
             "id": "desktop-selected-reset-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/reset-visual-width"
             },
             "actual": 82,
@@ -972,7 +972,7 @@
             "id": "desktop-selected-reset-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/reset-visual-height"
             },
             "actual": 44,
@@ -983,7 +983,7 @@
             "id": "desktop-selected-reset-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/reset-hit-width"
             },
             "actual": 82,
@@ -994,7 +994,7 @@
             "id": "desktop-selected-reset-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/reset-hit-height"
             },
             "actual": 44,
@@ -1005,7 +1005,7 @@
             "id": "desktop-selected-reset-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するresetの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/reset-activate"
             },
             "actual": true,
@@ -1016,7 +1016,7 @@
             "id": "desktop-selected-stage-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/stage-visual-width"
             },
             "actual": 998,
@@ -1027,7 +1027,7 @@
             "id": "desktop-selected-stage-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/stage-visual-height"
             },
             "actual": 49,
@@ -1038,7 +1038,7 @@
             "id": "desktop-selected-stage-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/stage-hit-width"
             },
             "actual": 998,
@@ -1049,7 +1049,7 @@
             "id": "desktop-selected-stage-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/stage-hit-height"
             },
             "actual": 49,
@@ -1060,7 +1060,7 @@
             "id": "desktop-selected-stage-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するstageの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/stage-activate"
             },
             "actual": true,
@@ -1071,7 +1071,7 @@
             "id": "desktop-selected-boss-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/boss-visual-width"
             },
             "actual": 322.65625,
@@ -1082,7 +1082,7 @@
             "id": "desktop-selected-boss-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/boss-visual-height"
             },
             "actual": 44,
@@ -1093,7 +1093,7 @@
             "id": "desktop-selected-boss-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/boss-hit-width"
             },
             "actual": 322.65625,
@@ -1104,7 +1104,7 @@
             "id": "desktop-selected-boss-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/boss-hit-height"
             },
             "actual": 44,
@@ -1115,7 +1115,7 @@
             "id": "desktop-selected-boss-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するbossの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/boss-activate"
             },
             "actual": true,
@@ -1126,7 +1126,7 @@
             "id": "desktop-selected-form-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/form-visual-width"
             },
             "actual": 298.65625,
@@ -1137,7 +1137,7 @@
             "id": "desktop-selected-form-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/form-visual-height"
             },
             "actual": 44,
@@ -1148,7 +1148,7 @@
             "id": "desktop-selected-form-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/form-hit-width"
             },
             "actual": 298.65625,
@@ -1159,7 +1159,7 @@
             "id": "desktop-selected-form-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/form-hit-height"
             },
             "actual": 44,
@@ -1170,7 +1170,7 @@
             "id": "desktop-selected-form-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するformの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/form-activate"
             },
             "actual": true,
@@ -1181,7 +1181,7 @@
             "id": "desktop-selected-help-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/help-visual-width"
             },
             "actual": 68,
@@ -1192,7 +1192,7 @@
             "id": "desktop-selected-help-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/help-visual-height"
             },
             "actual": 44,
@@ -1203,7 +1203,7 @@
             "id": "desktop-selected-help-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/help-hit-width"
             },
             "actual": 68,
@@ -1214,7 +1214,7 @@
             "id": "desktop-selected-help-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/help-hit-height"
             },
             "actual": 44,
@@ -1225,7 +1225,7 @@
             "id": "desktop-selected-help-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するhelpの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-selected.metrics.json",
               "pointer": "/help-activate"
             },
             "actual": true,
@@ -1249,22 +1249,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.png",
             "sha256": "8ef15b86dd4efbb3579ca29698a5277fc1c2eedcf76823065f7bc068e4225cb7",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.zoom.png",
             "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
             "sha256": "7c83515553657bc66b449e32c2512dca581642dcc73adc1a35d8ab48b33002de",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.aria.json",
             "sha256": "eda8a2d25cdf37623125573178d627fc208e67c0e4c4b6e600108c5be70f5dc8",
             "kind": "aria"
           }
@@ -1274,7 +1274,7 @@
             "id": "mobile-selected-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -1303,7 +1303,7 @@
             "id": "mobile-selected-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -1314,7 +1314,7 @@
             "id": "mobile-selected-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -1325,7 +1325,7 @@
             "id": "mobile-selected-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 52,
@@ -1336,7 +1336,7 @@
             "id": "mobile-selected-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -1347,7 +1347,7 @@
             "id": "mobile-selected-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -1358,7 +1358,7 @@
             "id": "mobile-selected-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -1369,7 +1369,7 @@
             "id": "mobile-selected-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -1380,7 +1380,7 @@
             "id": "mobile-selected-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -1543,7 +1543,7 @@
             "id": "mobile-selected-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -1554,7 +1554,7 @@
             "id": "mobile-selected-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -1565,7 +1565,7 @@
             "id": "mobile-selected-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -1576,7 +1576,7 @@
             "id": "mobile-selected-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -1587,7 +1587,7 @@
             "id": "mobile-selected-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -1598,7 +1598,7 @@
             "id": "mobile-selected-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -1609,7 +1609,7 @@
             "id": "mobile-selected-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -1620,7 +1620,7 @@
             "id": "mobile-selected-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -1631,7 +1631,7 @@
             "id": "mobile-selected-choose-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/choose-visual-width"
             },
             "actual": 12,
@@ -1642,7 +1642,7 @@
             "id": "mobile-selected-choose-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/choose-visual-height"
             },
             "actual": 12,
@@ -1653,7 +1653,7 @@
             "id": "mobile-selected-choose-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/choose-hit-width"
             },
             "actual": 161,
@@ -1664,7 +1664,7 @@
             "id": "mobile-selected-choose-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/choose-hit-height"
             },
             "actual": 52,
@@ -1675,7 +1675,7 @@
             "id": "mobile-selected-choose-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するchooseの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/choose-activate"
             },
             "actual": true,
@@ -1686,7 +1686,7 @@
             "id": "mobile-selected-clear-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/clear-visual-width"
             },
             "actual": 48,
@@ -1697,7 +1697,7 @@
             "id": "mobile-selected-clear-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/clear-visual-height"
             },
             "actual": 44,
@@ -1708,7 +1708,7 @@
             "id": "mobile-selected-clear-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/clear-hit-width"
             },
             "actual": 48,
@@ -1719,7 +1719,7 @@
             "id": "mobile-selected-clear-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/clear-hit-height"
             },
             "actual": 44,
@@ -1730,7 +1730,7 @@
             "id": "mobile-selected-clear-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するclearの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/clear-activate"
             },
             "actual": true,
@@ -1741,7 +1741,7 @@
             "id": "mobile-selected-search-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/search-visual-width"
             },
             "actual": 328,
@@ -1752,7 +1752,7 @@
             "id": "mobile-selected-search-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/search-visual-height"
             },
             "actual": 44,
@@ -1763,7 +1763,7 @@
             "id": "mobile-selected-search-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/search-hit-width"
             },
             "actual": 328,
@@ -1774,7 +1774,7 @@
             "id": "mobile-selected-search-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/search-hit-height"
             },
             "actual": 44,
@@ -1785,7 +1785,7 @@
             "id": "mobile-selected-search-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するsearchの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/search-activate"
             },
             "actual": true,
@@ -1796,7 +1796,7 @@
             "id": "mobile-selected-reset-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/reset-visual-width"
             },
             "actual": 82,
@@ -1807,7 +1807,7 @@
             "id": "mobile-selected-reset-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/reset-visual-height"
             },
             "actual": 44,
@@ -1818,7 +1818,7 @@
             "id": "mobile-selected-reset-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/reset-hit-width"
             },
             "actual": 82,
@@ -1829,7 +1829,7 @@
             "id": "mobile-selected-reset-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/reset-hit-height"
             },
             "actual": 44,
@@ -1840,7 +1840,7 @@
             "id": "mobile-selected-reset-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するresetの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/reset-activate"
             },
             "actual": true,
@@ -1851,7 +1851,7 @@
             "id": "mobile-selected-stage-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/stage-visual-width"
             },
             "actual": 362,
@@ -1862,7 +1862,7 @@
             "id": "mobile-selected-stage-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/stage-visual-height"
             },
             "actual": 49,
@@ -1873,7 +1873,7 @@
             "id": "mobile-selected-stage-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/stage-hit-width"
             },
             "actual": 362,
@@ -1884,7 +1884,7 @@
             "id": "mobile-selected-stage-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/stage-hit-height"
             },
             "actual": 49,
@@ -1895,7 +1895,7 @@
             "id": "mobile-selected-stage-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するstageの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/stage-activate"
             },
             "actual": true,
@@ -1906,7 +1906,7 @@
             "id": "mobile-selected-boss-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/boss-visual-width"
             },
             "actual": 360,
@@ -1917,7 +1917,7 @@
             "id": "mobile-selected-boss-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/boss-visual-height"
             },
             "actual": 44,
@@ -1928,7 +1928,7 @@
             "id": "mobile-selected-boss-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/boss-hit-width"
             },
             "actual": 360,
@@ -1939,7 +1939,7 @@
             "id": "mobile-selected-boss-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/boss-hit-height"
             },
             "actual": 44,
@@ -1950,7 +1950,7 @@
             "id": "mobile-selected-boss-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するbossの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/boss-activate"
             },
             "actual": true,
@@ -1961,7 +1961,7 @@
             "id": "mobile-selected-form-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/form-visual-width"
             },
             "actual": 336,
@@ -1972,7 +1972,7 @@
             "id": "mobile-selected-form-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/form-visual-height"
             },
             "actual": 44,
@@ -1983,7 +1983,7 @@
             "id": "mobile-selected-form-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/form-hit-width"
             },
             "actual": 336,
@@ -1994,7 +1994,7 @@
             "id": "mobile-selected-form-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/form-hit-height"
             },
             "actual": 44,
@@ -2005,7 +2005,7 @@
             "id": "mobile-selected-form-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するformの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/form-activate"
             },
             "actual": true,
@@ -2016,7 +2016,7 @@
             "id": "mobile-selected-help-visual-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/help-visual-width"
             },
             "actual": 68,
@@ -2027,7 +2027,7 @@
             "id": "mobile-selected-help-visual-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/help-visual-height"
             },
             "actual": 44,
@@ -2038,7 +2038,7 @@
             "id": "mobile-selected-help-hit-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/help-hit-width"
             },
             "actual": 68,
@@ -2049,7 +2049,7 @@
             "id": "mobile-selected-help-hit-height",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/help-hit-height"
             },
             "actual": 44,
@@ -2060,7 +2060,7 @@
             "id": "mobile-selected-help-activate",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するhelpの結果を起動するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-selected.metrics.json",
               "pointer": "/help-activate"
             },
             "actual": true,
@@ -2084,22 +2084,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.png",
             "sha256": "7b9ce8da18d84154cfcbbe3c2f6db4f762bc43436faaac242a04b31ee6638723",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.zoom.png",
             "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
             "sha256": "a4f163c3835c9081b74d3aba141adddfc71c5ba0522f4ab210b3b119bdce92e2",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.aria.json",
             "sha256": "eda8a2d25cdf37623125573178d627fc208e67c0e4c4b6e600108c5be70f5dc8",
             "kind": "aria"
           }
@@ -2109,7 +2109,7 @@
             "id": "tablet-selected-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -2138,7 +2138,7 @@
             "id": "tablet-selected-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -2149,7 +2149,7 @@
             "id": "tablet-selected-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -2160,7 +2160,7 @@
             "id": "tablet-selected-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 52,
@@ -2171,7 +2171,7 @@
             "id": "tablet-selected-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -2182,7 +2182,7 @@
             "id": "tablet-selected-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -2193,7 +2193,7 @@
             "id": "tablet-selected-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -2204,7 +2204,7 @@
             "id": "tablet-selected-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -2215,7 +2215,7 @@
             "id": "tablet-selected-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -2378,7 +2378,7 @@
             "id": "tablet-selected-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -2389,7 +2389,7 @@
             "id": "tablet-selected-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -2400,7 +2400,7 @@
             "id": "tablet-selected-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -2411,7 +2411,7 @@
             "id": "tablet-selected-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -2422,7 +2422,7 @@
             "id": "tablet-selected-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -2433,7 +2433,7 @@
             "id": "tablet-selected-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -2444,7 +2444,7 @@
             "id": "tablet-selected-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -2455,7 +2455,7 @@
             "id": "tablet-selected-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/tablet-selected.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -2479,22 +2479,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.png",
             "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.zoom.png",
             "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
             "sha256": "36b833afce5141c4b84cc0b854f1014d7708f82fa4f7b05adac1f5288ea9f7b0",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.aria.json",
             "sha256": "eda8a2d25cdf37623125573178d627fc208e67c0e4c4b6e600108c5be70f5dc8",
             "kind": "aria"
           }
@@ -2504,7 +2504,7 @@
             "id": "narrow-zoom-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -2533,7 +2533,7 @@
             "id": "narrow-zoom-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -2544,7 +2544,7 @@
             "id": "narrow-zoom-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -2555,7 +2555,7 @@
             "id": "narrow-zoom-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 44,
@@ -2566,7 +2566,7 @@
             "id": "narrow-zoom-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -2577,7 +2577,7 @@
             "id": "narrow-zoom-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -2588,7 +2588,7 @@
             "id": "narrow-zoom-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -2599,7 +2599,7 @@
             "id": "narrow-zoom-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -2610,7 +2610,7 @@
             "id": "narrow-zoom-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -2773,7 +2773,7 @@
             "id": "narrow-zoom-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -2784,7 +2784,7 @@
             "id": "narrow-zoom-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -2795,7 +2795,7 @@
             "id": "narrow-zoom-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -2806,7 +2806,7 @@
             "id": "narrow-zoom-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -2817,7 +2817,7 @@
             "id": "narrow-zoom-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -2828,7 +2828,7 @@
             "id": "narrow-zoom-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -2839,7 +2839,7 @@
             "id": "narrow-zoom-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -2850,7 +2850,7 @@
             "id": "narrow-zoom-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/narrow-zoom.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/narrow-zoom.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -2874,22 +2874,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.png",
             "sha256": "98ddb0163f5a83dcf2ac05b73a12050f9613f2307d7677497e076cc5aeb7de7d",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.zoom.png",
             "sha256": "e4ed540f13925501b4dcfd1a9151cbfff68066f311b953fe6781970c9d61e4c7",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
             "sha256": "eb1cf703803c756cb0fb91c23dfd05815596bedbe3bd6c2840950e667c6b3443",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.aria.json",
             "sha256": "93a0640f97ee7dff56538e2c3814a94a7cd4ed8480e307b802dc454372c6588d",
             "kind": "aria"
           }
@@ -2899,7 +2899,7 @@
             "id": "desktop-expanded-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -2927,7 +2927,7 @@
             "id": "desktop-expanded-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -2938,7 +2938,7 @@
             "id": "desktop-expanded-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -2949,7 +2949,7 @@
             "id": "desktop-expanded-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 52,
@@ -2960,7 +2960,7 @@
             "id": "desktop-expanded-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -2971,7 +2971,7 @@
             "id": "desktop-expanded-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -2982,7 +2982,7 @@
             "id": "desktop-expanded-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -2993,7 +2993,7 @@
             "id": "desktop-expanded-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -3004,7 +3004,7 @@
             "id": "desktop-expanded-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -3233,7 +3233,7 @@
             "id": "desktop-expanded-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -3244,7 +3244,7 @@
             "id": "desktop-expanded-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -3255,7 +3255,7 @@
             "id": "desktop-expanded-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -3266,7 +3266,7 @@
             "id": "desktop-expanded-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -3277,7 +3277,7 @@
             "id": "desktop-expanded-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -3288,7 +3288,7 @@
             "id": "desktop-expanded-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -3299,7 +3299,7 @@
             "id": "desktop-expanded-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -3310,7 +3310,7 @@
             "id": "desktop-expanded-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-expanded.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -3334,22 +3334,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.png",
             "sha256": "100363f721735c4843cc9e375bffae694857cfd7a960a871b1a94cbd8a9b3949",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.zoom.png",
             "sha256": "e4ed540f13925501b4dcfd1a9151cbfff68066f311b953fe6781970c9d61e4c7",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
             "sha256": "b66cc5bf86963758fc87f4a1d4401f809f4a137c12a9c07db34faf54ef56f680",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.aria.json",
             "sha256": "93a0640f97ee7dff56538e2c3814a94a7cd4ed8480e307b802dc454372c6588d",
             "kind": "aria"
           }
@@ -3359,7 +3359,7 @@
             "id": "mobile-expanded-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -3387,7 +3387,7 @@
             "id": "mobile-expanded-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -3398,7 +3398,7 @@
             "id": "mobile-expanded-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -3409,7 +3409,7 @@
             "id": "mobile-expanded-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 52,
@@ -3420,7 +3420,7 @@
             "id": "mobile-expanded-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -3431,7 +3431,7 @@
             "id": "mobile-expanded-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -3442,7 +3442,7 @@
             "id": "mobile-expanded-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -3453,7 +3453,7 @@
             "id": "mobile-expanded-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -3464,7 +3464,7 @@
             "id": "mobile-expanded-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -3693,7 +3693,7 @@
             "id": "mobile-expanded-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -3704,7 +3704,7 @@
             "id": "mobile-expanded-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -3715,7 +3715,7 @@
             "id": "mobile-expanded-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -3726,7 +3726,7 @@
             "id": "mobile-expanded-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -3737,7 +3737,7 @@
             "id": "mobile-expanded-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -3748,7 +3748,7 @@
             "id": "mobile-expanded-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -3759,7 +3759,7 @@
             "id": "mobile-expanded-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -3770,7 +3770,7 @@
             "id": "mobile-expanded-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-expanded.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/mobile-expanded.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -3794,22 +3794,22 @@
         },
         "files": [
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.png",
-            "sha256": "1e4dff7f698f6afd8d7460d60e65c08cd717daa59d0b80c5848cac88ce11b3d6",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.png",
+            "sha256": "841470e2eb1b230f1a2b6765742ad5e8336ec777e7a243c0456424d3ab7d64af",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.zoom.png",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.zoom.png",
             "sha256": "a2a2c0d41799d136420d81ff86adfbacb7ace80d14b66b0cad9780d5e3320b7b",
             "kind": "screenshot"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
             "sha256": "f26c985eb2e541b97e3cbd050dcc37ad47a058ec4f1ee780673a6976f0aa34a1",
             "kind": "metrics"
           },
           {
-            "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.aria.json",
+            "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.aria.json",
             "sha256": "12d7d94c4e6eb9bda5e96903cd669c7e862c16201945fc25b89517b3387bef94",
             "kind": "aria"
           }
@@ -3819,7 +3819,7 @@
             "id": "desktop-search-empty-layout",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/layout"
             },
             "actual": {
@@ -3847,7 +3847,7 @@
             "id": "desktop-search-empty-heading-font",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/heading-font"
             },
             "actual": 24,
@@ -3858,7 +3858,7 @@
             "id": "desktop-search-empty-option-line",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/option-line"
             },
             "actual": 20,
@@ -3869,7 +3869,7 @@
             "id": "desktop-search-empty-option-row",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/option-row"
             },
             "actual": 44,
@@ -3880,7 +3880,7 @@
             "id": "desktop-search-empty-reset-target",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/reset-target"
             },
             "actual": 44,
@@ -3891,7 +3891,7 @@
             "id": "desktop-search-empty-workspace-gap",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/workspace-gap"
             },
             "actual": 20,
@@ -3902,7 +3902,7 @@
             "id": "desktop-search-empty-page-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/page-token"
             },
             "actual": "#101519",
@@ -3913,7 +3913,7 @@
             "id": "desktop-search-empty-heading-token",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/heading-token"
             },
             "actual": 24,
@@ -3924,7 +3924,7 @@
             "id": "desktop-search-empty-copy",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/copy"
             },
             "actual": [
@@ -4044,7 +4044,7 @@
             "id": "desktop-search-empty-state-consistency",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/state-consistency"
             },
             "actual": true,
@@ -4055,7 +4055,7 @@
             "id": "desktop-search-empty-a11y-label",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/a11y-label"
             },
             "actual": true,
@@ -4066,7 +4066,7 @@
             "id": "desktop-search-empty-a11y-keyboard",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/a11y-keyboard"
             },
             "actual": true,
@@ -4077,7 +4077,7 @@
             "id": "desktop-search-empty-a11y-focus",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/a11y-focus"
             },
             "actual": true,
@@ -4088,7 +4088,7 @@
             "id": "desktop-search-empty-a11y-width",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/a11y-width"
             },
             "actual": true,
@@ -4099,7 +4099,7 @@
             "id": "desktop-search-empty-a11y-zoom",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/a11y-zoom"
             },
             "actual": true,
@@ -4110,7 +4110,7 @@
             "id": "desktop-search-empty-a11y-reading_order",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/a11y-reading_order"
             },
             "actual": true,
@@ -4121,7 +4121,7 @@
             "id": "desktop-search-empty-a11y-operable_targets",
             "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
             "value_ref": {
-              "path": ".harness/changes/ui-design-quality/evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-search-empty.metrics.json",
+              "path": ".harness/changes/ui-design-quality/evidence/9698e203d9fb439a9c2ffc0dc0a4dcd8/ui-browser/desktop-search-empty.metrics.json",
               "pointer": "/a11y-operable_targets"
             },
             "actual": true,
@@ -4133,6 +4133,6 @@
     ],
     "issues": []
   },
-  "finished_at": "2026-11-11T07:27:49.932336+00:00",
+  "finished_at": "2026-11-11T07:48:38.451571+00:00",
   "source_unchanged": true
 }
