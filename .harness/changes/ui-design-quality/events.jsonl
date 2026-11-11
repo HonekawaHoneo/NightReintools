@@ -11,3 +11,9 @@
 {"time": "2026-11-11T07:03:58.080005+00:00", "event": "verification", "success": false, "receipt": "evidence/ce788466fc184f35b972edbba8ed7fee.json"}
 {"time": "2026-11-11T07:04:45.643434+00:00", "event": "verification", "success": true, "receipt": "evidence/3a242dc7266941c6bbec0dc39205fae9.json"}
 {"time": "2026-11-11T07:04:53.952729+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "bd330641af6da41bf27bd44f8b63e2aa80e64d5fc32eabaef32ab81bd5440f1a"}
+{"time": "2026-11-11T07:14:20.274463+00:00", "event": "reopened", "previous": "review", "phase": "design", "reason": "独立レビューR1/R2に対応。開いたhelp/全耐性表/形態/日別選択/検索不一致と入力placeholderを全文観測へ追加し、静的ラベルのpurposeと実出典を修正する。"}
+{"time": "2026-11-11T07:16:36.151884+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "c76cfc524934e3574d1ef53575f838f6edd28cf075008b23784f76c93a1a912f"}
+{"time": "2026-11-11T07:17:25.758941+00:00", "event": "verification", "success": true, "receipt": "evidence/b73bd92cf212447a83a366043ef0f186.json"}
+{"time": "2026-11-11T07:19:34.218199+00:00", "event": "verification", "success": false, "receipt": "evidence/246878e84b354305bc49adaf075e953f.json"}
+{"time": "2026-11-11T07:20:38.323968+00:00", "event": "verification", "success": true, "receipt": "evidence/c27e5c9138b145cc89adba475abf7bca.json"}
+{"time": "2026-11-11T07:20:51.503647+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2"}

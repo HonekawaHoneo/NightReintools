@@ -1,0 +1,4146 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-11-11T07:18:44.856402+00:00",
+  "project_digest": "125eb452cd0678dc63ca9a7aa3dd4a34399b28474f0bb6b3319ad2979db31b98",
+  "artifacts_digest": "4b298ab88f0e27148212aa888be0aabec40b3a311166e12f17e97c7d869119f0",
+  "checks": [
+    {
+      "id": "ui-browser",
+      "argv": [
+        "python3",
+        "tests/ui_browser.py"
+      ],
+      "timeout_seconds": 180
+    },
+    {
+      "id": "regression",
+      "argv": [
+        "python3",
+        "tests/regression.py"
+      ],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeout_seconds": 30
+    }
+  ],
+  "checks_digest": "e20754359b1670ff4840ecd63940d5fefdbbffd14cbb96450d4a702bdcbc780a",
+  "source_changes": [
+    "index.html",
+    "manifest.webmanifest",
+    "resistance.css",
+    "service-worker.js",
+    "styles.css",
+    "tests/README.md",
+    "tests/browser_support.py",
+    "tests/regression.py",
+    "tests/ui_browser.py"
+  ],
+  "base_sha": null,
+  "ci_base_sha": null,
+  "provenance": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "head_sha": "d32c81c2ed43d0e360052d930b0c34736b2686a9"
+  },
+  "results": [
+    {
+      "id": "ui-browser",
+      "argv": [
+        "python3",
+        "tests/ui_browser.py"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at": "2026-11-11T07:18:44.893116+00:00",
+      "finished_at": "2026-11-11T07:19:22.969596+00:00",
+      "log": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f-ui-browser.log",
+      "log_digest": "40eacc7fa330fe8dc23a7595dfa73f514fc44fa2105ab5636ab73fe8f4436927"
+    },
+    {
+      "id": "regression",
+      "argv": [
+        "python3",
+        "tests/regression.py"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at": "2026-11-11T07:19:22.970235+00:00",
+      "finished_at": "2026-11-11T07:19:34.033781+00:00",
+      "log": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f-regression.log",
+      "log_digest": "4fa21de286b347908d9789cafc84426642b82ba6f8057c793d16669d1a3dcd49"
+    },
+    {
+      "id": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at": "2026-11-11T07:19:34.034458+00:00",
+      "finished_at": "2026-11-11T07:19:34.050306+00:00",
+      "log": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f-diff-check.log",
+      "log_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "success": false,
+  "ui": {
+    "status": "failed",
+    "directory": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f",
+    "registry_digest": "bfea9bb8db0b6209162b7561bb81303b1e7848d43ffa0f436404d0983154c3e0",
+    "reports": [
+      {
+        "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/ui-browser.ui.json",
+        "sha256": "1f0ac1a26253d61c5770bc3ede544c8ddd3ec3e705112470a13359ec793b330d"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "desktop-empty",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "未選択; CSS layout zoom 1x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.png",
+            "sha256": "a99086cc2b5587d607539d37721f1c572a12e7e41eb7abebf763395c4a040c56",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.zoom.png",
+            "sha256": "be9f98335efe7ce6ee4f7d97f5f3df46f70d7059605b968f83e4c0fd031fb37b",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+            "sha256": "ec37c1eb5816022d23ccb8863bfd1dabf149ec4e3969e6629540b982299a41ee",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.aria.json",
+            "sha256": "f72dafdb0bc58777b98dc46b15974de911923bf7c7ce6aa5e59249907b673060",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "desktop-empty-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [],
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "zoom": 1
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "desktop-empty-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "ボス名",
+              "亜人の女王＆亜人の剣聖",
+              "鈴玉狩り",
+              "貪食ドラゴン",
+              "夜の騎兵",
+              "英雄のガーゴイル",
+              "ミミズ顔",
+              "百足のデーモン",
+              "熔鉄デーモン",
+              "戦場の宿将",
+              "爛れた樹霊",
+              "接ぎ木の君主",
+              "ティビアの呼び舟",
+              "王族の幽鬼",
+              "公のフレイディア",
+              "傷ついたデーモン＆うろ底のデーモン",
+              "呪剣士＆神獣の戦士",
+              "大赤熊",
+              "死の騎士",
+              "2",
+              "2日目",
+              "1日目を先に選択",
+              "任意",
+              "イベント",
+              "イベント名",
+              "忌み鬼",
+              "知性の蟲",
+              "兆し",
+              "調律の魔物",
+              "三つ首の獣",
+              "霧の裂け目",
+              "安寧者たち",
+              "歩く霊廟",
+              "隕石",
+              "狂い火",
+              "古の魔術師塔",
+              "夜の勢力",
+              "新たなる脅威",
+              "◆",
+              "夜の王の候補",
+              "未選択",
+              "1日目のボスかイベントを選択してください。",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "2",
+              "2日目の弱点・耐性",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-empty-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-empty.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      },
+      {
+        "id": "desktop-selected",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.png",
+            "sha256": "8754dcd20c98fd5fccffbeec580273cf6e4ee310133049a3e6e6f51ba3839ba6",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.zoom.png",
+            "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+            "sha256": "d1d3a35346fd7495f0bd56a095133c21e6648b12b28136b6dbb2f647ec4851f2",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.aria.json",
+            "sha256": "e1285cf77d3711b7a9ee03678e690d9ab792aef36406673f889b10264ca1e1e9",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "desktop-selected-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [
+                "エデレ",
+                "フルゴール",
+                "ナメレス"
+              ],
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "zoom": 1
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "desktop-selected-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "ボス名",
+              "夜の騎兵",
+              "解除",
+              "亜人の女王＆亜人の剣聖",
+              "鈴玉狩り",
+              "貪食ドラゴン",
+              "夜の騎兵",
+              "英雄のガーゴイル",
+              "ミミズ顔",
+              "百足のデーモン",
+              "熔鉄デーモン",
+              "戦場の宿将",
+              "爛れた樹霊",
+              "接ぎ木の君主",
+              "ティビアの呼び舟",
+              "王族の幽鬼",
+              "公のフレイディア",
+              "傷ついたデーモン＆うろ底のデーモン",
+              "呪剣士＆神獣の戦士",
+              "大赤熊",
+              "死の騎士",
+              "2",
+              "2日目",
+              "ボス名",
+              "古竜",
+              "坩堝の騎士＆黄金カバ",
+              "僻地の宿将",
+              "ノクスの竜人兵",
+              "無名の王",
+              "該当なし（ナメレス）",
+              "任意",
+              "イベント",
+              "イベント名",
+              "忌み鬼",
+              "知性の蟲",
+              "兆し",
+              "調律の魔物",
+              "三つ首の獣",
+              "霧の裂け目",
+              "安寧者たち",
+              "隕石",
+              "夜の勢力",
+              "新たなる脅威",
+              "◆",
+              "夜の王の候補",
+              "3体",
+              "エデレ",
+              "物理",
+              "属性",
+              "炎",
+              "−20%",
+              "雷",
+              "−50%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "542",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "フルゴール",
+              "物理",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "−30%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "154",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "ナメレス",
+              "ナメレス（夜の輪郭）",
+              "物理",
+              "斬撃",
+              "+15%",
+              "打撃",
+              "−10%",
+              "刺突",
+              "+10%",
+              "属性",
+              "炎",
+              "+20%",
+              "聖",
+              "+35%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "ナメレス（第二形態）",
+              "物理",
+              "斬撃",
+              "−10%",
+              "打撃",
+              "+10%",
+              "刺突",
+              "+15%",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "+20%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "夜の騎兵",
+              "2",
+              "2日目の弱点・耐性",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-choose-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/choose-visual-width"
+            },
+            "actual": 12,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-choose-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/choose-visual-height"
+            },
+            "actual": 12,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-choose-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/choose-hit-width"
+            },
+            "actual": 167,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-choose-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/choose-hit-height"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-choose-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するchooseの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/choose-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-clear-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/clear-visual-width"
+            },
+            "actual": 48,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-clear-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/clear-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-clear-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/clear-hit-width"
+            },
+            "actual": 48,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-clear-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/clear-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-clear-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するclearの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/clear-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-search-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/search-visual-width"
+            },
+            "actual": 340,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-search-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/search-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-search-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/search-hit-width"
+            },
+            "actual": 340,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-search-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/search-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-search-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するsearchの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/search-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-reset-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/reset-visual-width"
+            },
+            "actual": 82,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-reset-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/reset-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-reset-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/reset-hit-width"
+            },
+            "actual": 82,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-reset-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/reset-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-reset-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するresetの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/reset-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-stage-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/stage-visual-width"
+            },
+            "actual": 998,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-stage-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/stage-visual-height"
+            },
+            "actual": 49,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-stage-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/stage-hit-width"
+            },
+            "actual": 998,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-stage-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/stage-hit-height"
+            },
+            "actual": 49,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-stage-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するstageの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/stage-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-boss-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/boss-visual-width"
+            },
+            "actual": 322.65625,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-boss-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/boss-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-boss-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/boss-hit-width"
+            },
+            "actual": 322.65625,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-boss-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/boss-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-boss-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するbossの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/boss-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-form-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/form-visual-width"
+            },
+            "actual": 298.65625,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-form-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/form-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-form-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/form-hit-width"
+            },
+            "actual": 298.65625,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-form-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/form-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-form-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するformの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/form-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-help-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/help-visual-width"
+            },
+            "actual": 68,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-help-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/help-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-help-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/help-hit-width"
+            },
+            "actual": 68,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-help-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/help-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-selected-help-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するhelpの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-selected.metrics.json",
+              "pointer": "/help-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      },
+      {
+        "id": "mobile-selected",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.png",
+            "sha256": "4b495b31010028c0bad418efb19dd26d4be91193c44dd09aef46d833552934e6",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.zoom.png",
+            "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+            "sha256": "9ccde55964e1c55ca23f02714567057c4f97665be7a35cbf9cf5efd47a2f2b59",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.aria.json",
+            "sha256": "e1285cf77d3711b7a9ee03678e690d9ab792aef36406673f889b10264ca1e1e9",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "mobile-selected-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [
+                "エデレ",
+                "フルゴール",
+                "ナメレス"
+              ],
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "zoom": 1
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "mobile-selected-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "ボス名",
+              "夜の騎兵",
+              "解除",
+              "亜人の女王＆亜人の剣聖",
+              "鈴玉狩り",
+              "貪食ドラゴン",
+              "夜の騎兵",
+              "英雄のガーゴイル",
+              "ミミズ顔",
+              "百足のデーモン",
+              "熔鉄デーモン",
+              "戦場の宿将",
+              "爛れた樹霊",
+              "接ぎ木の君主",
+              "ティビアの呼び舟",
+              "王族の幽鬼",
+              "公のフレイディア",
+              "傷ついたデーモン＆うろ底のデーモン",
+              "呪剣士＆神獣の戦士",
+              "大赤熊",
+              "死の騎士",
+              "2",
+              "2日目",
+              "ボス名",
+              "古竜",
+              "坩堝の騎士＆黄金カバ",
+              "僻地の宿将",
+              "ノクスの竜人兵",
+              "無名の王",
+              "該当なし（ナメレス）",
+              "任意",
+              "イベント",
+              "イベント名",
+              "忌み鬼",
+              "知性の蟲",
+              "兆し",
+              "調律の魔物",
+              "三つ首の獣",
+              "霧の裂け目",
+              "安寧者たち",
+              "隕石",
+              "夜の勢力",
+              "新たなる脅威",
+              "◆",
+              "夜の王の候補",
+              "3体",
+              "エデレ",
+              "物理",
+              "属性",
+              "炎",
+              "−20%",
+              "雷",
+              "−50%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "542",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "フルゴール",
+              "物理",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "−30%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "154",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "ナメレス",
+              "ナメレス（夜の輪郭）",
+              "物理",
+              "斬撃",
+              "+15%",
+              "打撃",
+              "−10%",
+              "刺突",
+              "+10%",
+              "属性",
+              "炎",
+              "+20%",
+              "聖",
+              "+35%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "ナメレス（第二形態）",
+              "物理",
+              "斬撃",
+              "−10%",
+              "打撃",
+              "+10%",
+              "刺突",
+              "+15%",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "+20%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "夜の騎兵",
+              "2",
+              "2日目の弱点・耐性",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-choose-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/choose-visual-width"
+            },
+            "actual": 12,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-choose-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/choose-visual-height"
+            },
+            "actual": 12,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-choose-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/choose-hit-width"
+            },
+            "actual": 161,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-choose-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/choose-hit-height"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-choose-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するchooseの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/choose-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-clear-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/clear-visual-width"
+            },
+            "actual": 48,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-clear-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/clear-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-clear-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/clear-hit-width"
+            },
+            "actual": 48,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-clear-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/clear-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-clear-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するclearの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/clear-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-search-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/search-visual-width"
+            },
+            "actual": 328,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-search-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/search-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-search-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/search-hit-width"
+            },
+            "actual": 328,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-search-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/search-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-search-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するsearchの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/search-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-reset-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/reset-visual-width"
+            },
+            "actual": 82,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-reset-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/reset-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-reset-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/reset-hit-width"
+            },
+            "actual": 82,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-reset-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/reset-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-reset-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するresetの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/reset-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-stage-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/stage-visual-width"
+            },
+            "actual": 362,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-stage-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/stage-visual-height"
+            },
+            "actual": 49,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-stage-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/stage-hit-width"
+            },
+            "actual": 362,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-stage-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/stage-hit-height"
+            },
+            "actual": 49,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-stage-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するstageの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/stage-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-boss-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/boss-visual-width"
+            },
+            "actual": 360,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-boss-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/boss-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-boss-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/boss-hit-width"
+            },
+            "actual": 360,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-boss-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/boss-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-boss-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するbossの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/boss-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-form-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/form-visual-width"
+            },
+            "actual": 336,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-form-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/form-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-form-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/form-hit-width"
+            },
+            "actual": 336,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-form-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/form-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-form-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するformの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/form-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-help-visual-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/help-visual-width"
+            },
+            "actual": 68,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-help-visual-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したvisual height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/help-visual-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-help-hit-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit width（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/help-hit-width"
+            },
+            "actual": 68,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-help-hit-height",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実測したhit height（CSS px）",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/help-hit-height"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-selected-help-activate",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。この入口の実操作が意図するhelpの結果を起動するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-selected.metrics.json",
+              "pointer": "/help-activate"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      },
+      {
+        "id": "tablet-selected",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 1024,
+            "height": 768
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 1x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.png",
+            "sha256": "c276571996a57a86a197fa17402355df7fc8c24ea6f0f63f66735a0b9dc5340a",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.zoom.png",
+            "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+            "sha256": "e27552941552733c47552981ccac0352c3b257beffe82307a4caa8834898497a",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.aria.json",
+            "sha256": "e1285cf77d3711b7a9ee03678e690d9ab792aef36406673f889b10264ca1e1e9",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "tablet-selected-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [
+                "エデレ",
+                "フルゴール",
+                "ナメレス"
+              ],
+              "viewport": {
+                "width": 1024,
+                "height": 768
+              },
+              "zoom": 1
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "tablet-selected-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "ボス名",
+              "夜の騎兵",
+              "解除",
+              "亜人の女王＆亜人の剣聖",
+              "鈴玉狩り",
+              "貪食ドラゴン",
+              "夜の騎兵",
+              "英雄のガーゴイル",
+              "ミミズ顔",
+              "百足のデーモン",
+              "熔鉄デーモン",
+              "戦場の宿将",
+              "爛れた樹霊",
+              "接ぎ木の君主",
+              "ティビアの呼び舟",
+              "王族の幽鬼",
+              "公のフレイディア",
+              "傷ついたデーモン＆うろ底のデーモン",
+              "呪剣士＆神獣の戦士",
+              "大赤熊",
+              "死の騎士",
+              "2",
+              "2日目",
+              "ボス名",
+              "古竜",
+              "坩堝の騎士＆黄金カバ",
+              "僻地の宿将",
+              "ノクスの竜人兵",
+              "無名の王",
+              "該当なし（ナメレス）",
+              "任意",
+              "イベント",
+              "イベント名",
+              "忌み鬼",
+              "知性の蟲",
+              "兆し",
+              "調律の魔物",
+              "三つ首の獣",
+              "霧の裂け目",
+              "安寧者たち",
+              "隕石",
+              "夜の勢力",
+              "新たなる脅威",
+              "◆",
+              "夜の王の候補",
+              "3体",
+              "エデレ",
+              "物理",
+              "属性",
+              "炎",
+              "−20%",
+              "雷",
+              "−50%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "542",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "フルゴール",
+              "物理",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "−30%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "154",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "ナメレス",
+              "ナメレス（夜の輪郭）",
+              "物理",
+              "斬撃",
+              "+15%",
+              "打撃",
+              "−10%",
+              "刺突",
+              "+10%",
+              "属性",
+              "炎",
+              "+20%",
+              "聖",
+              "+35%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "ナメレス（第二形態）",
+              "物理",
+              "斬撃",
+              "−10%",
+              "打撃",
+              "+10%",
+              "刺突",
+              "+15%",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "+20%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "夜の騎兵",
+              "2",
+              "2日目の弱点・耐性",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "tablet-selected-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/tablet-selected.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      },
+      {
+        "id": "narrow-zoom",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 640,
+            "height": 1000
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; CSS layout zoom 2x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.png",
+            "sha256": "fe37b06e20a2f64b9f50b20e054b4d8fa4b7921ed65fd7704a7e9a6a9c53fd21",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.zoom.png",
+            "sha256": "f8567e746c40ba4aeef57e961a11dafc8bbf25e41bceb605245e1d3c93a07d50",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+            "sha256": "72fb65bd32ccc6237c10f0f5502b3c85988fed2533641e2f28a7826458c80c7c",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.aria.json",
+            "sha256": "e1285cf77d3711b7a9ee03678e690d9ab792aef36406673f889b10264ca1e1e9",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "narrow-zoom-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [
+                "エデレ",
+                "フルゴール",
+                "ナメレス"
+              ],
+              "viewport": {
+                "width": 640,
+                "height": 1000
+              },
+              "zoom": 2
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "narrow-zoom-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "ボス名",
+              "夜の騎兵",
+              "解除",
+              "亜人の女王＆亜人の剣聖",
+              "鈴玉狩り",
+              "貪食ドラゴン",
+              "夜の騎兵",
+              "英雄のガーゴイル",
+              "ミミズ顔",
+              "百足のデーモン",
+              "熔鉄デーモン",
+              "戦場の宿将",
+              "爛れた樹霊",
+              "接ぎ木の君主",
+              "ティビアの呼び舟",
+              "王族の幽鬼",
+              "公のフレイディア",
+              "傷ついたデーモン＆うろ底のデーモン",
+              "呪剣士＆神獣の戦士",
+              "大赤熊",
+              "死の騎士",
+              "2",
+              "2日目",
+              "ボス名",
+              "古竜",
+              "坩堝の騎士＆黄金カバ",
+              "僻地の宿将",
+              "ノクスの竜人兵",
+              "無名の王",
+              "該当なし（ナメレス）",
+              "任意",
+              "イベント",
+              "イベント名",
+              "忌み鬼",
+              "知性の蟲",
+              "兆し",
+              "調律の魔物",
+              "三つ首の獣",
+              "霧の裂け目",
+              "安寧者たち",
+              "隕石",
+              "夜の勢力",
+              "新たなる脅威",
+              "◆",
+              "夜の王の候補",
+              "3体",
+              "エデレ",
+              "物理",
+              "属性",
+              "炎",
+              "−20%",
+              "雷",
+              "−50%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "542",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "フルゴール",
+              "物理",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "−30%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "154",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "ナメレス",
+              "ナメレス（夜の輪郭）",
+              "物理",
+              "斬撃",
+              "+15%",
+              "打撃",
+              "−10%",
+              "刺突",
+              "+10%",
+              "属性",
+              "炎",
+              "+20%",
+              "聖",
+              "+35%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "ナメレス（第二形態）",
+              "物理",
+              "斬撃",
+              "−10%",
+              "打撃",
+              "+10%",
+              "刺突",
+              "+15%",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "+20%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "夜の騎兵",
+              "2",
+              "2日目の弱点・耐性",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "narrow-zoom-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/narrow-zoom.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      },
+      {
+        "id": "desktop-expanded",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; boss/form details expanded; help open; CSS layout zoom 1x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.png",
+            "sha256": "292f97db04de1cd1f0e2ba2c91cd9b888b1de682a8d499bccff5dc07d0894f1f",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.zoom.png",
+            "sha256": "e4ed540f13925501b4dcfd1a9151cbfff68066f311b953fe6781970c9d61e4c7",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+            "sha256": "db1d7f90fb333247e217e8754cef1ce484c6091234a5ea7df1df6184936b3abd",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.aria.json",
+            "sha256": "9477ff34aa48dbeb4894515d6465609c520dc3de35c0d11081a10dc724da1100",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "desktop-expanded-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [
+                "エデレ",
+                "ナメレス"
+              ],
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "zoom": 1
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "desktop-expanded-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "1日目のボスかイベントを選ぶと、夜の王の候補が表示されます。",
+              "2日目のボスは、1日目を選ぶと選択できます。",
+              "候補名を開くと、弱点・耐性の全項目を確認できます。",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "ボス名",
+              "夜の騎兵",
+              "解除",
+              "亜人の女王＆亜人の剣聖",
+              "鈴玉狩り",
+              "貪食ドラゴン",
+              "夜の騎兵",
+              "英雄のガーゴイル",
+              "ミミズ顔",
+              "百足のデーモン",
+              "熔鉄デーモン",
+              "戦場の宿将",
+              "爛れた樹霊",
+              "接ぎ木の君主",
+              "ティビアの呼び舟",
+              "王族の幽鬼",
+              "公のフレイディア",
+              "2",
+              "2日目",
+              "ボス名",
+              "古竜",
+              "解除",
+              "古竜",
+              "坩堝の騎士＆黄金カバ",
+              "僻地の宿将",
+              "該当なし（ナメレス）",
+              "任意",
+              "イベント",
+              "イベント名",
+              "忌み鬼",
+              "解除",
+              "忌み鬼",
+              "知性の蟲",
+              "兆し",
+              "調律の魔物",
+              "三つ首の獣",
+              "霧の裂け目",
+              "安寧者たち",
+              "隕石",
+              "新たなる脅威",
+              "◆",
+              "夜の王の候補",
+              "2体",
+              "エデレ",
+              "物理・属性",
+              "標準",
+              "0%",
+              "斬撃",
+              "0%",
+              "打撃",
+              "0%",
+              "刺突",
+              "0%",
+              "魔力",
+              "0%",
+              "炎",
+              "−20%",
+              "雷",
+              "−50%",
+              "聖",
+              "0%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "542",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "ナメレス",
+              "ナメレス（夜の輪郭）",
+              "物理・属性",
+              "標準",
+              "0%",
+              "斬撃",
+              "+15%",
+              "打撃",
+              "−10%",
+              "刺突",
+              "+10%",
+              "魔力",
+              "0%",
+              "炎",
+              "+20%",
+              "雷",
+              "0%",
+              "聖",
+              "+35%",
+              "状態異常",
+              "毒",
+              "無効",
+              "腐敗",
+              "252",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "ナメレス（第二形態）",
+              "物理・属性",
+              "標準",
+              "0%",
+              "斬撃",
+              "−10%",
+              "打撃",
+              "+10%",
+              "刺突",
+              "+15%",
+              "魔力",
+              "0%",
+              "炎",
+              "0%",
+              "雷",
+              "+20%",
+              "聖",
+              "+20%",
+              "状態異常",
+              "毒",
+              "無効",
+              "腐敗",
+              "252",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "夜の騎兵",
+              "物理・属性",
+              "標準",
+              "−35%",
+              "斬撃",
+              "−35%",
+              "打撃",
+              "−35%",
+              "刺突",
+              "−10%",
+              "魔力",
+              "−40%",
+              "炎",
+              "−40%",
+              "雷",
+              "−20%",
+              "聖",
+              "−40%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "252",
+              "凍傷",
+              "252",
+              "睡眠",
+              "無効",
+              "発狂",
+              "無効",
+              "2",
+              "2日目の弱点・耐性",
+              "古竜",
+              "物理・属性",
+              "標準",
+              "−35%",
+              "斬撃",
+              "−35%",
+              "打撃",
+              "−35%",
+              "刺突",
+              "−10%",
+              "魔力",
+              "−40%",
+              "炎",
+              "−40%",
+              "雷",
+              "−80%",
+              "聖",
+              "−40%",
+              "状態異常",
+              "毒",
+              "252",
+              "腐敗",
+              "252",
+              "出血",
+              "252",
+              "凍傷",
+              "542",
+              "睡眠",
+              "無効",
+              "発狂",
+              "無効",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-expanded-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-expanded.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      },
+      {
+        "id": "mobile-expanded",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; boss/form details expanded; help open; CSS layout zoom 1x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.png",
+            "sha256": "f241841537a3e56e25d5616d2542710f64b67bb4bdaf5221deaa0ed71eda46a1",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.zoom.png",
+            "sha256": "e4ed540f13925501b4dcfd1a9151cbfff68066f311b953fe6781970c9d61e4c7",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+            "sha256": "69513eacfcb51c5e3e519153a7eee4f4f54f1bb1da751aaed136f37b2ef67a8c",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.aria.json",
+            "sha256": "9477ff34aa48dbeb4894515d6465609c520dc3de35c0d11081a10dc724da1100",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "mobile-expanded-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [
+                "エデレ",
+                "ナメレス"
+              ],
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "zoom": 1
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "mobile-expanded-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 52,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "1日目のボスかイベントを選ぶと、夜の王の候補が表示されます。",
+              "2日目のボスは、1日目を選ぶと選択できます。",
+              "候補名を開くと、弱点・耐性の全項目を確認できます。",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "ボス名",
+              "夜の騎兵",
+              "解除",
+              "亜人の女王＆亜人の剣聖",
+              "鈴玉狩り",
+              "貪食ドラゴン",
+              "夜の騎兵",
+              "英雄のガーゴイル",
+              "ミミズ顔",
+              "百足のデーモン",
+              "熔鉄デーモン",
+              "戦場の宿将",
+              "爛れた樹霊",
+              "接ぎ木の君主",
+              "ティビアの呼び舟",
+              "王族の幽鬼",
+              "公のフレイディア",
+              "2",
+              "2日目",
+              "ボス名",
+              "古竜",
+              "解除",
+              "古竜",
+              "坩堝の騎士＆黄金カバ",
+              "僻地の宿将",
+              "該当なし（ナメレス）",
+              "任意",
+              "イベント",
+              "イベント名",
+              "忌み鬼",
+              "解除",
+              "忌み鬼",
+              "知性の蟲",
+              "兆し",
+              "調律の魔物",
+              "三つ首の獣",
+              "霧の裂け目",
+              "安寧者たち",
+              "隕石",
+              "新たなる脅威",
+              "◆",
+              "夜の王の候補",
+              "2体",
+              "エデレ",
+              "物理・属性",
+              "標準",
+              "0%",
+              "斬撃",
+              "0%",
+              "打撃",
+              "0%",
+              "刺突",
+              "0%",
+              "魔力",
+              "0%",
+              "炎",
+              "−20%",
+              "雷",
+              "−50%",
+              "聖",
+              "0%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "542",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "ナメレス",
+              "ナメレス（夜の輪郭）",
+              "物理・属性",
+              "標準",
+              "0%",
+              "斬撃",
+              "+15%",
+              "打撃",
+              "−10%",
+              "刺突",
+              "+10%",
+              "魔力",
+              "0%",
+              "炎",
+              "+20%",
+              "雷",
+              "0%",
+              "聖",
+              "+35%",
+              "状態異常",
+              "毒",
+              "無効",
+              "腐敗",
+              "252",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "ナメレス（第二形態）",
+              "物理・属性",
+              "標準",
+              "0%",
+              "斬撃",
+              "−10%",
+              "打撃",
+              "+10%",
+              "刺突",
+              "+15%",
+              "魔力",
+              "0%",
+              "炎",
+              "0%",
+              "雷",
+              "+20%",
+              "聖",
+              "+20%",
+              "状態異常",
+              "毒",
+              "無効",
+              "腐敗",
+              "252",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "夜の騎兵",
+              "物理・属性",
+              "標準",
+              "−35%",
+              "斬撃",
+              "−35%",
+              "打撃",
+              "−35%",
+              "刺突",
+              "−10%",
+              "魔力",
+              "−40%",
+              "炎",
+              "−40%",
+              "雷",
+              "−20%",
+              "聖",
+              "−40%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "252",
+              "凍傷",
+              "252",
+              "睡眠",
+              "無効",
+              "発狂",
+              "無効",
+              "2",
+              "2日目の弱点・耐性",
+              "古竜",
+              "物理・属性",
+              "標準",
+              "−35%",
+              "斬撃",
+              "−35%",
+              "打撃",
+              "−35%",
+              "刺突",
+              "−10%",
+              "魔力",
+              "−40%",
+              "炎",
+              "−40%",
+              "雷",
+              "−80%",
+              "聖",
+              "−40%",
+              "状態異常",
+              "毒",
+              "252",
+              "腐敗",
+              "252",
+              "出血",
+              "252",
+              "凍傷",
+              "542",
+              "睡眠",
+              "無効",
+              "発狂",
+              "無効",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "mobile-expanded-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/mobile-expanded.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      },
+      {
+        "id": "desktop-search-empty",
+        "status": "failed",
+        "observations": "固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。",
+        "environment": {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "browser": "Chromium 156.0.8078.79",
+          "theme": "browser prefers-color-scheme: light; application stylesheet per revision",
+          "fixture": "夜の騎兵 → エデレ/フルゴール/ナメレス; 2日目=古竜; イベント=忌み鬼; unmatched day1/event search; CSS layout zoom 1x"
+        },
+        "files": [
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.png",
+            "sha256": "738330ed378c03f9b72a9cd29af50d72064621a970511053aa63b5313ad9d900",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.zoom.png",
+            "sha256": "a2a2c0d41799d136420d81ff86adfbacb7ace80d14b66b0cad9780d5e3320b7b",
+            "kind": "screenshot"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+            "sha256": "94f20a0ff5075c26927676374498ac3c295a59f1dd920afcb812467adda87ede",
+            "kind": "metrics"
+          },
+          {
+            "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.aria.json",
+            "sha256": "092fb37d7066ee2ad4d813e001ee29cde1c89f91d327604cf64b984b161f280a",
+            "kind": "aria"
+          }
+        ],
+        "case_results": [
+          {
+            "id": "desktop-search-empty-layout",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力段階と最優先の夜の王候補・耐性を初見で区別できるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/layout"
+            },
+            "actual": {
+              "order": [
+                "nightlord-section",
+                "candidate-empty-state",
+                "resistance-legend",
+                "day1-section",
+                "day2-section"
+              ],
+              "selected": [
+                "エデレ",
+                "ナメレス"
+              ],
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              },
+              "zoom": 1
+            },
+            "status": "observed",
+            "kind": "visual"
+          },
+          {
+            "id": "desktop-search-empty-heading-font",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。作業用ツール名を識別する。大きなheroにはしない。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/heading-font"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-option-line",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。日本語の選択肢が複数行になっても読める。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/option-line"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-option-row",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。長い名前を含む選択行を小さい印と余白で操作できる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/option-row"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-reset-target",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。リセットを誤って隣接操作と取り違えず押せる。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/reset-target"
+            },
+            "actual": 44,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-workspace-gap",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。入力と結果の所属を区別する。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/workspace-gap"
+            },
+            "actual": 20,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-page-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。定義済みページ背景色が実画面に使われるか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/page-token"
+            },
+            "actual": "#101519",
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-heading-token",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。見出しが定義した24 CSS pxか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/heading-token"
+            },
+            "actual": 42,
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-copy",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。scroll領域・全可視text nodeを含む画面全体の表示文が固定した必要文と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/copy"
+            },
+            "actual": [
+              "本文へ移動",
+              "夜の王チェッカー",
+              "使い方",
+              "リセット",
+              "出撃情報",
+              "1",
+              "1日目",
+              "該当しないボス",
+              "夜の騎兵",
+              "解除",
+              "一致するボスがありません。",
+              "2",
+              "2日目",
+              "ボス名",
+              "古竜",
+              "解除",
+              "古竜",
+              "坩堝の騎士＆黄金カバ",
+              "僻地の宿将",
+              "該当なし（ナメレス）",
+              "任意",
+              "イベント",
+              "該当しないイベント",
+              "忌み鬼",
+              "解除",
+              "一致するイベントがありません。",
+              "◆",
+              "夜の王の候補",
+              "2体",
+              "エデレ",
+              "物理",
+              "属性",
+              "炎",
+              "−20%",
+              "雷",
+              "−50%",
+              "状態異常",
+              "毒",
+              "154",
+              "腐敗",
+              "154",
+              "出血",
+              "542",
+              "凍傷",
+              "154",
+              "睡眠",
+              "154",
+              "発狂",
+              "無効",
+              "ナメレス",
+              "ナメレス（夜の輪郭）",
+              "物理",
+              "斬撃",
+              "+15%",
+              "打撃",
+              "−10%",
+              "刺突",
+              "+10%",
+              "属性",
+              "炎",
+              "+20%",
+              "聖",
+              "+35%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "ナメレス（第二形態）",
+              "物理",
+              "斬撃",
+              "−10%",
+              "打撃",
+              "+10%",
+              "刺突",
+              "+15%",
+              "属性",
+              "雷",
+              "+20%",
+              "聖",
+              "+20%",
+              "状態異常",
+              "毒",
+              "無効",
+              "出血",
+              "無効",
+              "凍傷",
+              "無効",
+              "睡眠",
+              "542",
+              "発狂",
+              "無効",
+              "数値の見方",
+              "物理・属性：＋は弱点、−は耐性。",
+              "状態異常：数値は蓄積耐性値です。",
+              "—：資料なし",
+              "1",
+              "1日目の弱点・耐性",
+              "夜の騎兵",
+              "2",
+              "2日目の弱点・耐性",
+              "古竜",
+              "UNREQUESTED COPY"
+            ],
+            "status": "failed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-state-consistency",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。表示候補数・候補名・入力段階のdisabled状態が実入力と一致するか。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/state-consistency"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-a11y-label",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでlabelを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/a11y-label"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-a11y-keyboard",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでkeyboardを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/a11y-keyboard"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-a11y-focus",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでfocusを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/a11y-focus"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-a11y-width",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでwidthを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/a11y-width"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-a11y-zoom",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでzoomを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/a11y-zoom"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-a11y-reading_order",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでreading_orderを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/a11y-reading_order"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          },
+          {
+            "id": "desktop-search-empty-a11y-operable_targets",
+            "observation": "実Chromiumのcomputed style、DOM、bounding box、または実入力結果。実ブラウザーでoperable_targetsを確認する。CSS zoomはレイアウト代替試験である。",
+            "value_ref": {
+              "path": ".harness/changes/ui-design-quality/evidence/246878e84b354305bc49adaf075e953f/ui-browser/desktop-search-empty.metrics.json",
+              "pointer": "/a11y-operable_targets"
+            },
+            "actual": true,
+            "status": "passed",
+            "kind": "assertion"
+          }
+        ]
+      }
+    ],
+    "issues": []
+  },
+  "finished_at": "2026-11-11T07:19:34.210535+00:00",
+  "source_unchanged": true
+}

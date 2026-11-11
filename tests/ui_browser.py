@@ -5,7 +5,7 @@ import tempfile
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
-from browser_support import ROOT, SCENARIOS, fixture, inventory, serve
+from browser_support import ROOT, SCENARIOS, fixture, inventory, serve, fixture_description
 
 CHANGE = os.environ.get('CODEXENVSET_CHANGE_ID', 'ui-design-quality')
 CHECK = os.environ.get('CODEXENVSET_CHECK_ID', 'ui-browser')
@@ -88,7 +88,9 @@ def measure_scene(page, base_url, spec, scene):
     rgb = [int(value) for value in re.findall(r'\d+', page_color)[:3]]
     count = page.locator('#candidate-count').inner_text()
     names = page.locator('#candidate-details .detail-title').all_text_contents()
-    state = (count == '3体' and names == ['エデレ', 'フルゴール', 'ナメレス'] and page.locator('#day2-search').is_enabled()) if spec['selected'] else (count == '未選択' and names == [] and page.locator('#day2-search').is_disabled())
+    expected_names = ['エデレ', 'ナメレス'] if spec.get('day2') else ['エデレ', 'フルゴール', 'ナメレス'] if spec['selected'] else []
+    expected_count = str(len(expected_names)) + '体' if expected_names else '未選択'
+    state = count == expected_count and names == expected_names and page.locator('#day2-search').is_disabled() == (not spec['selected'])
     values = {
         'layout': {'order': page.locator('.results-panel > *').evaluate_all('els => els.map(el => el.id || el.className)'), 'selected': names, 'viewport': page.viewport_size, 'zoom': spec['zoom']},
         'heading-font': page.locator('.app-header h1').evaluate('el => parseFloat(getComputedStyle(el).fontSize)'),
@@ -104,10 +106,14 @@ def measure_scene(page, base_url, spec, scene):
         'a11y-reading_order': page.evaluate('''() => Boolean(document.querySelector('.selection-panel').compareDocumentPosition(document.querySelector('#nightlord-section')) & Node.DOCUMENT_POSITION_FOLLOWING)
           && Boolean(document.querySelector('#nightlord-section').compareDocumentPosition(document.querySelector('#day1-section')) & Node.DOCUMENT_POSITION_FOLLOWING)'''),
     }
-    selected_summary_visible = not spec['selected'] or page.locator('.quick-summary').evaluate_all('els => els.length > 0 && els.every(el => el.checkVisibility())')
+    selected_summary_visible = not spec['selected'] or page.locator('.candidate-detail:not([open]) + .quick-summary').evaluate_all('els => els.every(el => el.checkVisibility())')
+    if spec.get('expanded'):
+        selected_summary_visible &= page.locator('.candidate-detail[open] .resistance-table').evaluate_all('els => els.length > 0 && els.every(el => el.checkVisibility())')
     assert selected_summary_visible, scene + ': compact resistance hidden'
     page.screenshot(path=str(OUTPUT / (scene + '.png')), full_page=True)
     write(OUTPUT / (scene + '.aria.json'), {'snapshot': page.locator('body').aria_snapshot()})
+    fixture(page, base_url, {**spec, 'selected': False, 'day2': None, 'event': None, 'expanded': False, 'help': False, 'search': False})
+    option = page.locator('.option-button').first
     values['a11y-focus'] = focus_visible(page, option)
     option.focus()
     page.keyboard.press('Space')
@@ -152,7 +158,7 @@ def main():
                 key = case['id'].removeprefix(scene + '-')
                 assert key in values, 'Unmeasured case: ' + case['id']
                 results.append({'id': case['id'], 'observation': '実Chromiumのcomputed style、DOM、bounding box、または実入力結果。' + case['question'], 'value_ref': {'path': scene + '.metrics.json', 'pointer': '/' + key}})
-            reports.append({'id': scene, 'status': 'passed', 'observations': '固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。', 'environment': {'viewport': {'width': spec['width'], 'height': spec['height']}, 'browser': 'Chromium ' + browser.version, 'theme': 'browser prefers-color-scheme: light; application stylesheet per revision', 'fixture': ('夜の騎兵 → エデレ/フルゴール/ナメレス' if spec['selected'] else '未選択') + f'; CSS layout zoom {spec["zoom"]}x'}, 'files': [{'path': scene + '.png', 'kind': 'screenshot'}, {'path': scene + '.zoom.png', 'kind': 'screenshot'}, {'path': scene + '.metrics.json', 'kind': 'metrics'}, {'path': scene + '.aria.json', 'kind': 'aria'}], 'case_results': results})
+            reports.append({'id': scene, 'status': 'passed', 'observations': '固定fixtureから実測した値。意味の妥当性は独立レビューで判定する。', 'environment': {'viewport': {'width': spec['width'], 'height': spec['height']}, 'browser': 'Chromium ' + browser.version, 'theme': 'browser prefers-color-scheme: light; application stylesheet per revision', 'fixture': fixture_description(spec)}, 'files': [{'path': scene + '.png', 'kind': 'screenshot'}, {'path': scene + '.zoom.png', 'kind': 'screenshot'}, {'path': scene + '.metrics.json', 'kind': 'metrics'}, {'path': scene + '.aria.json', 'kind': 'aria'}], 'case_results': results})
             page.close()
         browser.close()
     assert not errors, errors

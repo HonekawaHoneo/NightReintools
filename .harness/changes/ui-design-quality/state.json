@@ -8,8 +8,8 @@
   "approvals": {
     "discovery": "f4f8b9a3f9b9c31cc2de50da0b5a2457bf802d1d93fc6c83081fce9d2eed5fb4",
     "requirements": "a8d3582dbb566f6daa9eca8bdd2d00ba8821adf3c0df43fceb9aa936fefb41ea",
-    "design": "315891bb9dd4f1227ad0109538b7ce8aefe3130f57f2fca372390238a82c2eb5",
-    "implementation": "bd330641af6da41bf27bd44f8b63e2aa80e64d5fc32eabaef32ab81bd5440f1a"
+    "design": "c76cfc524934e3574d1ef53575f838f6edd28cf075008b23784f76c93a1a912f",
+    "implementation": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2"
   },
   "intent_contract": 1,
   "baseline_files": {
