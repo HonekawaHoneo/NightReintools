@@ -15,7 +15,7 @@ CodexEnvSet main `1f95e672c6225047709eb47dbb5e710ad7a5e240`、バージョン0.9
 - ハーネス本体は338試験中300件が成功し、追加ツールを使う任意の38件をスキップしました。ログは[evidence/framework-tests.log](evidence/framework-tests.log)です。
 - 環境の380管理ファイルと6スキルファイルを固定ロックへ照合しました。対象の初期化を再実行し、既存設定を保持したunchangedを確認しました。
 - UI schema3、enforceを変更開始前に固定しました。10原則、5寸法、8種類の操作入口、全文inventoryを設計へ結びました。
-- 実Chromiumの8シナリオで216 caseを観測しました。208 assertionが成功し、8 visual caseは画面レビューの対象です。正常実行のreceiptは[evidence/c27e5c9138b145cc89adba475abf7bca.json](evidence/c27e5c9138b145cc89adba475abf7bca.json)です。
+- 実Chromiumの8シナリオで216 caseを観測しました。208 assertionが成功し、8 visual caseは画面レビューの対象です。正常実行のreceiptは[evidence/090f6b3ba9524fd3a7583090b1d0b6ab.json](evidence/090f6b3ba9524fd3a7583090b1d0b6ab.json)です。
 - 18種類の1日目ボスから2日目候補・イベントへ進む結果を変更前と比較しました。別名検索、不一致、選択解除、リセット、耐性展開も成功しました。
 - 320、390、768、1024、1440pxで収まりと操作領域を確認しました。640pxで200% CSS zoomのレイアウトも確認しました。
 - 旧Service Worker 0.9.1と旧画面から、0.9.2の画面とキャッシュへ更新しました。その後、オフラインで起動してイベントから候補を選べました。
@@ -28,9 +28,9 @@ CodexEnvSet main `1f95e672c6225047709eb47dbb5e710ad7a5e240`、バージョン0.9
 ## 画面
 
 - [変更前のデスクトップ](evidence/before/desktop-selected.png)
-- [変更後のデスクトップ](evidence/c27e5c9138b145cc89adba475abf7bca/ui-browser/desktop-selected.png)
-- [変更後のスマートフォン](evidence/c27e5c9138b145cc89adba475abf7bca/ui-browser/mobile-selected.png)
-- [変更後のタブレット](evidence/c27e5c9138b145cc89adba475abf7bca/ui-browser/tablet-selected.png)
+- [変更後のデスクトップ](evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/desktop-selected.png)
+- [変更後のスマートフォン](evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/mobile-selected.png)
+- [変更後のタブレット](evidence/090f6b3ba9524fd3a7583090b1d0b6ab/ui-browser/tablet-selected.png)
 
 ## 確認範囲
 
@@ -43,3 +43,9 @@ CodexEnvSet main `1f95e672c6225047709eb47dbb5e710ad7a5e240`、バージョン0.9
 ## 独立レビューへの対応
 
 初回レビューでは、開いた使い方・検索不一致・全耐性表・形態・日別選択と入力placeholderの全文観測不足、および静的表示をaction_labelとした誤分類を指摘しました。元の画面を基準に3つの代表状態を追加し、入力値も観測へ含めました。静的な所属や属性名はidentityへ修正し、実装・元データ・描画関数へのsource_refを確認しました。旧レビューは[review-round1.json](review-round1.json)へ保存しています。最終判定は新しいコンテキストのreview.jsonへ記録します。
+
+最終レビュー中に、イベント群の静的見出し4件と、無効な2日目入力の前提条件案内1件の目的分類を追加訂正しました。前者はidentity、後者はstate_guidanceです。画面・fixture・期待値は変更していません。新設ヘルプがない旧画面の比較では、同じ選択・展開操作を旧部品の存在する範囲で行っています。
+
+## 最終結果
+
+新しいコンテキストの独立レビューはpassedです。10原則、5寸法、8操作、533文言の評価を記録し、R1/R2と追加の5分類訂正をresolvedとしました。レビュアーは21件の実ブラウザー操作も独立して確認しています。[最終レビュー](final-review-report.md)と[review.json](review.json)を参照してください。親によるcheckとadvanceも成功し、工程はdoneです。

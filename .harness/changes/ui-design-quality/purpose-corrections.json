@@ -1,0 +1,10 @@
+{
+  "ids": [
+    "group-0-copy-28",
+    "group-0-copy-30",
+    "group-1-copy-38",
+    "group-2-copy-37",
+    "group-3-copy-21"
+  ],
+  "verification": "event-titleはh3、day2-searchはdisabledで前提条件placeholderを表示。画面/数値/出典/期待値の変更なし。"
+}

@@ -17,3 +17,8 @@
 {"time": "2026-11-11T07:19:34.218199+00:00", "event": "verification", "success": false, "receipt": "evidence/246878e84b354305bc49adaf075e953f.json"}
 {"time": "2026-11-11T07:20:38.323968+00:00", "event": "verification", "success": true, "receipt": "evidence/c27e5c9138b145cc89adba475abf7bca.json"}
 {"time": "2026-11-11T07:20:51.503647+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2"}
+{"time": "2026-11-11T07:26:59.790799+00:00", "event": "reopened", "previous": "review", "phase": "design", "reason": "最終独立レビューで、イベントの静的h3見出し4件とdisabled入力の前提条件案内1件のpurposeを追加修正。UI/入力条件/期待値/ソースは変更しない。"}
+{"time": "2026-11-11T07:27:00.134003+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "39f3f0f045cb4bf790ed7ce6316f519aaddc3391bb8004f21804040f3b247956"}
+{"time": "2026-11-11T07:27:49.940384+00:00", "event": "verification", "success": true, "receipt": "evidence/090f6b3ba9524fd3a7583090b1d0b6ab.json"}
+{"time": "2026-11-11T07:28:49.481996+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2"}
+{"time": "2026-11-11T07:35:20.088234+00:00", "event": "advanced", "previous": "review", "phase": "done", "artifact_digest": "97da1ad8c4f038e8c0510a17ee335cb2e81e4ed2629af030b5e23e5d028c5fb0"}

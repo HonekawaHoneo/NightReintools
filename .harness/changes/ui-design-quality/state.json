@@ -4,12 +4,13 @@
   "kind": "change",
   "author": "codex-ui-owner",
   "context": "ui-owner-implementation-20261111",
-  "phase": "review",
+  "phase": "done",
   "approvals": {
     "discovery": "f4f8b9a3f9b9c31cc2de50da0b5a2457bf802d1d93fc6c83081fce9d2eed5fb4",
     "requirements": "a8d3582dbb566f6daa9eca8bdd2d00ba8821adf3c0df43fceb9aa936fefb41ea",
-    "design": "c76cfc524934e3574d1ef53575f838f6edd28cf075008b23784f76c93a1a912f",
-    "implementation": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2"
+    "design": "39f3f0f045cb4bf790ed7ce6316f519aaddc3391bb8004f21804040f3b247956",
+    "implementation": "3e08c4ec6bfeeaaceeac1dae4bfbbe45a3a4565bdf47687bff6cd5e3a78c8ec2",
+    "review": "97da1ad8c4f038e8c0510a17ee335cb2e81e4ed2629af030b5e23e5d028c5fb0"
   },
   "intent_contract": 1,
   "baseline_files": {

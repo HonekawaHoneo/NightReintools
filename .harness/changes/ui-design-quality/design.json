@@ -4,7 +4,8 @@
     "軽い明色の調整も検討したが、プレイ中に候補と入力段階を強調する暗い配色を採用する。好みの指定とは扱わない。",
     "巨大hero、キャッチコピー、外部画像、UI frameworkを追加せず、本文と表の可読性・意味の所属を優先する。",
     "全18選択の基準結果、データSHA、CSP、PWA cache更新とofflineを検証する。",
-    "各状態の全文、5寸法、見える印とhit領域を実測し、期待値自体も独立レビューする。"
+    "各状態の全文、5寸法、見える印とhit領域を実測し、期待値自体も独立レビューする。",
+    "最終レビューに従い、イベント群見出しをidentity、無効な2日目の前提条件案内をstate_guidanceとし、元のDOMで目的を照合する。"
   ],
   "impact_paths": [
     "index.html",
@@ -1493,15 +1494,15 @@
             {
               "id": "group-0-copy-28",
               "text": "1日目を先に選択",
-              "role": "label",
-              "purpose": "action_label",
+              "role": "status",
+              "purpose": "state_guidance",
               "requirement": "REQ-UI",
-              "reason": "利用できる操作、検索の対象、または開閉する情報を示す。",
+              "reason": "無効な2日目入力で、先に1日目を選ぶ必要がある状態と次の入力を示す。現在操作できる検索の名前ではない。",
               "source_ref": {
                 "path": "app.js",
                 "anchor": "elements.day2Search.placeholder"
               },
-              "alternative": "操作名や検索対象を省くと何を起動/入力するか分からない。短い既存名を維持する。",
+              "alternative": "前提条件を示さないと2日目入力が無効な理由が分からない。短い状態案内を維持する。",
               "redundancy": "同じ名称/数値は別の入力段階・ボス・形態・表の対象へ所属を示す。選択chipはスクロール後も選択値を示す。helpは通常閉じており入力段階の説明を常設しない。",
               "case_ids": [
                 "desktop-empty-copy"
@@ -1527,15 +1528,15 @@
             {
               "id": "group-0-copy-30",
               "text": "イベント",
-              "role": "data",
-              "purpose": "data",
+              "role": "label",
+              "purpose": "identity",
               "requirement": "REQ-UI",
-              "reason": "実際のボス名、入力値、耐性値を元の定義と既存の描画処理から表示する。",
+              "reason": "イベント入力群の所属を識別する静的h3見出し。イベント名の実データや操作名ではない。",
               "source_ref": {
                 "path": "index.html",
                 "anchor": "イベント"
               },
-              "alternative": "実データや入力値そのものを短文化すると別の対象・数値になる。",
+              "alternative": "見出しを除くとイベント検索と日別ボス検索の区別がなくなる。短い群名を維持する。",
               "redundancy": "同じ名称/数値は別の入力段階・ボス・形態・表の対象へ所属を示す。選択chipはスクロール後も選択値を示す。helpは通常閉じており入力段階の説明を常設しない。",
               "case_ids": [
                 "desktop-empty-copy"
@@ -2746,15 +2747,15 @@
             {
               "id": "group-1-copy-38",
               "text": "イベント",
-              "role": "data",
-              "purpose": "data",
+              "role": "label",
+              "purpose": "identity",
               "requirement": "REQ-UI",
-              "reason": "実際のボス名、入力値、耐性値を元の定義と既存の描画処理から表示する。",
+              "reason": "イベント入力群の所属を識別する静的h3見出し。イベント名の実データや操作名ではない。",
               "source_ref": {
                 "path": "index.html",
                 "anchor": "イベント"
               },
-              "alternative": "実データや入力値そのものを短文化すると別の対象・数値になる。",
+              "alternative": "見出しを除くとイベント検索と日別ボス検索の区別がなくなる。短い群名を維持する。",
               "redundancy": "同じ名称/数値は別の入力段階・ボス・形態・表の対象へ所属を示す。選択chipはスクロール後も選択値を示す。helpは通常閉じており入力段階の説明を常設しない。",
               "case_ids": [
                 "desktop-selected-copy",
@@ -5672,15 +5673,15 @@
             {
               "id": "group-2-copy-37",
               "text": "イベント",
-              "role": "data",
-              "purpose": "data",
+              "role": "label",
+              "purpose": "identity",
               "requirement": "REQ-UI",
-              "reason": "実際のボス名、入力値、耐性値を元の定義と既存の描画処理から表示する。",
+              "reason": "イベント入力群の所属を識別する静的h3見出し。イベント名の実データや操作名ではない。",
               "source_ref": {
                 "path": "index.html",
                 "anchor": "イベント"
               },
-              "alternative": "実データや入力値そのものを短文化すると別の対象・数値になる。",
+              "alternative": "見出しを除くとイベント検索と日別ボス検索の区別がなくなる。短い群名を維持する。",
               "redundancy": "同じ名称/数値は別の入力段階・ボス・形態・表の対象へ所属を示す。選択chipはスクロール後も選択値を示す。helpは通常閉じており入力段階の説明を常設しない。",
               "case_ids": [
                 "desktop-expanded-copy",
@@ -9269,15 +9270,15 @@
             {
               "id": "group-3-copy-21",
               "text": "イベント",
-              "role": "data",
-              "purpose": "data",
+              "role": "label",
+              "purpose": "identity",
               "requirement": "REQ-UI",
-              "reason": "実際のボス名、入力値、耐性値を元の定義と既存の描画処理から表示する。",
+              "reason": "イベント入力群の所属を識別する静的h3見出し。イベント名の実データや操作名ではない。",
               "source_ref": {
                 "path": "index.html",
                 "anchor": "イベント"
               },
-              "alternative": "実データや入力値そのものを短文化すると別の対象・数値になる。",
+              "alternative": "見出しを除くとイベント検索と日別ボス検索の区別がなくなる。短い群名を維持する。",
               "redundancy": "同じ名称/数値は別の入力段階・ボス・形態・表の対象へ所属を示す。選択chipはスクロール後も選択値を示す。helpは通常閉じており入力段階の説明を常設しない。",
               "case_ids": [
                 "desktop-search-empty-copy"
