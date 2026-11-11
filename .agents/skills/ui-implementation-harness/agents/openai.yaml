@@ -1,0 +1,5 @@
+interface:
+  display_name: "UI Implementation Harness"
+  short_description: "確定したUI設計、部品・操作・状態、HTMLモック移行の実装判断"
+policy:
+  allow_implicit_invocation: false

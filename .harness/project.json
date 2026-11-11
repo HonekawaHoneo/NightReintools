@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "checks": [
+    {
+      "id": "ui-browser",
+      "argv": [
+        "python3",
+        "tests/ui_browser.py"
+      ],
+      "timeout_seconds": 180
+    },
+    {
+      "id": "regression",
+      "argv": [
+        "python3",
+        "tests/regression.py"
+      ],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeout_seconds": 30
+    }
+  ],
+  "snapshot_ignore": [],
+  "skill_bindings": {
+    "orchestrator": "poteto-mode",
+    "requirements": "grill-me",
+    "design": "ponytail",
+    "review": "ponytail-review",
+    "ui_design": "semantic-ui-design",
+    "ui_implementation": "ui-implementation-harness"
+  },
+  "autonomy": {
+    "completion": "review",
+    "branch_prefix": "ai/",
+    "base_branch": "default"
+  },
+  "ui": {
+    "schema_version": 3,
+    "mode": "enforce",
+    "registry": "ui/registry.json",
+    "input_globs": [
+      "index.html",
+      "styles.css",
+      "resistance.css",
+      "app.js",
+      "mapping-data.js",
+      "resistance-data.js",
+      "manifest.webmanifest",
+      "service-worker.js",
+      "ui/**"
+    ],
+    "check_ids": [
+      "ui-browser"
+    ]
+  }
+}

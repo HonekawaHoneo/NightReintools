@@ -1,0 +1,7 @@
+{
+  "correction": "以前のthemeはブラウザーの条件でなく、アプリCSSの配色を表していた。fixtureに補助zoom probeの説明を追加したのも不一致の原因。",
+  "browser_preference": "light",
+  "original_capture": "Playwright defaultでprefers-color-scheme dark=false。原画像は保持する。",
+  "after_capture": "color_scheme=lightを明示し、元のviewport、fixture、CSS layout zoomを維持する。",
+  "extra_probe": "640px/2xの追加画像は主fixtureのenvironmentへ混在させず、添付画像として区別する。"
+}

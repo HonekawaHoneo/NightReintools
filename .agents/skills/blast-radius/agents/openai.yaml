@@ -1,0 +1,5 @@
+interface:
+  display_name: "blast-radius"
+  short_description: "Find what a change could break somewhere else before it ships, beyond the diff, and prove the one fact it's safe because"
+policy:
+  allow_implicit_invocation: false

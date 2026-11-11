@@ -1,0 +1,5 @@
+interface:
+  display_name: "Semantic UI Design"
+  short_description: "意味から部品・トークン・階層・密度を設計し、視覚表現の過剰と不足を検証する"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,17 @@
+{
+  "repository": "HonekawaHoneo/CodexEnvSet",
+  "source_commit": "1f95e672c6225047709eb47dbb5e710ad7a5e240",
+  "version": "0.9.0",
+  "environment_bundle_digest": "f741699134b2c5dfa38f65e534d1fbb1db8dd882cc3f3295e1d680e849494f69",
+  "project_bundle_digest": "ff61f89a3d283cfffe00ea5250da6a85b90f81cc9ddf96e7267d12d4c497e4b3",
+  "integrity": "380 Codex files + 6 skill files checked against environment lock; project bootstrap repeated with unchanged result",
+  "framework_tests": {
+    "run": 338,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 38,
+    "note": "Unshallow fetch supplied historical commits used by upgrade tests; optional native quality-tool tests skipped"
+  },
+  "environment_published": false,
+  "fresh_chat_auto_load_verified": false
+}

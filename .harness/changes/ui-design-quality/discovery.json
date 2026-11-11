@@ -1,0 +1,22 @@
+{
+  "request": "これからCodexEnvSetの最新のmainブランチのハーネスをテストします\n\n目的は、このハーネスによって作成されたアプリUIの品質チェックです。\n\nhttps://github.com/HonekawaHoneo/NightReintools\nあなたは普段通りに作業を行い、このリポジトリのツールの目的を分析し、UIを改善してください\nバックエンドの処理には触らず、フロントエンドのデザインに注力してください\n\nでは入れて\n環境の構築が終わったら、最初の指示通りにハーネスのテストを始めてください",
+  "goal": "CodexEnvSet main 0.9.0の共通工程でNightReintoolsのUIを改善し、実画面と独立レビューで品質を確認する。",
+  "current_behavior": "main 2e39352の静的PWA。18種の1日目ボスと13イベントから候補を絞る。小さい文字と淡い画面で結果が道中耐性の後ろにあり、初期画面の結果欄に案内がない。狭幅ではquick-summaryを隠す。夜の騎兵でエデレ/フルゴール/ナメレス(3体)。",
+  "constraints": [
+    "app.js、mapping-data.js、resistance-data.jsを変更しない",
+    "外部依存、API、解析計測、バックエンドを追加しない",
+    "既存CSPとPWAの相対パス、オフライン動作を保持する",
+    "個人プロファイルは標準review完了。mainへmerge/公開しない。",
+    "環境導入と、環境保存/Publish・新規チャットの自動読込を区別する。"
+  ],
+  "evidence": [
+    "README.md",
+    "index.html",
+    "app.js",
+    "styles.css",
+    "resistance.css",
+    "tests/fixtures/behavior-baseline.json",
+    "CodexEnvSet main 1f95e672c6225047709eb47dbb5e710ad7a5e240 / 0.9.0、環境380ファイル+スキル6ファイルの指紋検証済み"
+  ],
+  "open_questions": []
+}

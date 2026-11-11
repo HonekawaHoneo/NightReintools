@@ -1,0 +1,22 @@
+{
+  "reviewer": "",
+  "context": "",
+  "decision": "pending",
+  "summary": "",
+  "checked_requirements": [],
+  "findings": [],
+  "limitations": [],
+  "project_digest": "",
+  "artifacts_digest": "",
+  "intent_review": {
+    "purpose": {
+      "status": "unverified",
+      "evidence": ""
+    },
+    "sources": [],
+    "minimality": {
+      "status": "unverified",
+      "evidence": ""
+    }
+  }
+}

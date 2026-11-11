@@ -1,0 +1,108 @@
+{
+  "request_items": [
+    {
+      "id": "SRC-HARNESS",
+      "text": "これからCodexEnvSetの最新のmainブランチのハーネスをテストします",
+      "kind": "requirement",
+      "binding": true
+    },
+    {
+      "id": "SRC-PURPOSE",
+      "text": "目的は、このハーネスによって作成されたアプリUIの品質チェックです。",
+      "kind": "purpose",
+      "binding": true
+    },
+    {
+      "id": "SRC-UI",
+      "text": "あなたは普段通りに作業を行い、このリポジトリのツールの目的を分析し、UIを改善してください",
+      "kind": "requirement",
+      "binding": true
+    },
+    {
+      "id": "SRC-SCOPE",
+      "text": "バックエンドの処理には触らず、フロントエンドのデザインに注力してください",
+      "kind": "constraint",
+      "binding": true
+    },
+    {
+      "id": "SRC-INSTALL",
+      "text": "環境の構築が終わったら、最初の指示通りにハーネスのテストを始めてください",
+      "kind": "requirement",
+      "binding": true
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-UI",
+      "description": "プレイ中に入力と候補・耐性を追いやすい画面へ改善する",
+      "sources": [
+        "SRC-UI",
+        "SRC-PURPOSE"
+      ],
+      "acceptance": [
+        "候補を結果領域の先頭に配置し、入力段階・選択・無効・展開を判別できる",
+        "簡潔な未選択の案内と必要な耐性凡例を示し、無関係な装飾文を加えない"
+      ]
+    },
+    {
+      "id": "REQ-LOGIC",
+      "description": "既存機能とデータの動作を維持する",
+      "sources": [
+        "SRC-SCOPE"
+      ],
+      "acceptance": [
+        "app.jsと対応表・耐性データのSHA256が変更前と同一",
+        "全18種の1日目選択と2日目候補・イベント・検索・解除・リセットの結果が基準と一致"
+      ]
+    },
+    {
+      "id": "REQ-ACCESS",
+      "description": "日本語と操作を狭幅でも読みやすくする",
+      "sources": [
+        "SRC-UI",
+        "SRC-PURPOSE"
+      ],
+      "acceptance": [
+        "320/390/768/1024/1440pxと200%CSSレイアウト拡大で横溢れがなく、native操作とfocusが利用できる",
+        "全表示文、5種の寸法、小さい選択印と操作領域の幅・高さ・起動を実測する",
+        "狭幅でも簡易耐性を非表示にしない"
+      ]
+    },
+    {
+      "id": "REQ-PWA",
+      "description": "配信とオフライン起動を維持する",
+      "sources": [
+        "SRC-SCOPE",
+        "SRC-UI"
+      ],
+      "acceptance": [
+        "CSP、同一オリジンの資源、相対パスを保持する",
+        "更新前cacheから新UIのcacheへ移行し、オフライン再起動できる"
+      ]
+    },
+    {
+      "id": "REQ-HARNESS",
+      "description": "latest mainの固定ハーネスを実環境と対象へ導入して検証する",
+      "sources": [
+        "SRC-HARNESS",
+        "SRC-INSTALL",
+        "SRC-PURPOSE"
+      ],
+      "acceptance": [
+        "0.9.0の環境/対象ロックと指紋整合を確認する",
+        "ui schema3 enforceを開始前に固定し、run証跡と別コンテキストレビューで完了判定する",
+        "Git作業ブランチへ成果と証跡を保存し、環境Publishや新規タスク自動読込の未検証範囲を区別する"
+      ]
+    }
+  ],
+  "out_of_scope": [
+    "バックエンド/判定アルゴリズム/収録データの変更",
+    "新機能、外部API、analytics、ランタイム依存の追加",
+    "mainへのmergeと本番公開",
+    "環境Publish、新規チャットによるホスト自動読込の実証"
+  ],
+  "assumptions": [
+    "暗い紺色と控えめな金色は担当者の設計判断であり、利用者の明示好みとは扱わない。",
+    "200% CSS zoomはレイアウトの代替試験で、Safari実機やブラウザー本体のzoomの全面検証ではない。"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "original_request": "これからCodexEnvSetの最新のmainブランチのハーネスをテストします\n\n目的は、このハーネスによって作成されたアプリUIの品質チェックです。\n\nhttps://github.com/HonekawaHoneo/NightReintools\nあなたは普段通りに作業を行い、このリポジトリのツールの目的を分析し、UIを改善してください\nバックエンドの処理には触らず、フロントエンドのデザインに注力してください\n\nでは入れて\n環境の構築が終わったら、最初の指示通りにハーネスのテストを始めてください",
+  "source_commit": "1f95e672c6225047709eb47dbb5e710ad7a5e240",
+  "installed_version": "0.9.0",
+  "prior_draft": "Prior unharnessed patch saved outside repository, not applied."
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "poteto-help"
+  short_description: "Guides users through pstack setup, /poteto-mode, and picking the skill, playbook, or principle for a task. Type /poteto-"
+policy:
+  allow_implicit_invocation: false

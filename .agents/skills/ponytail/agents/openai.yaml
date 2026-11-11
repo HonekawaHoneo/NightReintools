@@ -1,0 +1,5 @@
+interface:
+  display_name: "ponytail"
+  short_description: "Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. "
+policy:
+  allow_implicit_invocation: false

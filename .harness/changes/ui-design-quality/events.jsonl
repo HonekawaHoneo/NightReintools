@@ -1,0 +1,13 @@
+{"time": "2026-11-11T06:46:38.112287+00:00", "event": "created", "kind": "change", "author": "codex-ui-owner", "context": "ui-owner-implementation-20261111"}
+{"time": "2026-11-11T06:47:31.270727+00:00", "event": "advanced", "previous": "discovery", "phase": "requirements", "artifact_digest": "f4f8b9a3f9b9c31cc2de50da0b5a2457bf802d1d93fc6c83081fce9d2eed5fb4"}
+{"time": "2026-11-11T06:47:31.392707+00:00", "event": "advanced", "previous": "requirements", "phase": "design", "artifact_digest": "a8d3582dbb566f6daa9eca8bdd2d00ba8821adf3c0df43fceb9aa936fefb41ea"}
+{"time": "2026-11-11T06:51:01.684987+00:00", "event": "gate_failed", "phase": "design", "reason": "成果物自身を実装影響範囲に指定できません"}
+{"time": "2026-11-11T06:51:22.918942+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "337cd29433574f9e6eff3d9c11a2bcf61ce962590c3559708db8ea93815857e7"}
+{"time": "2026-11-11T07:00:15.743236+00:00", "event": "verification", "success": false, "receipt": "evidence/4129b3062fc445f6b7ad628aebf8de7d.json"}
+{"time": "2026-11-11T07:01:44.125705+00:00", "event": "verification", "success": false, "receipt": "evidence/273e97576d9d4f64a177193ae971c555.json"}
+{"time": "2026-11-11T07:01:49.955121+00:00", "event": "gate_failed", "phase": "implementation", "reason": "検証が未実行、失敗、またはタイムアウトです"}
+{"time": "2026-11-11T07:02:52.428182+00:00", "event": "reopened", "previous": "implementation", "phase": "design", "reason": "beforeとafterのenvironmentにアプリ配色と補助probeの説明を混在させていた。画像は変更せず、実際に共通のブラウザーprefers-color-scheme=lightと主fixtureの条件へ訂正する。"}
+{"time": "2026-11-11T07:03:22.487543+00:00", "event": "advanced", "previous": "design", "phase": "implementation", "artifact_digest": "315891bb9dd4f1227ad0109538b7ce8aefe3130f57f2fca372390238a82c2eb5"}
+{"time": "2026-11-11T07:03:58.080005+00:00", "event": "verification", "success": false, "receipt": "evidence/ce788466fc184f35b972edbba8ed7fee.json"}
+{"time": "2026-11-11T07:04:45.643434+00:00", "event": "verification", "success": true, "receipt": "evidence/3a242dc7266941c6bbec0dc39205fae9.json"}
+{"time": "2026-11-11T07:04:53.952729+00:00", "event": "advanced", "previous": "implementation", "phase": "review", "artifact_digest": "bd330641af6da41bf27bd44f8b63e2aa80e64d5fc32eabaef32ab81bd5440f1a"}

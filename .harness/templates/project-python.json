@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checks": [
+    {"id": "tests", "argv": ["python3", "-m", "unittest", "discover", "-s", "tests", "-v"], "timeout_seconds": 120},
+    {"id": "structure", "argv": ["python3", ".harness/structure.py", "check"], "timeout_seconds": 120}
+  ],
+  "verification_inputs": [".jscpd.json", "tach.toml", "requirements-quality.txt"],
+  "snapshot_ignore": [],
+  "structural_quality": {
+    "mode": "observe",
+    "source_roots": ["src", "tests"],
+    "clone_roots": ["src"],
+    "required_checks": ["structure"],
+    "jscpd_config": ".jscpd.json",
+    "tach_config": "tach.toml"
+  },
+  "skill_bindings": {"orchestrator": "poteto-mode", "requirements": "grill-me", "design": "ponytail", "review": "ponytail-review"}
+}

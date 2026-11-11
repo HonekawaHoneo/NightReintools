@@ -1,0 +1,22 @@
+{
+  "summary": "既存の検索・選択・判定を保持し、暗い紺の配色、優先した候補欄、必要な空状態、使い方、耐性凡例と狭幅でも表示する要約を実装。親が実測providerと18種の回帰・PWA更新試験を接続し、UI担当が製品5ファイルを実装。",
+  "author": "codex-ui-owner",
+  "changed_paths": [
+    "index.html",
+    "manifest.webmanifest",
+    "resistance.css",
+    "service-worker.js",
+    "styles.css",
+    "tests/README.md",
+    "tests/browser_support.py",
+    "tests/regression.py",
+    "tests/ui_browser.py"
+  ],
+  "deleted_paths": [],
+  "limitations": [
+    "実画面の機械観測は意味的品質の合格ではなく、別コンテキストレビューで判定する。",
+    "Safari/iPadの実機操作とWCAG全面適合は未検証。Chromiumと200% CSSレイアウト拡大で確認する。",
+    "通常タスクへの環境導入まで確認。保存/Publishと新規タスクでのホスト自動読込は未実施。",
+    "既存app.jsは操作後に選択肢DOMを再生成する。キーボード試験は現在の入口を取得して選択と解除を実行し、再生成前のbuttonにfocusが保持されるとは主張しない。"
+  ]
+}
